@@ -192,7 +192,7 @@
                                 style="background-image: url(&quot;assets/img/gallery/gallery-6.jpg&quot;);">
                             </div>
                             <div class="area__btn">
-                                <a href="assets/video/team-session.mp4" class="circle-btn popup-video">
+                                <a href="https://www.youtube.com/watch?v=CH_Kv7Y3fQw" class="circle-btn popup-video">
                                     <span class="icon-box" data-background="assets/img/gallery/gallery-8.jpg"
                                         style="background-image: url(&quot;assets/img/gallery/gallery-8.jpg&quot;);">
                                         <svg width="24" height="26" viewBox="0 0 24 26" fill="none"
@@ -392,15 +392,6 @@
                            
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
                 </div>
             </div>
         </div>
