@@ -8,3 +8,13 @@
 
 /.github export-ignore
 CHANGELOG.md export-ignore
+
+# Ensure consistent line endings
+* text=auto
+
+# Handle specific file types
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.php text eol=lf
+*.blade.php text eol=lf

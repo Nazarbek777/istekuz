@@ -16,13 +16,13 @@
                         <img src="assets/img/bg/error-404.png" alt="img not found">
                     </div>
                     <div class="error-btn">
-                        <a href="/" class="border-btn">Back to Home<i class="flaticon-040-right"></i></a>
+                        <a href="/about" class="border-btn">Back to Home<i class="flaticon-040-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+{{-- change this reogi git s --}}
 
 @endsection
