@@ -1,6 +1,11 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\Category;
+use App\Http\Controllers\CategoryController;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,5 +28,18 @@ Route::get('/about', function () {
     return view('front.about');
 });
 
+Route::get('language/{locale}', function ($locale) {
+    
+    App::setLocale($locale);
+    session(['lang'=>$locale]);
+    return redirect()->back();
+})->name('lang');
 
-Route::resource('pages', PageController::class);
+
+Route::prefix('admin')->group(function () {
+    Route::get('/', [AdminController::class, 'index'])->name('admin');
+    Route::resource('pages', PageController::class);
+
+    Route::resource('posts', PostController::class);
+    Route::resource('categories', CategoryController::class);
+});

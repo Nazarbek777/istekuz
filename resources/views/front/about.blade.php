@@ -123,10 +123,10 @@
     <section class="history-area fix p-relative section-spacing">
         <div class="history-thumbs">
             <div class="history-thumb-1">
-                <img src="assets/img/gallery/gallery-13.jpg" alt="image not found">
+                <img src="assets/img/about/meeting1.png" alt="image not found">
             </div>
             <div class="history-thumb-2">
-                <img src="assets/img/gallery/gallery-9.jpg" alt="image not found">
+                <img src="assets/img/about/meeting2.png" alt="image not found">
             </div>
         </div>
         <div class="container">
