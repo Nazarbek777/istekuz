@@ -36,7 +36,7 @@
         <div class="main-nav-js">
             <div class="mobile-logo-area d-flex justify-content-between align-items-center">
                 <div class="header-logo">
-                    <a href="index.html"><img alt="image" class="img-fluid" src="assets/img/logo/logo_istek.svg"></a>
+                    <a href="index.html"><img alt="image" class="img-fluid" src="assets/img/logo/logo-white.png"></a>
                 </div>
                 <div class="menu-close-btn"><i class="fa-thin fa-xmark"></i></div>
             </div>
@@ -56,7 +56,7 @@
                         <a href="/contact" class="drop-down" data-hover='Contact'> Contact</a>
                     </li>
 					 <li class="menu-item-has-children menu-item">
-                        <a href="/lang/ru" class="drop-down" data-hover='Contact'> UZ</a>
+                        <a href="/language/ru" class="drop-down" data-hover='Contact'> UZ</a>
                     </li>
 					
 				</ul>
@@ -109,7 +109,7 @@
                             <div class="header-3-main-left">
                                 <div class="header__logo">
                                     <a href="index.html">
-                                        <img src="assets/img/logo/logo_istek.svg" alt="image not found">
+                                        <img src="assets/img/logo/logo-white.png" alt="image not found">
                                     </a>
                                 </div>
                             </div>
@@ -133,9 +133,9 @@
 											<li class="has-dropdown">
                                                 <a href="javasript:void(0);">Lang</a>
                                                 <ul class="submenu">
-													<li><a href="/lang/uz">UZ</a></li>
-                                                    <li><a href="/lang/ru">RU</a></li>
-													 <li><a href="/lang/en">EN</a></li>
+													<li><a href="/language/uz">UZ</a></li>
+                                                    <li><a href="/language/ru">RU</a></li>
+													 <li><a href="/language/en">EN</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -153,7 +153,7 @@
                                         </span>
                                     </div>
                                     <div class="contact-link__text">
-                                        <p><a href="tel:+</a></p>
+                                        <p><a href="tel:"></a></p>
                                     </div>
                                 </div>
                                 <div class="menu__bar-3 d-xl-none pl-35">
@@ -195,14 +195,11 @@
                             <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
                                 <div class="footer__widget footer__widget-1">
                                     <div class="footer__logo mb-20">
-                                        <a href="index.html"><img src="assets/img/logo/logo_istek.svg"
+                                        <a href="index.html"><img src="assets/img/logo/logo-white.png"
                                                 alt="img not found"></a>
                                     </div>
-                                    <p class="made-by-text mb-30">Made by Agenzia</p>
-                                    <div class="product__review-thumb mb-40">
-                                        <img src="assets/img/projects/product-review-1.png" alt="image not found">
-                                        <img src="assets/img/projects/product-review-2.png" alt="image not found">
-                                    </div>
+                                    <p class="made-by-text mb-30">Istaklarga mos takliflar</p>
+
                                     <div class="social-links">
                                         <ul>
                                             <li>
@@ -229,14 +226,14 @@
                             </div>
                             <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6">
                                 <div class="footer__widget footer__widget-2">
-                                    <h4 class="footer__widget-title mb-30">Our Services</h4>
+                                    <h4 class="footer__widget-title mb-30">Популярные продукты</h4>
                                     <div class="footer__links">
                                         <ul>
-                                            <li><a href="services-details.html">UX/UI Design</a></li>
-                                            <li><a href="services-details.html">Web Development</a></li>
-                                            <li><a href="services-details.html">Digital Marketing</a></li>
-                                            <li><a href="services-details.html">Product Design</a></li>
-                                            <li><a href="services-details.html">Software Solutions</a></li>
+                                            <li><a href="#">AKFA TRIO 6000</a></li>
+                                            <li><a href="#">AKFA 7000</a></li>
+                                            <li><a href="#">ENGELBERG 7000</a></li>
+                                            <li><a href="#">THERMO 70</a></li>
+                                            <li><a href="#">BKH 65</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -291,7 +288,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="company-address-area footer__bg">
+                <section class="company-address-area footer__bg d-none">
                     <div class="container">
                         <div class="address-wrapper pt-60 pb-10">
                             <div class="row">
@@ -376,8 +373,8 @@
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="copyright__text tpl__item-center">
-                                    <p>Copyright © 2023 <a target="_blank"
-                                            href="https://themeforest.net/user/topylo">Axil</a></p>
+                                    <p>©2024 Все права защищены <a target="_blank"
+                                            href="https://dora.uz">Dora Dev.</a></p>
                                 </div>
                             </div>
                         </div>

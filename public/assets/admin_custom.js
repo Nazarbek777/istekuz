@@ -14,3 +14,5 @@ function languageDisplay(event) {
 }
 
 languageDisplay('uz')
+
+

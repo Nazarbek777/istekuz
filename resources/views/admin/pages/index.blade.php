@@ -12,7 +12,7 @@
                         <h5 class="card-title en">{{ $page->title_en }}</h5>
                         <h5 class="card-title ru">{{ $page->title_ru }}</h5>
                         <h5 class="card-title uz">{{ $page->title_uz }}</h5>
-
+                        <h5 class="card-title">{{ $page->slug }}</h5>
                         <p class="card-text en">{{ $page->text_en }}</p>
                         <p class="card-text ru">{{ $page->text_ru }}</p>
                         <p class="card-text uz">{{ $page->text_uz }}</p>

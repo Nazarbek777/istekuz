@@ -16995,3 +16995,19 @@ label {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+
+.team-item-2 {
+  position: relative;
+  text-align: center;
+  border-top: 1px solid #414141;
+}
+
+.team-item-2.active .team-thmb-2 {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.team-item-2.active .team-info-2 {
+  top: 71% !important;
+}

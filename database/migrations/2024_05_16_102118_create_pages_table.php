@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('text_ru')->nullable();
             $table->text('text_uz')->nullable();
             $table->text('text_en')->nullable();
-            $table->string('slug')->unique();
+            $table->string('slug');
             $table->string('image')->nullable();
             $table->timestamps();
         });

@@ -82,6 +82,14 @@
 	});
 
 	/*======================================
+	16. team slider  
+	========================================*/
+	$(document).on('mouseover', '.team-item-2', function () {
+		$('.team-item-2').removeClass('active');
+		$(this).addClass('active');
+	});
+
+	/*======================================
 	Mobile Menu Js
 	========================================*/
 	$('#mobile-menu').meanmenu({
@@ -472,42 +480,7 @@
 		},
 	});
 
-	/*======================================
-	16. team slider  
-	========================================*/
-	let teamSlider = new Swiper(".team-slider", {
-		loop: true,
-		freemode: true,
-		slidesPerView: 1,
-		spaceBetween: 30,
-		centeredSlides: false,
-		speed: 1000,
-		navigation: {
-			nextEl: ".team-slider-button-next",
-			prevEl: ".team-slider-button-prev",
-		},
-		breakpoints: {
-			// when window width is >= 320px
-			320: {
-				slidesPerView: 1,
-			},
-			540: {
-				slidesPerView: 1,
-			},
-			768: {
-				slidesPerView: 2,
-			},
-			992: {
-				slidesPerView: 2,
-			},
-			1200: {
-				slidesPerView: 3,
-			},
-			1400: {
-				slidesPerView: 4,
-			},
-		},
-	});
+	
 
 	/*======================================
 	17. service slider  

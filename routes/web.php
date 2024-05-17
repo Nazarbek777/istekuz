@@ -7,6 +7,7 @@ use App\Http\Controllers\Category;
 use App\Http\Controllers\CatalogController;
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\MediaController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
@@ -27,9 +28,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::get('/about', function () {
-    return view('front.about');
-});
+Route::get('/about', [FrontController::class, 'about'])->name('about');
 
 Route::get('language/{locale}', function ($locale) {
 
@@ -48,5 +47,4 @@ Route::prefix('admin')->group(function () {
 
     Route::resource('media', MediaController::class); 
     Route::resource('catolog', CatalogController::class); 
-
 });
