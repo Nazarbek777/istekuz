@@ -36,7 +36,7 @@
         <div class="main-nav-js">
             <div class="mobile-logo-area d-flex justify-content-between align-items-center">
                 <div class="header-logo">
-                    <a href="index.html"><img alt="image" class="img-fluid" src="assets/img/logo/logo.jpg"></a>
+                    <a href="index.html"><img alt="image" class="img-fluid" src="assets/img/logo/logo_istek.svg"></a>
                 </div>
                 <div class="menu-close-btn"><i class="fa-thin fa-xmark"></i></div>
             </div>
@@ -109,7 +109,7 @@
                             <div class="header-3-main-left">
                                 <div class="header__logo">
                                     <a href="index.html">
-                                        <img src="assets/img/logo/logo.jpg" alt="image not found">
+                                        <img src="assets/img/logo/logo_istek.svg" alt="image not found">
                                     </a>
                                 </div>
                             </div>
@@ -195,7 +195,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
                                 <div class="footer__widget footer__widget-1">
                                     <div class="footer__logo mb-20">
-                                        <a href="index.html"><img src="assets/img/logo/logo.jpg"
+                                        <a href="index.html"><img src="assets/img/logo/logo_istek.svg"
                                                 alt="img not found"></a>
                                     </div>
                                     <p class="made-by-text mb-30">Made by Agenzia</p>
