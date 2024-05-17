@@ -76,7 +76,7 @@ class PageController extends Controller
             'text_uz' => 'nullable|string',
             'text_ru' => 'nullable|string',
             'text_en' => 'nullable|string',
-            'slug' => 'required|string' . $page->id,
+            'slug' => 'required|string',
             'image' => 'nullable|file|max:2048',
         ]);
 
