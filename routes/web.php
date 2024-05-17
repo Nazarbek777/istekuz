@@ -4,7 +4,10 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Category;
+use App\Http\Controllers\CatalogController;
+
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\MediaController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
@@ -19,9 +22,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('front.index');
-});
+// Route::get('/', function () {
+//     return view('front.index');
+// });
 
 
 Route::get('/about', function () {
@@ -29,9 +32,9 @@ Route::get('/about', function () {
 });
 
 Route::get('language/{locale}', function ($locale) {
-    
+
     App::setLocale($locale);
-    session(['lang'=>$locale]);
+    session(['lang' => $locale]);
     return redirect()->back();
 })->name('lang');
 
@@ -42,4 +45,8 @@ Route::prefix('admin')->group(function () {
 
     Route::resource('posts', PostController::class);
     Route::resource('categories', CategoryController::class);
+
+    Route::resource('media', MediaController::class); 
+    Route::resource('catolog', CatalogController::class); 
+
 });
