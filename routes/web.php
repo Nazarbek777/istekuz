@@ -30,6 +30,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/about', [FrontController::class, 'about'])->name('about');
 Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
+Route::get('/blog', [FrontController::class, 'blogs'])->name('blogs');
 
 Route::get('language/{locale}', function ($locale) {
 

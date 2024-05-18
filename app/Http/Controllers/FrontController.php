@@ -11,6 +11,12 @@ use Illuminate\Http\Request;
 class FrontController extends Controller
 {
 
+    public function blogs(){
+        return view('front.blogs');
+    }
+
+
+
     public function contact(){
         $contact_data = Page::where('slug', 'contact')->first();
         $phone = Post::find(10);

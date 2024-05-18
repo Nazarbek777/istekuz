@@ -73,17 +73,7 @@
                                 </div>
                                 <div class="col-xxl-12">
                                     <div class="contact-input">
-                                        <input type="email" placeholder="Your Email*">
-                                    </div>
-                                </div>
-                                <div class="col-xxl-12">
-                                    <div class="contact-input">
                                         <input type="tel" placeholder="Phone Number">
-                                    </div>
-                                </div>
-                                <div class="col-xxl-12">
-                                    <div class="contact-input">
-                                        <input type="text" placeholder="Subject">
                                     </div>
                                 </div>
                                 <div class="col-xxl-12">
