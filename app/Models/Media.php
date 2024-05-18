@@ -12,6 +12,7 @@ class Media extends Model
     protected $fillable = [
         'name',
         'url',
+        'is_image',
         'catolog_id',
     ];
 }

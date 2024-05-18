@@ -7,9 +7,18 @@
     <ul>
         @if ($posts)
         @foreach ($posts as $post)
-        <li> {{$post->content_en}}</li>
-        <li> {{$post->content_uz}}</li>
-        <li> {{$post->content_ru}}</li>
+        <li> <span>{{$post->id}}</span>
+            <span> 
+                {{$post->content_uz}}
+            </span>
+            <span>
+                {{$post->content_en}}
+            </span>
+            <span>
+                {{$post->content_ru}}
+            </span>
+        </li>
+       
         @endforeach
         @endif
     </ul>

@@ -13,21 +13,27 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('catologs', function (Blueprint $table) {
+        Schema::create('media', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            
+            Schema::create('media', function (Blueprint $table) {
+                $table->id();
+                $table->string('name');
+                $table->string('is_image');
+                $table->string('url');
+                $table->string('catolog_id');
+                $table->timestamps();
+            });
             $table->timestamps();
         });
     }
 
-    /**
+    /**q
      * Reverse the migrations.
      *
      * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('catologs');
+        Schema::dropIfExists('media');
     }
 };

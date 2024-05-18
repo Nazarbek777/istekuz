@@ -29,6 +29,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/about', [FrontController::class, 'about'])->name('about');
+Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
 
 Route::get('language/{locale}', function ($locale) {
 
@@ -38,7 +39,7 @@ Route::get('language/{locale}', function ($locale) {
 })->name('lang');
 
 
-Route::prefix('admin')->group(function () {
+Route::prefix('dash')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin');
     Route::resource('pages', PageController::class);
 

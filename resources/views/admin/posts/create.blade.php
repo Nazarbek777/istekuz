@@ -7,12 +7,17 @@
     <form action="{{ route('posts.store') }}" method="POST">
         @csrf
         <div class="form-group">
-            <label for="content">Content</label>
+            <label for="content">Content ru</label>
             <textarea name="content_ru" id="content" class="form-control" ></textarea>
+        </div>
+        <div class="form-group uz">
+            <label for="content">Content uz</label>
             <textarea name="content_uz" id="content" class="form-control" ></textarea>
+        </div>
+        <div class="form-group en">
+            <label for="content">Content en</label>
             <textarea name="content_en" id="content" class="form-control" ></textarea>
         </div>
-      
         <div class="form-group">
             <label for="categories">Categories</label>
             <select name="categories[]" id="categories" class="form-control" required>
