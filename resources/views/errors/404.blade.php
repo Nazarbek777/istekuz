@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Istek</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -18,22 +18,24 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+
+            .not_found{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid red;
+                height: 100vh;
+            }
+            .not_found h1{
+                text-align: center
+            }
         </style>
     </head>
     <body class="antialiased">
 <div class="error-area pt-200 section-spacing white-bg p-relative z-index-2 adjust-header-space">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="error-content-wrapper text-center">
-                    <div class="error-img mb-65">
-                        <img src="assets/img/bg/error-404.png" alt="img not found">
-                    </div>
-                    <div class="error-btn">
-                        <a href="/about" class="border-btn">Back to Home<i class="flaticon-040-right"></i></a>
-                    </div>
-                </div>
-            </div>
+    <div class="container d-flex justify-content-center align-items-center border" style="flex-direction: column">
+        <div class="not_found"  >
+            <h1 class="text-center">Texnik ishlar olib borilmoqda... </h1>
         </div>
     </div>
 </div>
