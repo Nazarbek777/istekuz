@@ -43,7 +43,7 @@
                         <img src="{{ asset('storage/' . $images[2]['url'] ) }}"
                             alt="{{ $images[2]['title']}}">
                     @else
-                        <img src="assets/img/about/isteeekkk.png" alt="Notfound">
+                        {{-- <img src="assets/img/about/isteeekkk.png" alt="Notfound"> --}}
                     @endif
 
                 </div>

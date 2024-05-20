@@ -14,9 +14,12 @@
                 </ol>
                 <div class="card mb-4">
                     <div class="card-body">
-
-
                         <a href="{{ route('posts.create') }}">Create New Post</a>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+
                     </div>
                 </div>
                 <div class="card mb-4">
