@@ -166,7 +166,7 @@
             <div class="row">
                 <div class="col-xxl-12">
                     <div class="history-thumb-3">
-                        <img src="about_service {{ asset('storage/' . $about_service['image']) }}" alt="image not found">
+                        <img src="{{ asset('storage/' . $about_service['image']) }}" alt="image not found">
                     </div>
                 </div>
             </div>
