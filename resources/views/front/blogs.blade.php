@@ -7,6 +7,12 @@
 
 @section('content')
 
+@section('home', $posts[18]['content_' . session('lang')])
+@section('about', $posts[19]['content_' . session('lang')])
+@section('blog', $posts[20]['content_' . session('lang')])
+@section('contact', $posts[21]['content_' . session('lang')])
+@section('popular_products', $posts[26]['content_' . session('lang')])
+
     <!-- page title area start -->
     <section class="page-title-area section-spacing p-relative adjust-header-space">
         <div class="page-title-shapes">

@@ -10,9 +10,15 @@ use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
+    public $posts;
+
+   public function __construct()
+    {
+        $this->posts = Post::all();
+    }
 
     public function blogs(){
-        $posts = Post::all();
+        $posts = $this->posts;
         $blogs = Page::where('slug', 'blogs')
     ->orderBy('created_at', 'desc') // Order by creation date in descending order
     ->get();
@@ -27,7 +33,7 @@ class FrontController extends Controller
         $contact_data = Page::where('slug', 'contact')->first();
         $phone = Post::find(10);
         $contact_us = Post::find(11);
-        $posts = Post::all();
+        $posts = $this->posts;
         return view('front.contact', compact('contact_data', 'posts', 'phone', 'contact_us') );
     }
 
@@ -35,14 +41,13 @@ class FrontController extends Controller
     public function about(){
         $pages = Page::all();
         
-        
+        $posts = $this->posts;
         $campany = Page::where('slug', 'campany')->first();
         $about_service = Page::where('slug', 'about-service')->first();
         $why_us = Page::where('slug', 'why_us')->first();
         $teams = Page::where('slug', 'team')->get();
         $about_mini_heding = Post::find(2); 
         $for_call = Post::find(4); 
-        $posts = Post::all();
         $about_us = Post::find(3);
         $images = Media::all();
 
