@@ -5,6 +5,12 @@
 
 @section('pagename', 'Blog')
 
+@section('home', $posts[18]['content_' . session('lang')])
+@section('about', $posts[19]['content_' . session('lang')])
+@section('blog', $posts[20]['content_' . session('lang')])
+@section('contact', $posts[21]['content_' . session('lang')])
+@section('popular_products', $posts[26]['content_' . session('lang')])
+
 @section('content')
     <!-- page titler area start -->
     <section class="page-title-area section-spacing-top pb-55 adjust-header-space">
@@ -33,11 +39,11 @@
         <div class="container">
             <div class="about-us-main p-relative">
                 <div class="about-us-thumb-2">
-                    @if (isset($campany['image']))
-                        <img src="{{ asset('storage/' . $campany['image']) }}"
-                            alt="{{ $campany['title_' . session('lang')] }}">
+                    @if (isset($images[2]['url'] )))
+                        <img src="{{ asset('storage/' . $images[2]['url'] ) }}"
+                            alt="{{ $images[2]['title']}}">
                     @else
-                        <img src="assets/img/about/isteeekkk.png" alt="image not found">
+                        <img src="assets/img/about/isteeekkk.png" alt="Notfound">
                     @endif
 
                 </div>
@@ -74,9 +80,9 @@
                                 @endif
                             </div>
                             <div class="btn_wrapper">
-                                <a class="c-button btn-moving" href="#">
+                                <a class="c-button btn-moving" href="/contact">
                                     <span class="c-button__border"></span>
-                                    <span class="c-button__text">На связи</span>
+                                    <span class="c-button__text"> {{ $posts[3]['content_' . session('lang')] }} </span>
                                 </a>
                             </div>
                         </div>
@@ -94,7 +100,7 @@
                 <h2 class="section__title-inner title-anim" style="perspective: 400px;">
                     <div
                         style="display: block; text-align: center; position: relative; translate: none; rotate: none; scale: none; transform-origin: 705px 35.1px; transform: translate3d(0px, 0px, 0px); opacity: 1;">
-                        Наш команда</div>
+                        {{ $posts[4]['content_' . session('lang')] }}</div>
                 </h2>
             </div>
             <div class="row">
@@ -175,7 +181,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="section__title-wrapper is-white mb-60">
-                        <span class="section__inner-subtitle">why we us</span>
+                        <span class="section__inner-subtitle">{{  $posts[5]['content_' . session('lang')] }}</span>
                         <h2 class="section__title-inner title-anim" style="perspective: 400px;">
                             {{ $why_us['title_' .  session('lang')] }}
                         </h2>

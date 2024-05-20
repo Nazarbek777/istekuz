@@ -37,7 +37,7 @@
                                     </span>
                                 </div>
                                 <div class="contact-info-content">
-                                    <span>Call Us</span>
+                                    <span>{{  $posts[11]['content_' . session('lang')] }}</span>
                                     <h4><a href="tel:202-555-0100">{{ $phone['content_' . session('lang')] }}</a></h4>
                                 </div>
                             </div>
@@ -55,7 +55,7 @@
                                     </span>
                                 </div>
                                 <div class="contact-info-content">
-                                    <span>Mail Us</span>
+                                    <span>{{  $posts[11]['content_' . session('lang')] }}</span>
                                     <h4><a href="mailto:info@istek.uz">info@istek.uz</a></h4>
                                 </div>
                             </div>
@@ -68,30 +68,28 @@
                             <div class="row">
                                 <div class="col-xxl-12">
                                     <div class="contact-input">
-                                        <input type="text" placeholder="Your Name*">
+                                        <input type="text" placeholder="{{  $posts[12]['content_' . session('lang')] }}*">
                                     </div>
                                 </div>
                                 <div class="col-xxl-12">
                                     <div class="contact-input">
-                                        <input type="tel" placeholder="Phone Number">
+                                        <input type="tel" placeholder="{{  $posts[13]['content_' . session('lang')] }}">
                                     </div>
                                 </div>
                                 <div class="col-xxl-12">
                                     <div class="contact-input">
-                                        <textarea placeholder="Write Comment"></textarea>
+                                        <textarea placeholder="{{  $posts[14]['content_' . session('lang')] }}"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-xxl-12">
                                     <div class="postbox__comment-check mb-40">
                                         <input class="e-check-input is-black" type="checkbox" id="c-check">
-                                        <label class="e-check-label" for="c-check">I agree that my submitted
-                                            data is being collected and stored. *</label>
+                                        <label class="e-check-label" for="c-check">{{  $posts[15]['content_' . session('lang')] }} *</label>
                                     </div>
                                 </div>
                                 <div class="col-xxl-12">
                                     <div class="contact-btn">
-                                        <button type="submit" class="input-btn"><span class="btn-text">Post
-                                                Comment</span><span class="btn-icon"><i class="flaticon-next"></i></span></button>
+                                        <button type="submit" class="input-btn"><span class="btn-text">{{  $posts[16]['content_' . session('lang')] }}</span><span class="btn-icon"><i class="flaticon-next"></i></span></button>
                                     </div>
                                 </div>
                             </div>

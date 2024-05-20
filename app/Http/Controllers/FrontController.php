@@ -12,7 +12,8 @@ class FrontController extends Controller
 {
 
     public function blogs(){
-        return view('front.blogs');
+        $posts = Post::all();
+        return view('front.blogs', compact( 'posts',) );
     }
 
 
@@ -21,7 +22,8 @@ class FrontController extends Controller
         $contact_data = Page::where('slug', 'contact')->first();
         $phone = Post::find(10);
         $contact_us = Post::find(11);
-        return view('front.contact', compact('contact_data', 'phone', 'contact_us') );
+        $posts = Post::all();
+        return view('front.contact', compact('contact_data', 'posts', 'phone', 'contact_us') );
     }
 
 
@@ -32,11 +34,14 @@ class FrontController extends Controller
         $why_us = Page::where('slug', 'why_us')->first();
         $teams = Page::where('slug', 'team')->get();
         $about_mini_heding = Post::find(2); 
+        $for_call = Post::find(4); 
+        $posts = Post::all();
         $about_us = Post::find(3);
+        $images = Media::all();
 
         // dd($about_mini_heding);
         // dd($about_service);
-        return view('front.about', compact('campany', 'about_service', 'teams', 'about_mini_heding', 'about_us', 'why_us'));
+        return view('front.about', compact('campany',  'images', 'posts', 'about_service', 'teams', 'about_mini_heding', 'about_us', 'why_us'));
     }
 
     public function data(){

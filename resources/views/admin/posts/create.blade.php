@@ -30,7 +30,9 @@
                 @endif
             </select>
         </div>
-        <button type="submit" class="btn btn-success">Save</button>
+        <div class="d-flex ">
+            <button type="submit" class="px-5 btn m-3 btn-success">Save</button>
+        </div>
     </form>
 </div>
 @endsection

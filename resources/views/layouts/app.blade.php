@@ -26,7 +26,11 @@
 </head>
 
 <body>
-
+    @if (!session()->has('lang'))
+    @php
+        session(['lang' => 'en']);
+    @endphp
+@endif
     <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
@@ -44,16 +48,17 @@
                 <ul class="menu-list">
                 
                     <li class="menu-item-has-children menu-item">
-                        <a href="/" class="drop-down" data-hover='Contact'> Home</a>
+@section('posts', $posts)
+<a href="/" class="drop-down" data-hover='Contact'>   @yield('home') </a>
                     </li>
                     <li class="menu-item-has-children menu-item">
-                        <a href="/about" class="drop-down" data-hover='Contact'> About</a>
+                        <a href="/about" class="drop-down" data-hover='Contact'> @yield('about')  </a>
                     </li>
                     <li class="menu-item-has-children menu-item">
-                        <a href="/blog" class="drop-down" data-hover='Contact'> Blog</a>
+                        <a href="/blog" class="drop-down" data-hover='Contact'> @yield('blog') </a>
                     </li>
                     <li class="menu-item-has-children menu-item">
-                        <a href="/contact" class="drop-down" data-hover='Contact'> Contact</a>
+                        <a href="/contact" class="drop-down" data-hover='Contact'> @yield('contact') </a>
                     </li>
 					 <li class="menu-item-has-children menu-item">
                         <a href="/language/ru" class="drop-down" data-hover='Contact'> UZ</a>
@@ -119,16 +124,16 @@
                                         <ul>
                                            
                                             <li>
-                                                <a href="/">Home</a>
+                                                <a href="/"> @yield('home') </a>
                                             </li>
                                             <li>
-                                                <a href="/about">About</a>
+                                                <a href="/about">@yield('about')</a>
                                             </li>
                                             <li>
-                                                <a href="/blog">Blog</a>
+                                                <a href="/blog">@yield('blog')</a>
                                             </li>
                                             <li>
-                                                <a href="/contact">Contact</a>
+                                                <a href="/contact">@yield('contact')</a>
                                             </li>
 											<li class="has-dropdown">
                                                 <a href="javasript:void(0);">Lang</a>
@@ -153,7 +158,7 @@
                                         </span>
                                     </div>
                                     <div class="contact-link__text">
-                                        <p><a href="tel:"></a></p>
+                                        <p><a href="tel:+912111042000">+91 211 10 42 000</a></p>
                                     </div>
                                 </div>
                                 <div class="menu__bar-3 d-xl-none pl-35">
@@ -226,7 +231,7 @@
                             </div>
                             <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6">
                                 <div class="footer__widget footer__widget-2">
-                                    <h4 class="footer__widget-title mb-30">Популярные продукты</h4>
+                                    <h4 class="footer__widget-title mb-30">@yield('popular_products')</h4>
                                     <div class="footer__links">
                                         <ul>
                                             <li><a href="#">AKFA TRIO 6000</a></li>
@@ -243,11 +248,9 @@
                                     <h4 class="footer__widget-title mb-30">Company</h4>
                                     <div class="footer__links">
                                         <ul>
-                                            <li><a href="about.html">About us</a></li>
-                                            <li><a href="service-01.html">What We Do</a></li>
-                                            <li><a href="team.html">Our Teams</a></li>
-                                            <li><a href="service-01.html">Career</a></li>
-                                            <li><a href="contact.html">Contact Us</a></li>
+                                            <li><a href="/about">@yield('about') </a></li>
+                                            <li><a href="/blog">@yield('blog') </a></li>
+                                            <li><a href="/contact">@yield('contact') </a></li>
                                         </ul>
                                     </div>
                                 </div>
