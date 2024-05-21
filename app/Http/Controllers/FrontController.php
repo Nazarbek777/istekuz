@@ -40,7 +40,7 @@ class FrontController extends Controller
 
     public function about(){
         $pages = Page::all();
-        
+        $brands = Page::where('slug', 'brands')->get();
         $posts = $this->posts;
         $campany = Page::where('slug', 'campany')->first();
         $about_service = Page::where('slug', 'about-service')->first();
@@ -53,7 +53,7 @@ class FrontController extends Controller
 
         // dd($about_mini_heding);
         // dd($about_service);
-        return view('front.about', compact(  'campany',  'images', 'posts', 'about_service', 'teams', 'about_mini_heding', 'about_us', 'why_us'));
+        return view('front.about', compact( 'brands', 'campany',  'images', 'posts', 'about_service', 'teams', 'about_mini_heding', 'about_us', 'why_us'));
     }
 
     public function data(){

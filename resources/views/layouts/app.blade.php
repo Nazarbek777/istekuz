@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="{{$current_locale}}">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> Istek </title>
+    <title> @yield('title') </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/meanmenu.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
-    <link rel="stylesheet" href="assets/css/backToTop.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontAwesome6Pro.css">
-    <link rel="stylesheet" href="assets/css/flaticon_axil.css">
-    <link rel="stylesheet" href="assets/css/font-autography.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/odometer.css">
-    <link rel="stylesheet" href="assets/css/default.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/meanmenu.css">
+    <link rel="stylesheet" href="/assets/css/animate.css">
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="/assets/css/backToTop.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/css/fontAwesome6Pro.css">
+    <link rel="stylesheet" href="/assets/css/flaticon_axil.css">
+    <link rel="stylesheet" href="/assets/css/font-autography.css">
+    <link rel="stylesheet" href="/assets/css/slick.css">
+    <link rel="stylesheet" href="/assets/css/odometer.css">
+    <link rel="stylesheet" href="/assets/css/default.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
 <body>
@@ -48,7 +48,6 @@
                 <ul class="menu-list">
                 
                     <li class="menu-item-has-children menu-item">
-@section('posts', $posts)
 <a href="/" class="drop-down" data-hover='Contact'>   @yield('home') </a>
                     </li>
                     <li class="menu-item-has-children menu-item">
@@ -134,6 +133,9 @@
                                             </li>
                                             <li>
                                                 <a href="/contact">@yield('contact')</a>
+                                            </li>
+                                            <li>
+                                                <a href="/contact"> @lang('main.title') </a>
                                             </li>
 											<li class="has-dropdown">
                                                 <a href="javasript:void(0);">Lang</a>
@@ -321,7 +323,8 @@
                                                     <a href="https://maps.google.com" target="_blank">333 SE 2nd Avenue,
                                                         Suite
                                                         2067Miami,
-                                                        FL</a>
+                                                        FL
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     <a href="tel:+012111042000">+01 211 10 42 000</a>
@@ -356,7 +359,8 @@
                                                 <li>
                                                     <a href="https://maps.google.com" target="_blank">Hauptstrasse
                                                         94CH-4147
-                                                        Basel,Switzerland</a>
+                                                        Basel,Switzerland
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     <a href="tel:+912111042196">+91 211 10 42 196</a>
@@ -397,27 +401,27 @@
     <!-- back to top end -->
 
     <!-- JS here -->
-    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/vendor/waypoints.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/sidebar.js"></script>
-    <script src="assets/js/meanmenu.js"></script>
-    <script src="assets/js/backToTop.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/magnific-popup.min.js"></script>
-    <script src="assets/js/ajax-form.js"></script>
-    <script src="assets/js/jquery.appear.js"></script>
-    <script src="assets/js/jquery.odometer.min.js"></script>
-    <script src="assets/js/service-accordion.js"></script>
-    <script src="assets/js/chroma.min.js"></script>
-    <script src="assets/js/SplitText.min.js"></script>
-    <script src="assets/js/ScrollSmoother.min.js"></script>
-    <script src="assets/js/ScrollToPlugin.min.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/vanilla-tilt.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/vendor/waypoints.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/sidebar.js"></script>
+    <script src="/assets/js/meanmenu.js"></script>
+    <script src="/assets/js/backToTop.js"></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/slick.min.js"></script>
+    <script src="/assets/js/magnific-popup.min.js"></script>
+    <script src="/assets/js/ajax-form.js"></script>
+    <script src="/assets/js/jquery.appear.js"></script>
+    <script src="/assets/js/jquery.odometer.min.js"></script>
+    <script src="/assets/js/service-accordion.js"></script>
+    <script src="/assets/js/chroma.min.js"></script>
+    <script src="/assets/js/SplitText.min.js"></script>
+    <script src="/assets/js/ScrollSmoother.min.js"></script>
+    <script src="/assets/js/ScrollToPlugin.min.js"></script>
+    <script src="/assets/js/ScrollTrigger.min.js"></script>
+    <script src="/assets/js/gsap.min.js"></script>
+    <script src="/assets/js/vanilla-tilt.js"></script>
+    <script src="/assets/js/main.js"></script>
 </body>
 
 </html>

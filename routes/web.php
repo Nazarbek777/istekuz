@@ -32,8 +32,11 @@ Route::get('/about', [FrontController::class, 'about'])->name('about');
 Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
 Route::get('/blog', [FrontController::class, 'blogs'])->name('blogs');
 
-Route::get('language/{locale}', function ($locale) {
+Route::get('/test', function (){
+    return view('front.test');
+});
 
+Route::get('language/{locale}', function ($locale) {
     App::setLocale($locale);
     session(['lang' => $locale]);
     return redirect()->back();
