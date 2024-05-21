@@ -302,12 +302,12 @@
                 <div class="brand-wrapper brand-active slider-drag">
                     @foreach ($brands as $brand)
                         <div class="brand-item">
-                            <img src="{{ asset('storage/' . $brands[0]['image']) }}" alt="image not found">
+                            <img src="{{ asset('storage/' . $brand['image']) }}" alt="image not found">
                         </div>
                     @endforeach
                     @foreach ($brands as $brand)
                         <div class="brand-item">
-                            <img src="{{ asset('storage/' . $brands[0]['image']) }}" alt="image not found">
+                            <img src="{{ asset('storage/' . $brand['image']) }}" alt="image not found">
                         </div>
                     @endforeach
                 </div>
