@@ -59,15 +59,22 @@
                     <li class="menu-item-has-children menu-item">
                         <a href="/contact" class="drop-down" data-hover='Contact'> @yield('contact') </a>
                     </li>
-					 <li class="menu-item-has-children menu-item">
-                        <a href="/language/ru" class="drop-down" data-hover='Contact'> UZ</a>
+					<li class="has-dropdown">
+                        <a href="javasript:void(0);">Lang</a>
+                        <ul class="submenu">
+                            <li><a href="/language/uz">UZ</a></li>
+                            <li><a href="/language/ru">RU</a></li>
+                             <li><a href="/language/en">EN</a></li>
+                        </ul>
                     </li>
 					
 				</ul>
             </div>
             <div class="sidebar-social d-flex  gap-5">
-                <a href="https://www.instagram.com/" target="_blank"><img src="assets/img/icons/social/instagram.svg"
-                        alt="image"></a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="assets/img/icons/social/instagram.svg"
+                        alt="image">
+                    </a>
                 <a href="https://www.dribbble.com/" target="_blank"><img src="assets/img/icons/social/dribbble.svg"
                         alt="image"></a>
                 <a href="https://www.pinterest.com/" target="_blank"><img src="assets/img/icons/social/pinterest.svg"
@@ -133,9 +140,6 @@
                                             </li>
                                             <li>
                                                 <a href="/contact">@yield('contact')</a>
-                                            </li>
-                                            <li>
-                                                <a href="/contact"> @lang('main.title') </a>
                                             </li>
 											<li class="has-dropdown">
                                                 <a href="javasript:void(0);">Lang</a>
@@ -205,7 +209,7 @@
                                         <a href="index.html"><img src="assets/img/logo/logo-white.png"
                                                 alt="img not found"></a>
                                     </div>
-                                    <p class="made-by-text mb-30">Istaklarga mos takliflar</p>
+                                    <p class="made-by-text mb-30"> @lang('main.footer.motto')</p>
 
                                     <div class="social-links">
                                         <ul>
@@ -247,7 +251,7 @@
                             </div>
                             <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6">
                                 <div class="footer__widget footer__widget-3">
-                                    <h4 class="footer__widget-title mb-30">Company</h4>
+                                    <h4 class="footer__widget-title mb-30">@lang('main.about.campaign')</h4>
                                     <div class="footer__links">
                                         <ul>
                                             <li><a href="/about">@yield('about') </a></li>
@@ -259,15 +263,13 @@
                             </div>
                             <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
                                 <div class="footer__widget footer__widget-4">
-                                    <h4 class="footer__widget-title mb-30">Newsletter</h4>
-                                    <p class="mb-20">We’re always on the lookout for the cutting-edge tech and brand
-                                        innovations. Join us
-                                        today.</p>
+                                    <h4 class="footer__widget-title mb-30"> @lang('main.footer.newsletter') </h4>
+                                    <p class="mb-20"> @lang('main.footer.letter_text') </p>
                                     <div class="joining-form p-relative">
                                         <form action="#">
                                             <div class="input-wrapper mb-30">
                                                 <div class="single-input-field field-email">
-                                                    <input type="email" placeholder="Enter Mail">
+                                                    <input type="text" placeholder="@lang('main.form.phone_number')">
                                                 </div>
                                                 <div class="joining__btn">
                                                     <a href="#" class="circle-icon-btn"><i
@@ -380,7 +382,7 @@
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="copyright__text tpl__item-center">
-                                    <p>©2024 Все права защищены <a target="_blank"
+                                    <p>©2024 Все права   <a target="_blank"
                                             href="https://dora.uz">Dora Dev.</a></p>
                                 </div>
                             </div>
