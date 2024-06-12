@@ -23,16 +23,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('front.index');
-// });
+Route::get('/', function () {
+    return view('front.index');
+});
 
 
-Route::get('/about', [FrontController::class, 'about'])->name('about');
-Route::get('/contact', [FrontController::class, 'contact'])->name('contact');
-Route::get('/blog', [FrontController::class, 'blogs'])->name('blogs');
-
-Route::get('/test', function (){
+Route::get('/test', function () {
     return view('front.test');
 });
 
@@ -43,13 +39,13 @@ Route::get('language/{locale}', function ($locale) {
 })->name('lang');
 
 
-Route::prefix('dash')->group(function () {
-    Route::get('/', [AdminController::class, 'index'])->name('admin');
-    Route::resource('pages', PageController::class);
+Route::middleware(['checkAdmin:admin', 'auth'])->group(function () {
+    Route::group(['prefix' => 'admin'], function () {
+        Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
-    Route::resource('posts', PostController::class);
-    Route::resource('categories', CategoryController::class);
-
-    Route::resource('media', MediaController::class); 
-    Route::resource('catolog', CatalogController::class); 
+    });
 });
+
+//Route::prefix('admin')->group(function () {
+//    Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+//});
