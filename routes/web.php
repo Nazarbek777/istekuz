@@ -46,6 +46,8 @@ Route::middleware(['checkAdmin:admin', 'auth'])->group(function () {
     });
 });
 
+Route::resource('category', CategoryController::class);
+
 //Route::prefix('admin')->group(function () {
 //    Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 //});
