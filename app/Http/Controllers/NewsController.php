@@ -2,30 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ProductStoreRequest;
-use App\Http\Requests\ProductUpdateRequest;
-use App\Models\Category;
-use App\Models\Product;
+use App\Http\Requests\NewsStoreRequest;
+use App\Http\Requests\NewsUpdateRequest;
+use App\Models\News;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class ProductController extends Controller
+class NewsController extends Controller
 {
 
     public function index()
     {
-        $products = Product::paginate(10);
-        return view('admin.product.index', compact('products'));
+        $news = News::paginate(10);
+        return view('admin.news.index', compact('news'));
     }
 
 
     public function create()
     {
-        $categories = Category::all();
-        return view('admin.product.create', compact('categories'));
+        return view('admin.news.create');
     }
 
 
-    public function store(ProductStoreRequest $request)
+    public function store(NewsStoreRequest $request)
     {
         $validated = $request->validated();
 
@@ -34,8 +33,7 @@ class ProductController extends Controller
             $path = $request->file('image')->storeAs('product_photo', $name, 'public');
         }
 
-        Product::create([
-            'category_id' => $validated['category_id'],
+        News::create([
             'name_uz' => $validated['name_uz'],
             'name_ru' => $validated['name_ru'],
             'name_en' => $validated['name_en'],
@@ -45,55 +43,52 @@ class ProductController extends Controller
             'image' => $path ?? null,
         ]);
 
-        return redirect()->route('product.index')->with('success', 'Mahsulot Bazaga Saqlandi');
+        return redirect()->route('news.index')->with('success', 'Yangilik Bazaga Saqlandi');
     }
 
 
-    public function show(Product $product)
+    public function show(News $news)
     {
-        return view('admin.product.show', compact('product'));
+        return view('admin.news.show', compact('news'));
     }
 
 
-    public function edit(Product $product)
+    public function edit(News $news)
     {
-        $categories = Category::all();
-        return view('admin.product.edit', compact('product', 'categories'));
+        return view('admin.news.edit', compact('news'));
     }
 
-
-    public function update(ProductUpdateRequest $request, Product $product)
+    public function update(NewsUpdateRequest $request, News $news)
     {
         $validated = $request->validated();
 
         if ($request->hasFile('image')) {
-            if ($product->image) {
-                Storage::delete('public/' . $product->image);
+            if ($news->image) {
+                Storage::delete('public/' . $news->image);
             }
             $name = time() . '_' . $request->file('image')->getClientOriginalName();
             $path = $request->file('image')->storeAs('product_photo', $name, 'public');
         }
-        $product->update([
-            'category_id' => $validated['category_id'],
+        $news->update([
             'name_uz' => $validated['name_uz'],
             'name_ru' => $validated['name_ru'],
             'name_en' => $validated['name_en'],
             'description_uz' => $validated['description_uz'],
             'description_ru' => $validated['description_ru'],
             'description_en' => $validated['description_en'],
-            'image' => $path ?? $product->image, // Keep the old image if a new one is not uploaded
+            'image' => $path ?? $news->image, // Keep the old image if a new one is not uploaded
         ]);
 
-        return redirect()->route('product.index')->with('success', 'Mahsulot muvaffaqiyatli tahrirlandi');
+        return redirect()->route('news.index')->with('success', 'Yangilik muvaffaqiyatli tahrirlandi');
     }
 
 
-    public function destroy(Product $product)
+    public function destroy(News $news)
     {
-        if($product->image){
-            Storage::delete($product->image);
+        if($news->image){
+            Storage::delete($news->image);
         }
-        $product->delete();
+        $news->delete();
         return redirect()->back();
     }
 }

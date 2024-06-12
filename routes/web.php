@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
@@ -8,7 +9,11 @@ use App\Http\Controllers\CatalogController;
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\LogoController;
 use App\Http\Controllers\MediaController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
@@ -25,12 +30,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('front.index');
-});
+})->name('index');
+Route::get('/login', [AdminController::class, 'login'])->name('login');
+Route::post('/authenticate', [AdminController::class, 'authenticate'])->name('authenticate');
+Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
 
-
-Route::get('/test', function () {
-    return view('front.test');
-});
 
 Route::get('language/{locale}', function ($locale) {
     App::setLocale($locale);
@@ -40,16 +44,19 @@ Route::get('language/{locale}', function ($locale) {
 
 
 
-Route::get('/admins', [AdminController::class, 'index'])->name('admin');
 
 Route::middleware(['checkAdmin:admin', 'auth'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
-        Route::get('/admin', [AdminController::class, 'index'])->name('admin');
-
+        Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+        Route::resource('category', CategoryController::class);
+        Route::resource('product', ProductController::class);
+        Route::resource('about', AboutController::class);
+        Route::resource('news', NewsController::class);
+        Route::resource('team', TeamController::class);
+        Route::resource('logo', LogoController::class);
     });
 });
 
-Route::resource('category', CategoryController::class);
 
 //Route::prefix('admin')->group(function () {
 //    Route::get('/admin', [AdminController::class, 'index'])->name('admin');

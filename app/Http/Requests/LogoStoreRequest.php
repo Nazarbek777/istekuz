@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CategoryUpdateRequest extends FormRequest
+class LogoStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,8 @@ class CategoryUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'name_uz' => 'string|required',
-            'name_ru' => 'string|required',
-            'name_en' => 'string|required',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:4096',
+
         ];
     }
 }
