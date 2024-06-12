@@ -1,159 +1,1004 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light" data-menu-color="brand" data-topbar-color="light">
 
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Dashboard - SB Admin</title>
-    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-    <link href="/admin/css/styles.css" rel="stylesheet" />
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <title>Admin Panel | DORA®</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta name="googlebot" content="noindex">
+    <meta name="robots" content="noindex">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/images/fav/favicon-32x32.png">
+    <script src="https://cdn.tiny.cloud/1/fue1smszaahitfvslyp73bv383xmg4xray62oa8cdh5jlsvw/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <link href="/admin-panel/assets/libs/morris.js/morris.css" rel="stylesheet" type="text/css" />
+    <link href="/admin-panel/assets/libs/morris.js/morris.css" rel="stylesheet" type="text/css" />
+    <link href="/admin-panel/assets/libs/morris.js/morris.css" rel="stylesheet" type="text/css" />
+
+    <!-- App css -->
+    <link href="/admin-panel/assets/css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="/admin-panel/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <script src="/admin-panel/assets/js/config.js"></script>
+    <link href="/admin-panel/assets/css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="/admin-panel/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+
+
+    <link href="/admin-panel/assets/css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="/admin-panel/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <style>
+        .uz,
+        .ru,
+        .en {
+            display: none;
+        }
+
+        .btn_change_lang {
+            background: inherit;
+            border: 1px solid #775252;
+            color: #704f4f;
+            padding: 5px 10px;
+        }
+
+        .removeBtn {
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            color: #346ee0;
+        }
+
+        .removeBtn {
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            color: #346ee0;
+        }
+
+        .aaa {
+            border: none;
+        }
+    </style>
+    <script src="/admin-panel/assets/js/config.js"></script>
+
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        });
+    </script>
 </head>
+<style>
 
-<body class="sb-nav-fixed">
-    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.html">Start with Dora</a>
-        <!-- Sidebar Toggle-->
-        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
-                class="fas fa-bars"></i></button>
+</style>
 
-                <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="" href="#!"><i
-                    class="fas fa-bars"></i></button>
-        <!-- Navbar Search-->
-        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-            <a href="">En</a>
-            
-                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..."
-                    aria-describedby="btnNavbarSearch" />
-                <button class="btn btn-primary" id="" type="button"><i
-                        class="fas fa-global"></i></button>
-            </div>
-        </form>
-        <!-- Navbar-->
-       
-        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Settings</a></li>
-                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                    <li>
-                        <hr class="dropdown-divider" />
-                    </li>
-                    <li><a class="dropdown-item" href="#!">Logout</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-    <div id="layoutSidenav">
-        <div id="layoutSidenav_nav">
-            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                <div class="sb-sidenav-menu">
-                    <div class="nav">
-                        <div class="sb-sidenav-menu-heading">Core</div>
-                        <a class="nav-link" href="index.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Dashboard
-                        </a>
-                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
-                            data-bs-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-                                    data-bs-target="#pagesCollapseAuth" aria-expanded="false"
-                                    aria-controls="pagesCollapseAuth">
-                                    Authentication
-                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                </a>
-                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
-                                    data-bs-parent="#sidenavAccordionPages">
-                                    <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="login.html">Login</a>
-                                        <a class="nav-link" href="register.html">Register</a>
-                                        <a class="nav-link" href="password.html">Forgot Password</a>
-                                    </nav>
-                                </div>
-                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-                                    data-bs-target="#pagesCollapseError" aria-expanded="false"
-                                    aria-controls="pagesCollapseError">
-                                    Error
-                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                </a>
-                                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
-                                    data-bs-parent="#sidenavAccordionPages">
-                                    <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="401.html">401 Page</a>
-                                        <a class="nav-link" href="404.html">404 Page</a>
-                                        <a class="nav-link" href="500.html">500 Page</a>
-                                    </nav>
-                                </div>
-                            </nav>
-                        </div>
-                        <div class="sb-sidenav-menu-heading">Posts</div>
-                        <a class="nav-link" href="{{route('pages.index')}}">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            pages
-                        </a>
-                        <a class="nav-link" href="{{route('posts.index')}}">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Text Posts
-                        </a>
-                        <a class="nav-link" href="{{route('media.index')}}">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Media Posts
-                        </a>
-                        
 
-                       <button onclick="languageDisplay('ru')">
-                            RU
-                       </button>
-                       <button onclick="languageDisplay('en')">
-                        en
-                   </button>
-                   <button onclick="languageDisplay('uz')">
-                    UZ
-               </button>
-                        
-                    </div>
-                </div>
-                <div class="sb-sidenav-footer">
-                    <div class="small">Logged in as:</div>
-                    Start Bootstrap
-                </div>
-            </nav>
+<body>
+
+<!-- Begin page -->
+<div class="layout-wrapper">
+
+    <!-- ========== Left Sidebar ========== -->
+    <div class="main-menu">
+        <!-- Brand Logo -->
+        <div class="logo-box">
+            <!-- Brand Logo Light -->
+            <a href="/" class="logo-light">
+                <img src="/admin-panel/assets/images/logo-light.png" alt="logo" class="logo-lg" height="28">
+                <img src="/assets/images/fav/favicon-32x32.png" alt="small logo" class="logo-sm" height="28">
+            </a>
+
+            <!-- Brand Logo Dark -->
+            {{-- <a href="" class="logo-dark"> --}}
+            {{-- <img src="/admin-panel/assets/images/logo-dark.png" alt="dark logo" class="logo-lg" height="28"> --}}
+            {{-- <img src="/admin-panel/assets/images/logo-sm.png" alt="small logo" class="logo-sm" height="28"> --}}
+            {{-- </a> --}}
         </div>
-        <div id="layoutSidenav_content">
-            <main>
 
-                @yield('content')
-            </main>
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid px-4">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2023</div>
-                        <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
-                            <a href="#">Terms &amp; Conditions</a>
-                        </div>
+        <!--- Menu -->
+        <div data-simplebar>
+            <ul class="app-menu">
+
+                <li class="menu-title">Menu</li>
+
+                <li class="menu-item">
+                    <a href="#" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-home-smile"></i></span>
+                        <span class="menu-text"> Bosh sahifa </span>
+                        <span class="badge bg-primary rounded ms-auto">01</span>
+                    </a>
+                </li>
+
+
+
+                <li class="menu-item">
+                    <a href="#menuExpages2" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-file"></i></span>
+                        <span class="menu-text"> Xizmatlar </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="menuExpages2">
+                        <ul class="sub-menu">
+
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Veb-sayt xizmatlari</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Reklama xizmatlari</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="# class="menu-link">
+                                    <span class="menu-text">Biznes uchun vositalar</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Marketing xizmatlari</span>
+                                </a>
+                            </li>
+
+                        </ul>
                     </div>
-                </div>
-            </footer>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#menuExpages" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-file"></i></span>
+                        <span class="menu-text"> Vakansiya </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="menuExpages">
+                        <ul class="sub-menu">
+
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Vakansiya categorylari</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Vakansiya ro'yxati</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Ishga topshirganlar</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <a href="# class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-calendar"></i></span>
+                        <span class="menu-text"> Yangiliklar </span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-calendar"></i></span>
+                        <span class="menu-text"> Portfolio </span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-calendar"></i></span>
+                        <span class="menu-text"> Hamkorlar </span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-calendar"></i></span>
+                        <span class="menu-text"> Mijozlar </span>
+                    </a>
+                </li>
+
+                <li class="menu-title text-danger">Comming soon</li>
+
+                <li class="menu-item">
+                    <a href="#" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-calendar"></i></span>
+                        <span class="menu-text"> Calendar </span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#menuExpages" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-file"></i></span>
+                        <span class="menu-text"> Extra Pages </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="menuExpages">
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Starter</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Invoice</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Log In</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Register</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Recover Password</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Lock Screen</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Error 404</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Error 500</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#menuLayouts" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-layout"></i></span>
+                        <span class="menu-text"> Layouts </span>
+                        <span class="badge bg-blue ms-auto">New</span>
+                    </a>
+                    <div class="collapse" id="menuLayouts">
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Horizontal</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Sidenav Light</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Sidenav Dark</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Topbar Dark</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-title">Components</li>
+
+                <li class="menu-item">
+                    <a href="#menuComponentsui" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-cookie"></i></span>
+                        <span class="menu-text"> UI Elements </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="menuComponentsui">
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="ui-alerts.html" class="menu-link">
+                                    <span class="menu-text">Alerts</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-buttons.html" class="menu-link">
+                                    <span class="menu-text">Buttons</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-cards.html" class="menu-link">
+                                    <span class="menu-text">Cards</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-carousel.html" class="menu-link">
+                                    <span class="menu-text">Carousel</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-dropdowns.html" class="menu-link">
+                                    <span class="menu-text">Dropdowns</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-video.html" class="menu-link">
+                                    <span class="menu-text">Embed Video</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-general.html" class="menu-link">
+                                    <span class="menu-text">General UI</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-grid.html" class="menu-link">
+                                    <span class="menu-text">Grid</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-images.html" class="menu-link">
+                                    <span class="menu-text">Images</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-list-group.html" class="menu-link">
+                                    <span class="menu-text">List Group</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-modals.html" class="menu-link">
+                                    <span class="menu-text">Modals</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-offcanvas.html" class="menu-link">
+                                    <span class="menu-text">Offcanvas</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-placeholders.html" class="menu-link">
+                                    <span class="menu-text">Placeholders</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-progress.html" class="menu-link">
+                                    <span class="menu-text">Progress</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-spinners.html" class="menu-link">
+                                    <span class="menu-text">Spinners</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-tabs-accordions.html" class="menu-link">
+                                    <span class="menu-text">Tabs & Accordions</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-tooltips-popovers.html" class="menu-link">
+                                    <span class="menu-text">Tooltips & Popovers</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="ui-typography.html" class="menu-link">
+                                    <span class="menu-text">Typography</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#menuExtendedui" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-briefcase-alt-2"></i></span>
+                        <span class="menu-text"> Components </span>
+                        <span class="badge bg-info ms-auto">Hot</span>
+                    </a>
+                    <div class="collapse" id="menuExtendedui">
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="components-range-slider.html" class="menu-link">
+                                    <span class="menu-text">Range Slider</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="components-sweet-alert.html" class="menu-link">
+                                    <span class="menu-text">Sweet Alert</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="components-loading-buttons.html" class="menu-link">
+                                    <span class="menu-text">Loading Buttons</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#menuIcons" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-aperture"></i></span>
+                        <span class="menu-text"> Icons </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="menuIcons">
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="icons-feather.html" class="menu-link">
+                                    <span class="menu-text">Feather Icons</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="icons-mdi.html" class="menu-link">
+                                    <span class="menu-text">Material Design Icons</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="icons-dripicons.html" class="menu-link">
+                                    <span class="menu-text">Dripicons</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#menuForms" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bxs-eraser"></i></span>
+                        <span class="menu-text"> Forms </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="menuForms">
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="forms-elements.html" class="menu-link">
+                                    <span class="menu-text">General Elements</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="forms-advanced.html" class="menu-link">
+                                    <span class="menu-text">Advanced</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="forms-validation.html" class="menu-link">
+                                    <span class="menu-text">Validation</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="forms-quilljs.html" class="menu-link">
+                                    <span class="menu-text">Editor</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="forms-file-uploads.html" class="menu-link">
+                                    <span class="menu-text">File Uploads</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#menuTables" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-table"></i></span>
+                        <span class="menu-text"> Tables </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="menuTables">
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="tables-basic.html" class="menu-link">
+                                    <span class="menu-text">Basic Tables</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="tables-datatables.html" class="menu-link">
+                                    <span class="menu-text">Data Tables</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#menuCharts" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-doughnut-chart"></i></span>
+                        <span class="menu-text"> Charts </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="menuCharts">
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="charts-apex.html" class="menu-link">
+                                    <span class="menu-text">Apex Charts</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="charts-morris.html" class="menu-link">
+                                    <span class="menu-text">Morris Charts</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="charts-chartjs.html" class="menu-link">
+                                    <span class="menu-text">Chartjs Charts</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#menuMaps" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-map-alt"></i></span>
+                        <span class="menu-text"> Maps </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="menuMaps">
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="maps-google.html" class="menu-link">
+                                    <span class="menu-text">Google Maps</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="maps-vector.html" class="menu-link">
+                                    <span class="menu-text">Vector Maps</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#menuMultilevel" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                        <span class="menu-icon"><i class="bx bx-share-alt"></i></span>
+                        <span class="menu-text"> Multi Level </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="menuMultilevel">
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="#menuMultilevel2" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                                    <span class="menu-text"> Second Level </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <div class="collapse" id="menuMultilevel2">
+                                    <ul class="sub-menu">
+                                        <li class="menu-item">
+                                            <a href="javascript: void(0);" class="menu-link">
+                                                <span class="menu-text">Item 1</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="javascript: void(0);" class="menu-link">
+                                                <span class="menu-text">Item 2</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="#menuMultilevel3" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                                    <span class="menu-text">Third Level</span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <div class="collapse" id="menuMultilevel3">
+                                    <ul class="sub-menu">
+                                        <li class="menu-item">
+                                            <a href="javascript: void(0);" class="menu-link">
+                                                <span class="menu-text">Item 1</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#menuMultilevel4" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                                                <span class="menu-text">Item 2</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <div class="collapse" id="menuMultilevel4">
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item">
+                                                        <a href="javascript: void(0);" class="menu-link">
+                                                            <span class="menu-text">Item 1</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="javascript: void(0);" class="menu-link">
+                                                            <span class="menu-text">Item 2</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-    </script>
-    <script src="/admin/js/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="/admin/assets/demo/chart-area-demo.js"></script>
-    <script src="/admin/assets/demo/chart-bar-demo.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
-        crossorigin="anonymous"></script>
-    <script src="/admin/js/datatables-simple-demo.js"></script>
+
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="page-content">
+
+        <!-- ========== Topbar Start ========== -->
+        <div class="navbar-custom">
+            <div class="topbar">
+                <div class="topbar-menu d-flex align-items-center gap-lg-2 gap-1">
+
+                    <!-- Brand Logo -->
+                    {{-- <div class="logo-box">
+                        <!-- Brand Logo Light -->
+                        <a href="/" class="logo-light">
+
+                                <img src="/admin-panel/assets/images/logo-light.png" alt="logo" class="logo-lg" height="28">
+
+                        </a>
+
+                        <!-- Brand Logo Dark -->
+                        <a href="/" class="logo-dark">
+
+                                <img src="/admin-panel/assets/images/logo-dark.png" alt="logo" class="logo-lg" height="28">
+
+                        </a>
+                    </div> --}}
+
+                    <!-- Sidebar Menu Toggle Button -->
+                    <button class="button-toggle-menu">
+                        <div class="row align-items-center flex-nowrap">
+                            <div class="col-auto d-md-none"> <!-- Display only on mobile (<= 768px) -->
+                                <img src="/assets/images/fav/favicon-32x32.png" alt="" class="logo-lg" height="28">
+                            </div>
+                            <div class="col-auto">
+                                <i class="mdi mdi-menu"></i>
+                            </div>
+                        </div>
+                    </button>
+
+                </div>
+
+                <ul class="topbar-menu d-flex align-items-center gap-4">
+
+                    <li class="d-none d-md-inline-block">
+                        <a class="nav-link" href="" data-bs-toggle="fullscreen">
+                            <i class="mdi mdi-fullscreen font-size-24"></i>
+                        </a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <i class="mdi mdi-magnify font-size-24"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-animated dropdown-menu-end dropdown-lg p-0">
+                            <form class="p-3">
+                                <input type="search" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                            </form>
+                        </div>
+                    </li>
+
+
+
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <i class="mdi mdi-bell font-size-24"></i>
+                            <span class="badge bg-danger rounded-circle noti-icon-badge">9</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg py-0">
+                            <div class="p-2 border-top-0 border-start-0 border-end-0 border-dashed border">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0 font-size-16 fw-semibold"> Notification</h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="javascript: void(0);" class="text-dark text-decoration-underline">
+                                            <small>Clear All</small>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="px-1" style="max-height: 300px;" data-simplebar>
+
+                                <h5 class="text-muted font-size-13 fw-normal mt-2">Today</h5>
+                                <!-- item-->
+
+                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item card unread-noti shadow-none mb-1">
+                                    <div class="card-body">
+                                        <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <div class="notify-icon bg-primary">
+                                                    <i class="mdi mdi-comment-account-outline"></i>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 text-truncate ms-2">
+                                                <h5 class="noti-item-title fw-semibold font-size-14">Datacorp
+                                                    <small class="fw-normal text-muted ms-1">1 min ago</small>
+                                                </h5>
+                                                <small class="noti-item-subtitle text-muted">Caleb Flakelar
+                                                    commented on
+                                                    Admin</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item card read-noti shadow-none mb-1">
+                                    <div class="card-body">
+                                        <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <div class="notify-icon bg-info">
+                                                    <i class="mdi mdi-account-plus"></i>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 text-truncate ms-2">
+                                                <h5 class="noti-item-title fw-semibold font-size-14">Admin <small class="fw-normal text-muted ms-1">1 hours ago</small></h5>
+                                                <small class="noti-item-subtitle text-muted">New user
+                                                    registered</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <h5 class="text-muted font-size-13 fw-normal mt-0">Yesterday</h5>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item card read-noti shadow-none mb-1">
+                                    <div class="card-body">
+                                        <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <div class="notify-icon">
+                                                    <img src="/admin-panel/assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 text-truncate ms-2">
+                                                <h5 class="noti-item-title fw-semibold font-size-14">Cristina Pride
+                                                    <small class="fw-normal text-muted ms-1">1 day ago</small>
+                                                </h5>
+                                                <small class="noti-item-subtitle text-muted">Hi, How are you? What
+                                                    about
+                                                    our next meeting</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <h5 class="text-muted font-size-13 fw-normal mt-0">30 Dec 2021</h5>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item card read-noti shadow-none mb-1">
+                                    <div class="card-body">
+                                        <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <div class="notify-icon bg-primary">
+                                                    <i class="mdi mdi-comment-account-outline"></i>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 text-truncate ms-2">
+                                                <h5 class="noti-item-title fw-semibold font-size-14">Datacorp</h5>
+                                                <small class="noti-item-subtitle text-muted">Caleb Flakelar
+                                                    commented on
+                                                    Admin</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item card read-noti shadow-none mb-1">
+                                    <div class="card-body">
+                                        <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <div class="notify-icon">
+                                                    <img src="/admin-panel/assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 text-truncate ms-2">
+                                                <h5 class="noti-item-title fw-semibold font-size-14">Karen Robinson
+                                                </h5>
+                                                <small class="noti-item-subtitle text-muted">Wow ! this admin looks
+                                                    good
+                                                    and awesome design</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="text-center">
+                                    <i class="mdi mdi-dots-circle mdi-spin text-muted h3 mt-0"></i>
+                                </div>
+                            </div>
+
+                            <!-- All-->
+                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item border-top border-light py-2">
+                                View All
+                            </a>
+
+                        </div>
+                    </li>
+
+                    <li class="nav-link" id="theme-mode">
+                        <i class="bx bx-moon font-size-24"></i>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="/admin-panel/assets/images/users/avatar-4.jpg" alt="user-image" class="rounded-circle">
+                            <span class="ms-1 d-none d-md-inline-block">
+                                    Jamie D. <i class="mdi mdi-chevron-down"></i>
+                                </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end profile-dropdown ">
+                            <!-- item-->
+                            <div class="dropdown-header noti-title">
+                                <h6 class="text-overflow m-0">Welcome !</h6>
+                            </div>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="fe-user"></i>
+                                <span>My Account</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="fe-settings"></i>
+                                <span>Settings</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="#" class="dropdown-item notify-item">
+                                <i class="fe-lock"></i>
+                                <span>Lock Screen</span>
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <!-- item-->
+                            <a href="#" class="dropdown-item notify-item">
+                                <i class="fe-log-out"></i>
+                                <span>
+                                        <form method="post" action="#">
+                                            @csrf
+                                            <button class="menu-text">Chiqish</button>
+                                        </form>
+                                    </span>
+                            </a>
+
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- ========== Topbar End ========== -->
+
+        @yield('content')
+
+        <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div>
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                            © Dashtrap
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-none d-md-flex gap-4 align-item-center justify-content-md-end">
+                            <p class="mb-0">Design & Develop by <a href="https://dora.uz/" target="_blank">Dora</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end Footer -->
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+
+</div>
+<!-- END wrapper -->
+
+<!-- App js -->
+<script src="/admin-panel/assets/js/vendor.min.js"></script>
+<script src="/admin-panel/assets/js/app.js"></script>
+
+<!-- Knob charts js -->
+<script src="/admin-panel/assets/libs/jquery-knob/jquery.knob.min.js"></script>
+
+<!-- Sparkline Js-->
+<script src="/admin-panel/assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+<script src="/admin-panel/assets/libs/morris.js/morris.min.js"></script>
+
+<script src="/admin-panel/assets/libs/raphael/raphael.min.js"></script>
+
+
+<script src="/admin-panel/assets/js/vendor.min.js"></script>
+<script src="/admin-panel/assets/js/app.js"></script>
+
+<!-- Knob charts js -->
+<script src="/admin-panel/assets/libs/jquery-knob/jquery.knob.min.js"></script>
+
+<!-- Sparkline Js-->
+<script src="/admin-panel/assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+<script src="/admin-panel/assets/libs/morris.js/morris.min.js"></script>
+
+<script src="/admin-panel/assets/libs/raphael/raphael.min.js"></script>
+
+<script src="/admin-panel/assets/js/vendor.min.js"></script>
+<script src="/admin-panel/assets/js/app.js"></script>
+
+<!-- Knob charts js -->
+<script src="/admin-panel/assets/libs/jquery-knob/jquery.knob.min.js"></script>
+
+<!-- Sparkline Js-->
+<script src="/admin-panel/assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+<script src="/admin-panel/assets/libs/morris.js/morris.min.js"></script>
+
+<script src="/admin-panel/assets/libs/raphael/raphael.min.js"></script>
+
+
+<!-- Dashboard init-->
+
+<script src="/admin-panel/assets/js/pages/dashboard.js"></script>
+
+
+<script>
+    function changeLang(lang) {
+        console.log('foiuewgf8yew')
+        const classes = ['uz', 'ru', 'en'];
+        classes.forEach(cls => {
+            const elements = document.querySelectorAll(`.${cls}`);
+            elements.forEach(element => {
+                element.style.display = cls === lang ? 'block' : 'none';
+            });
+        });
+    }
+    changeLang('uz')
+</script>
+
+
 </body>
 
 </html>

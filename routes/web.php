@@ -39,6 +39,9 @@ Route::get('language/{locale}', function ($locale) {
 })->name('lang');
 
 
+
+Route::get('/admins', [AdminController::class, 'index'])->name('admin');
+
 Route::middleware(['checkAdmin:admin', 'auth'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
         Route::get('/admin', [AdminController::class, 'index'])->name('admin');
