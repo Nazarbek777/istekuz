@@ -20,5 +20,7 @@ return[
     'form' => [
         'phone_number' => 'Telefon raqam',
         'send' => 'Yuborish',
-    ] 
+    ],
+    'language' => 'Til',
+    'main' => 'Bosh sahifa'
 ];

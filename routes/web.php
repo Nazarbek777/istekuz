@@ -9,6 +9,7 @@ use App\Http\Controllers\CatalogController;
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\NewsController;
@@ -28,19 +29,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('front.index');
-})->name('index');
+
+Route::get('/', [FrontendController::class, 'home'])->name('index');
+Route::get('/about', [FrontendController::class, 'about'])->name('about');
+Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
+Route::get('/blog', [FrontendController::class, 'blog'])->name('blog');
+Route::get('/product', [FrontendController::class, 'product'])->name('product');
+Route::get('/blog/{blog}', [FrontendController::class, 'singleBlog'])->name('singleBlog');
+
 Route::get('/login', [AdminController::class, 'login'])->name('login');
 Route::post('/authenticate', [AdminController::class, 'authenticate'])->name('authenticate');
 Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
 
 
-Route::get('language/{locale}', function ($locale) {
-    App::setLocale($locale);
-    session(['lang' => $locale]);
-    return redirect()->back();
-})->name('lang');
+Route::get('/{lang}', function ($lang) {
+    session(['lang' => $lang]);
+    return back();
+})->where('lang', 'en|ru|uz');
 
 
 
@@ -56,8 +61,3 @@ Route::middleware(['checkAdmin:admin', 'auth'])->group(function () {
         Route::resource('logo', LogoController::class);
     });
 });
-
-
-//Route::prefix('admin')->group(function () {
-//    Route::get('/admin', [AdminController::class, 'index'])->name('admin');
-//});
