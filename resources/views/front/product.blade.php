@@ -8,10 +8,10 @@
 	<section id="ori-breadcrumbs" class="ori-breadcrumbs-section position-relative" data-background="assets/img/bg/bread-bg.png">
 		<div class="container">
 			<div class="ori-breadcrumb-content text-center ul-li">
-				<h1>Maxsulotlar</h1>
+				<h1>{{__('main.products')}}</h1>
 				<ul>
-					<li><a href="home.html">Home</a></li>
-					<li>Maxsulotlar</li>
+					<li><a href="{{ route('index')}}">{{__('main.main')}}</a></li>
+					<li>{{__('main.products')}}</li>
 				</ul>
 			</div>
 		</div>
@@ -47,7 +47,7 @@
                                                         <img src="/storage/{{ $tm->image}}" alt="rasm yo'q">
                                                     </div>
                                                     <div class="add-cart-btn text-uppercase text-center">
-                                                        <a href="{{route('singleProduct' , $tm->id)}}">Batafsil</a>
+                                                        <a href="{{route('singleProduct' , $tm->id)}}">{{__('main.readMore')}}</a>
                                                     </div>
                                                 </div>
                                                 <div class="shop-text">
@@ -65,7 +65,7 @@
 						<div class="ori-shop-sidebar-wrap">
 							<div class="ori-shop-sidebar-widget">
 								<div class="category-widget ul-li-block">
-									<h3 class="widget-title">Kategoriyalar</h3>
+									<h3 class="widget-title">{{__('main.category')}}</h3>
                                     <ul>
                                         @foreach($categories as $category)
                                             <li><a href="{{ route('product') }}">{{ $category['name_' . $lang] }} <span>({{ $category->products->count() }})</span></a></li>
@@ -76,7 +76,7 @@
 
 							<div class="ori-shop-sidebar-widget">
 								<div class="best-seller-widget ul-li-block">
-									<h3 class="widget-title">Yangiliklar</h3>
+									<h3 class="widget-title">{{__('main.news')}}</h3>
 									<div class="best-seller-item-wrap">
 										@foreach($news as $tm )
                                             <div class="best-seller-item d-flex align-items-center">

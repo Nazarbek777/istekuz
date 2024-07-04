@@ -9,9 +9,9 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
         <div class="ori-slider-content-wrapper-1 postion-relative">
             <div class="ori-slider-social position-absolute text-uppercase ul-li">
                 <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                    <li><a href="#"><i class="fab fa-youtube"></i> Youtube</a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i>twitter</a></li>
+                    <li><a href="https://www.facebook.com/people/Istek/61557360990149/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="https://www.youtube.com/@istek_uz" target="_blank"><i class="fab fa-youtube"></i> Youtube</a></li>
+                    <li><a href="https://www.instagram.com/istek.uz/" target="_blank"><i class="fab fa-instagram"></i>Instagram</a></li>
                 </ul>
             </div>
             <div class="ori-slider-wrap-1">
@@ -108,14 +108,14 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                         <div class="col-lg-4 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <div class="ori-service-inner-item position-relative">
                                 <div class="ori-service-more position-absolute">
-                                    <a href="{{ route('mission')}}"><i class="fas fa-arrow-righa"></i></a>
+                                    <a href="{{ route('mission')}}"><i class="fas fa-arrow-right"></i></a>
                                 </div>
                                 <div class="ori-service-img-title position-relative">
                                     <div class="ori-service-img">
                                         <img src="assets/img/service/ser2.png" alt="">
                                     </div>
                                     <div class="ori-service-title text-center position-absolute">
-                                        <h3>{{__('main.mission')}}<i class="fal fa-arrow-right"></i></h3>
+                                        <h3>{{__('main.about48')}}<i class="fal fa-arrow-right"></i></h3>
                                     </div>
                                 </div>
                             </div>

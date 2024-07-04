@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Category;
+
 $lang = \Illuminate\Support\Facades\App::getLocale();
 $categories = Category::all();
 ?>
@@ -26,10 +27,10 @@ $categories = Category::all();
                         <li class="dropdown">
                             <a href="{{ route('about')}}">{{__('main.istek1')}}</a>
                             <ul class="dropdown-menu clearfix">
-                                <li><a target="_blank" href="{{route('about')}}">{{__('main.about')}}</a></li>
-                                <li><a target="_blank" href="{{route('mission')}}">Mission</a></li>
-                                <li><a target="_blank" href="404">{{__('main.history')}}</a></li>
-                                <li><a target="_blank" href="404">{{__('main.partner')}}</a></li>
+                                <li><a href="{{route('about')}}">{{__('main.about')}}</a></li>
+                                <li><a href="{{route('mission')}}">{{__('main.about48')}}</a></li>
+                                <li><a href="404">{{__('main.history')}}</a></li>
+                                <li><a href="404">{{__('main.partner')}}</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -38,21 +39,22 @@ $categories = Category::all();
                                 @foreach ($categories as $category )
 
                                 <li class="dropdown">
-                                    <a  target="_blank" href="{{route('product')}}">{{$category['name_'. $lang]}}</a>
+                                    <a href="{{route('product')}}">{{$category['name_'. $lang]}}</a>
                                     <ul class="dropdown-menu clearfix">
                                         @foreach ($category->products as $product)
-                                            <li><a target="_blank" href="{{route('singleProduct', $product->id)}}">{{ $product['name_'. $lang] }}</a></li>
+                                        <li><a href="{{route('singleProduct', $product->id)}}">{{ $product['name_'. $lang] }}</a></li>
                                         @endforeach
                                     </ul>
                                 </li>
                                 @endforeach
                             </ul>
-{{--                            <a href="#">{{__('main.products')}}</a>--}}
-{{--                            <ul class="dropdown-menu clearfix">--}}
-{{--                                @foreach ($categories as $category )--}}
-{{--                                <li><a target="_blank" href="{{ route('category', $category->id )}}">{{ $category['name_'.App::getLocale()]}}</a></li>--}}
-{{--                                @endforeach--}}
-{{--                            </ul>--}}
+                            {{-- <a href="#">{{__('main.products')}}</a>--}}
+                            {{-- <ul class="dropdown-menu clearfix">--}}
+                            {{-- @foreach ($categories as $category )--}}
+                            {{-- <li><a href="{{ route('category', $category->id )}}">{{ $category['name_'.App::getLocale()]}}</a>
+                        </li>--}}
+                        {{-- @endforeach--}}
+                        {{-- </ul>--}}
                         </li>
                         <li>
                             <a class="" href="{{ route('blog')}}">{{__('main.blog')}}</a>
@@ -102,18 +104,18 @@ $categories = Category::all();
                             <li class="dropdown">
                                 <a href="{{ route('about')}}">{{__('main.istek')}}</a>
                                 <ul class="dropdown-menu clearfix">
-                                    <li><a target="_blank" href="{{ route('about')}}">{{__('main.about')}} </a></li>
-                                    <li><a target="_blank" href="404">{{__('main.history')}}</a></li>
-                                    <li><a target="_blank" href="cart.html">{{__('main.partner')}}</a></li>
+                                    <li><a href="{{ route('about')}}">{{__('main.about')}} </a></li>
+                                    <li><a href="404">{{__('main.history')}}</a></li>
+                                    <li><a href="cart.html">{{__('main.partner')}}</a></li>
                                 </ul>
                             </li>
 
                             <li class="dropdown">
                                 <a href="{{route('product')}}">{{__('main.products')}}</a>
                                 <ul class="dropdown-menu clearfix">
-                                @foreach ($categories as $category )
-                                <li><a target="_blank" href="{{ route('product')}}">{{ $category['name_'.App::getLocale()]}}</a></li>
-                                @endforeach
+                                    @foreach ($categories as $category )
+                                    <li><a href="{{ route('product')}}">{{ $category['name_'.App::getLocale()]}}</a></li>
+                                    @endforeach
                                 </ul>
                             </li>
 
@@ -202,10 +204,10 @@ $categories = Category::all();
                         <div class="content-box">
                             <h5>Social Account</h5>
                             <ul class="social-box">
-                                <li><a href="https://www.facebook.com/" class="fab fa-facebook-f"></a></li>
-                                <li><a href="https://www.twitter.com/" class="fab fa-twitter"></a></li>
-                                <li><a href="https://dribbble.com/" class="fab fa-dribbble"></a></li>
-                                <li><a href="https://www.linkedin.com/" class="fab fa-linkedin"></a></li>
+                                <a href="https://www.facebook.com/people/Istek/61557360990149/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://t.me/istek_uz" target="_blank"><i class="fab fa-telegram"></i></a>
+                                <a href="https://www.instagram.com/istek.uz/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.youtube.com/@istek_uz" target="_blank"><i class="fab fa-youtube"></i></a>
                             </ul>
                         </div>
                     </div>
@@ -214,5 +216,5 @@ $categories = Category::all();
         </div>
     </div>
 </div>
-    <!-- End of header section
+<!-- End of header section
 	============================================= -->

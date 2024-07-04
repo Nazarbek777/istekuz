@@ -20,10 +20,7 @@ class FrontendController extends Controller
         return view('front.index', compact('logos','teams', 'news','categories'));
     }
 
-    public function mission()
-    {
-        return view('front.mission');
-    }
+    
     public function about()
     {
         $teams = Team::all();
