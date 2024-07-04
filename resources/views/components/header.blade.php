@@ -15,7 +15,7 @@ $categories = Category::all();
     <div class="ori-header-content-area">
         <div class="ori-header-content d-flex align-items-center justify-content-between">
             <div class="brand-logo">
-                <a href="#"><img src="assets/img/logo/logo1.png" alt=""></a>
+                <a href="#"><img src="/assets/img/logo/logo1.png" alt=""></a>
             </div>
             <div class="ori-main-navigation-area">
                 <nav class="ori-main-navigation clearfix ul-li">
