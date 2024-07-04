@@ -6,10 +6,7 @@ return[
     ],
 
     'title'  =>  'Sarlavha!',
-    'about' => [
-        'campaign' => 'kampaniya',
-        
-    ],
+    
 
     'footer' => [
         'newsletter' => 'Biz bilan bog`laning',
@@ -22,5 +19,12 @@ return[
         'send' => 'Yuborish',
     ],
     'language' => 'Til',
-    'main' => 'Bosh sahifa'
+    'main' => 'Bosh sahifa',
+    'istek' => 'Istak',
+    'about' => 'Biz haqimizda',
+    'history' => 'Tarix',
+    'partner' => 'Hamkorlar',
+    'products' => 'Mahsulotlar',
+    'blog' => 'Blog',
+    'contact' => 'aloqa'
 ];

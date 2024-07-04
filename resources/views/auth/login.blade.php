@@ -26,11 +26,11 @@
 
                         <div class="text-center w-75 mx-auto auth-logo mb-4">
                             <a href="{{ route('index')}}" class="logo-dark">
-                                <span><img src="/frontend/images/MiracleTourLogoBlack.png" alt="" height="35"></span>
+                                <span><img src="/assets/img/logo/logo1.png" alt="" height="35"></span>
                             </a>
 
                             <a href="{{ route('index')}}" class="logo-light">
-                                <span><img src="/frontend/images/MiracleTourLogo.png" alt="" height="35"></span>
+                                <span><img src="/assets/img/logo/logo1.png" alt="" height="35"></span>
                             </a>
                         </div>
                         @if (session('error'))

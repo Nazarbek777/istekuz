@@ -39,6 +39,7 @@ class ProductController extends Controller
             'name_uz' => $validated['name_uz'],
             'name_ru' => $validated['name_ru'],
             'name_en' => $validated['name_en'],
+            'price' => $validated['price'],
             'description_uz' => $validated['description_uz'],
             'description_ru' => $validated['description_ru'],
             'description_en' => $validated['description_en'],
@@ -57,8 +58,9 @@ class ProductController extends Controller
 
     public function edit(Product $product)
     {
+        $producta = Product::all();
         $categories = Category::all();
-        return view('admin.product.edit', compact('product', 'categories'));
+        return view('admin.product.edit', compact('product', 'categories','producta'));
     }
 
 
@@ -78,6 +80,7 @@ class ProductController extends Controller
             'name_uz' => $validated['name_uz'],
             'name_ru' => $validated['name_ru'],
             'name_en' => $validated['name_en'],
+            'price' => $validated['price'],
             'description_uz' => $validated['description_uz'],
             'description_ru' => $validated['description_ru'],
             'description_en' => $validated['description_en'],

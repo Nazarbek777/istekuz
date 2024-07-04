@@ -20,6 +20,7 @@ class ProductStoreRequest extends FormRequest
             'name_uz' => 'required|string|max:255',
             'name_ru' => 'required|string|max:255',
             'name_en' => 'required|string|max:255',
+            'price' => 'required|string|max:255',
             'description_uz' => 'nullable|string',
             'description_ru' => 'nullable|string',
             'description_en' => 'nullable|string',

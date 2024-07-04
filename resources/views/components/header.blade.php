@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\Category;
-
+$lang = \Illuminate\Support\Facades\App::getLocale();
 $categories = Category::all();
 ?>
 <div id="preloader"></div>
@@ -24,30 +24,43 @@ $categories = Category::all();
                             <a href="{{ route('index')}}">{{__('main.main')}}</a>
                         </li>
                         <li class="dropdown">
-                            <a href="{{ route('about')}}">Istek</a>
+                            <a href="{{ route('about')}}">{{__('main.istek')}}</a>
                             <ul class="dropdown-menu clearfix">
-                                <li><a target="_blank" href="{{route('about')}}">Biz haqimizda </a></li>
-                                <li><a target="_blank" href="shop-single.html">Tarix</a></li>
-                                <li><a target="_blank" href="cart.html">Hamkorlar</a></li>
+                                <li><a target="_blank" href="{{route('about')}}">{{__('main.about')}}</a></li>
+                                <li><a target="_blank" href="">{{__('main.history')}}</a></li>
+                                <li><a target="_blank" href="">{{__('main.partner')}}</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="{{ route('product')}}">Maxsulotlar</a>
+                            <a href="{{route('product')}}">{{__('main.products')}}</a>
                             <ul class="dropdown-menu clearfix">
                                 @foreach ($categories as $category )
-                                <li><a target="_blank" href="{{ route('product')}}">{{ $category['name_'.App::getLocale()]}}</a></li>
-                                @endforeach
 
+                                <li class="dropdown">
+                                    <a  target="_blank" href="{{route('product')}}">{{$category['name_'. $lang]}}</a>
+                                    <ul class="dropdown-menu clearfix">
+                                        @foreach ($category->products as $product)
+                                            <li><a target="_blank" href="{{route('singleProduct', $product->id)}}">{{ $product['name_'. $lang] }}</a></li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                                @endforeach
                             </ul>
+{{--                            <a href="#">{{__('main.products')}}</a>--}}
+{{--                            <ul class="dropdown-menu clearfix">--}}
+{{--                                @foreach ($categories as $category )--}}
+{{--                                <li><a target="_blank" href="{{ route('category', $category->id )}}">{{ $category['name_'.App::getLocale()]}}</a></li>--}}
+{{--                                @endforeach--}}
+{{--                            </ul>--}}
                         </li>
                         <li>
-                            <a class="" href="{{ route('blog')}}">Blog</a>
+                            <a class="" href="{{ route('blog')}}">{{__('main.blog')}}</a>
                         </li>
                         <li>
-                            <a href="{{ route('contact')}}">Aloqa</a>
+                            <a href="{{ route('contact')}}">{{__('main.contact')}}</a>
                         </li>
                         <li class="dropdown">
-                            <a href="!#" class="dropdown-toggle" data-toggle="dropdown">{{__('main.language')}}</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{__('main.language')}}</a>
                             <ul class="dropdown-menu">
                                 <li><a href="/uz">Uzbek (uz)</a></li>
                                 <li><a href="/ru">Russian (ru)</a></li>
@@ -77,47 +90,36 @@ $categories = Category::all();
                         <i class="fal fa-times"></i>
                     </div>
                     <div class="m-brand-logo">
-                        <a href="!#"><img src="assets/img/logo/logo1.png" alt=""></a>
+                        <a href="/"><img src="assets/img/logo/logo1.png" alt=""></a>
                     </div>
                     <nav class="mobile-main-navigation  clearfix ul-li">
                         <ul id="m-main-nav" class="nav navbar-nav clearfix">
                             <li class="ori-megamenu">
-                                <a href="!#">Bosh sahifa</a>
+                                <a href="{{ route('index')}}">{{__('main.main')}}</a>
                             </li>
 
                             <li class="dropdown">
-                                <a href="!#">Istek</a>
+                                <a href="{{ route('about')}}">{{__('main.istek')}}</a>
                                 <ul class="dropdown-menu clearfix">
-                                    <li><a target="_blank" href="shop.html">Biz haqimizda </a></li>
-                                    <li><a target="_blank" href="shop-single.html">Tarix</a></li>
-                                    <li><a target="_blank" href="cart.html">Hamkorlar</a></li>
+                                    <li><a target="_blank" href="{{ route('about')}}">{{__('main.about')}} </a></li>
+                                    <li><a target="_blank" href="shop-single.html">{{__('main.history')}}</a></li>
+                                    <li><a target="_blank" href="cart.html">{{__('main.partner')}}</a></li>
                                 </ul>
                             </li>
 
                             <li class="dropdown">
-                                <a href="product.html">Maxsulotlar</a>
+                                <a href="{{route('product')}}">{{__('main.products')}}</a>
                                 <ul class="dropdown-menu clearfix">
-                                    <li><a target="_blank" href="product.html">Aluminy</a></li>
-                                    <li class="dropdown">
-                                        <a href="product.html">PVX</a>
-                                        <ul class="dropdown-menu clearfix">
-                                            <li><a target="_blank" href="product-single.html">Quattro 5200</a></li>
-                                            <li><a target="_blank" href="product-single.html">Quattro 5800</a></li>
-                                            <li><a target="_blank" href="product-single.html">Quattro 6000</a></li>
-                                            <li><a target="_blank" href="product-single.html">Trio 5800</a></li>
-                                            <li><a target="_blank" href="product-single.html">Trio 6000</a></li>
-                                            <li><a target="_blank" href="product-single.html">Engelberg 7000</a></li>
-                                            <li><a target="_blank" href="product-single.html">Engelberg 7600</a></li>
-                                            <li><a target="_blank" href="product-single.html">Engelberg 8000</a></li>
-                                        </ul>
-                                    </li>
+                                @foreach ($categories as $category )
+                                <li><a target="_blank" href="{{ route('product')}}">{{ $category['name_'.App::getLocale()]}}</a></li>
+                                @endforeach
                                 </ul>
                             </li>
 
-                            <li><a class="" href="!#">Blog</a></li>
-                            <li><a href="!#">Aloqa</a></li>
+                            <li><a class="" href="{{ route('blog')}}">{{__('main.blog')}}</a></li>
+                            <li><a href="{{route('contact')}}">{{__('main.contact')}}</a></li>
                             <li class="dropdown">
-                                <a href="!#" class="dropdown-toggle" data-toggle="dropdown">Language </a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{__('main.language')}} </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="/uz">Uzbek (uz)</a></li>
                                     <li><a href="/ru">Russian (ru)</a></li>
@@ -211,5 +213,5 @@ $categories = Category::all();
         </div>
     </div>
 </div>
-<!-- End of header section
+    <!-- End of header section
 	============================================= -->

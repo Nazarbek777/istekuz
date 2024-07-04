@@ -75,6 +75,12 @@
                             <label for="description_en" class="form-label">Yangiliklar haqida batafsil Ingliz tilida</label>
                             <textarea name="description_en" class="form-control" id="description_en" placeholder="Yangiliklar haqida batafsil En" rows="4" required></textarea>
                         </div>
+
+
+                        <div class="mb-3">
+                            <label for="validationCustom01" class="form-label">Mahsulot narxini kiriting</label>
+                            <input type="text" class="form-control" id="validationCustom01" name="price" placeholder="Price " >
+                        </div>
                         <style>
                             .custom-file-input {
                                 display: none;

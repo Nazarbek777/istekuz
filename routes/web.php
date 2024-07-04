@@ -35,6 +35,8 @@ Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 Route::get('/blog', [FrontendController::class, 'blog'])->name('blog');
 Route::get('/product', [FrontendController::class, 'product'])->name('product');
+Route::get('/category{category}', [FrontendController::class, 'categoryId'])->name('categoryId');
+Route::get('/product{product}', [FrontendController::class, 'singleProduct'])->name('singleProduct');
 Route::get('/blog/{blog}', [FrontendController::class, 'singleBlog'])->name('singleBlog');
 
 Route::get('/login', [AdminController::class, 'login'])->name('login');
@@ -51,7 +53,7 @@ Route::get('/{lang}', function ($lang) {
 
 
 Route::middleware(['checkAdmin:admin', 'auth'])->group(function () {
-    Route::group(['prefix' => 'admin'], function () {
+    Route::prefix('admin')->group(function () {
         Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
         Route::resource('category', CategoryController::class);
         Route::resource('product', ProductController::class);
@@ -61,3 +63,4 @@ Route::middleware(['checkAdmin:admin', 'auth'])->group(function () {
         Route::resource('logo', LogoController::class);
     });
 });
+

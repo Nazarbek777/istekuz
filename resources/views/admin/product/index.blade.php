@@ -48,6 +48,7 @@
                                     <th>Kategoriya</th>
                                     <th>Nomi Uz</th>
                                     <th>Rasm</th>
+                                    <th>Narxi</th>
                                     <th>Actions</th>
 
                                 </tr>
@@ -58,6 +59,7 @@
                                     <td>{{ $product->id }}</td>
                                     <td>{{ $product->category->name_uz}}</td>
                                     <td>{{ $product->name_uz}}</td>
+                                    <td>{{ $product->price}}</td>
                                     <td><img src="/storage/{{ $product->image}}" style="height:90px" alt=""></td>
                                     <td>
                                         <div class="mx-1 d-inline-block">

@@ -1,4 +1,7 @@
 <x-layouts.frontend>
+    <?php
+$lang = \Illuminate\Support\Facades\App::getLocale();
+?>
 
     <!-- Start of Slider section
 	============================================= -->
@@ -218,21 +221,13 @@
                             </div>
                             <div class="ori-project-tab-btn ul-li-block text-uppercase wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                                 <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="plastic_rom-tab" data-bs-toggle="pill" data-bs-target="#plastic_rom" type="button" role="tab" aria-controls="plastic_rom" aria-selected="true">Plastik romlar</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="alumin_rom-tab" data-bs-toggle="pill" data-bs-target="#alumin_rom" type="button" role="tab" aria-controls="alumin_rom" aria-selected="false">Alyumin romlar</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="surilma_tizim-tab" data-bs-toggle="pill" data-bs-target="#surilma_tizim" type="button" role="tab" aria-controls="surilma_tizim" aria-selected="false">Surilma tizimlari</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="door-tab" data-bs-toggle="pill" data-bs-target="#door" type="button" role="tab" aria-controls="surilma_tizim" aria-selected="false">Eshiklar</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="accessories-tab" data-bs-toggle="pill" data-bs-target="#accessories" type="button" role="tab" aria-controls="surilma_tizim" aria-selected="false">Aksessuarlar</button>
-                                    </li>
+                                    @foreach($categories as $index => $category)
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link {{ $index == 0 ? 'active' : '' }}" id="category-tab-{{ $category->id }}" data-bs-toggle="pill" data-bs-target="#category-{{ $category->id }}" type="button" role="tab" aria-controls="category-{{ $category->id }}" aria-selected="{{ $index == 0 ? 'true' : 'false' }}">
+                                                {{ $category['name_'. $lang] }}
+                                            </button>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -240,181 +235,33 @@
                     <div class="col-lg-8">
                         <div class="ori-project-tab-content wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
                             <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="plastic_rom" role="tabpanel" aria-labelledby="pills-home-tab">
-                                    <div class="ori-project-item-1 position-relative">
-                                        <div class="ori-project-img">
-                                            <img src="assets/img/project/Trio6000.png" alt="">
-                                        </div>
-                                        <div class="ori-project-text position-absolute">
-                                            <h3><a href="product-single.html">Trio 6000</a></h3>
-                                            <span class="text-uppercase project-category"><a href="#">ISTEK - Rom fabrikasi</a></span>
-                                        </div>
-                                        <div class="ori-project-link position-absolute">
-                                            <a href="product-single.html"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
+                                @foreach($categories as $index => $category)
+                                    <div class="tab-pane fade {{ $index == 0 ? 'show active' : '' }}" id="category-{{ $category->id }}" role="tabpanel" aria-labelledby="category-tab-{{ $category->id }}">
+                                        @foreach($category->products as $product)
+                                            <div class="ori-project-item-1 position-relative">
+                                                <div class="ori-project-img">
+                                                    <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name_uz }}">
+                                                </div>
+                                                <div class="ori-project-text position-absolute">
+                                                    <h3><a href="{{route('singleProduct',$product->id)}}">{{ $product->name_uz }}</a></h3>
+                                                    <span class="text-uppercase project-category"><a href="#">ISTEK - Rom fabrikasi</a></span>
+                                                </div>
+                                                <div class="ori-project-link position-absolute">
+                                                    <a href="{{route('singleProduct',$product->id)}}"><i class="fas fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        @endforeach
                                     </div>
-                                    <div class="ori-project-item-1 position-relative">
-                                        <div class="ori-project-img">
-                                            <img src="assets/img/project/Quattro6000.png" alt="">
-                                        </div>
-                                        <div class="ori-project-text position-absolute">
-                                            <h3><a href="product-single.html">Quattro 6000</a></h3>
-                                            <span class="text-uppercase project-category"><a href="#">ISTEK - Rom fabrikasi</a></span>
-                                        </div>
-                                        <div class="ori-project-link position-absolute">
-                                            <a href="product-single.html"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="ori-project-item-1 position-relative">
-                                        <div class="ori-project-img">
-                                            <img src="assets/img/project/Engelberg7000.png" alt="">
-                                        </div>
-                                        <div class="ori-project-text position-absolute">
-                                            <h3><a href="product-single.html">Engelberg 7000</a></h3>
-                                            <span class="text-uppercase project-category"><a href="#">ISTEK - Rom fabrikasi</a></span>
-                                        </div>
-                                        <div class="ori-project-link position-absolute">
-                                            <a href="product-single.html"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="tab-pane fade" id="alumin_rom" role="tabpanel" aria-labelledby="pills-home-tab">
-                                    <div class="ori-project-item-1 position-relative d-none">
-                                        <div class="ori-project-img">
-                                            <img src="assets/img/project/pro1.png" alt="">
-                                        </div>
-                                        <div class="ori-project-text position-absolute">
-                                            <h3><a href="product-single.html">Champion</a></h3>
-                                            <span class="text-uppercase project-category"><a href="#">Istek - Rom fabrikasi</a></span>
-                                        </div>
-                                        <div class="ori-project-link position-absolute">
-                                            <a href="product-single.html"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="ori-project-item-1 position-relative">
-                                        <div class="ori-project-img">
-                                            <img src="assets/img/project/Thermo57.png" alt="">
-                                        </div>
-                                        <div class="ori-project-text position-absolute">
-                                            <h3><a href="product-single.html">Thermo 57 Engelberg</a></h3>
-                                            <span class="text-uppercase project-category"><a href="#">Istek - Rom fabrikasi</a></span>
-                                        </div>
-                                        <div class="ori-project-link position-absolute">
-                                            <a href="product-single.html"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="ori-project-item-1 position-relative d-none">
-                                        <div class="ori-project-img">
-                                            <img src="assets/img/project/pro3.png" alt="">
-                                        </div>
-                                        <div class="ori-project-text position-absolute">
-                                            <h3><a href="product-single.html">Thermo 78 Engelberg</a></h3>
-                                            <span class="text-uppercase project-category"><a href="#">Istek - Rom fabrikasi</a></span>
-                                        </div>
-                                        <div class="ori-project-link position-absolute">
-                                            <a href="product-single.html"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="surilma_tizim" role="tabpanel" aria-labelledby="pills-home-tab">
-                                    <div class="ori-project-item-1 position-relative">
-                                        <div class="ori-project-img">
-                                            <img src="assets/img/project/BKH20.png" alt="">
-                                        </div>
-                                        <div class="ori-project-text position-absolute">
-                                            <h3><a href="product-single.html">BKH 20</a></h3>
-                                            <span class="text-uppercase project-category"><a href="#">Istek - Rom fabrikasi</a></span>
-                                        </div>
-                                        <div class="ori-project-link position-absolute">
-                                            <a href="product-single.html"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="ori-project-item-1 position-relative">
-                                        <div class="ori-project-img">
-                                            <img src="assets/img/project/BKH65.png" alt="">
-                                        </div>
-                                        <div class="ori-project-text position-absolute">
-                                            <h3><a href="product-single.html">BKH 65</a></h3>
-                                            <span class="text-uppercase project-category"><a href="#">Istek - Rom fabrikasi</a></span>
-                                        </div>
-                                        <div class="ori-project-link position-absolute">
-                                            <a href="product-single.html"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="door" role="tabpanel" aria-labelledby="pills-home-tab">
-                                    <div class="ori-project-item-1 position-relative">
-                                        <div class="ori-project-img">
-                                            <img src="assets/img/project/pro1.png" alt="">
-                                        </div>
-                                        <div class="ori-project-text position-absolute">
-                                            <h3><a href="product-single.html">MDF 40</a></h3>
-                                            <span class="text-uppercase project-category"><a href="#">Istek - Rom fabrikasi</a></span>
-                                        </div>
-                                        <div class="ori-project-link position-absolute">
-                                            <a href="product-single.html"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="ori-project-item-1 position-relative">
-                                        <div class="ori-project-img">
-                                            <img src="assets/img/project/pro2.png" alt="">
-                                        </div>
-                                        <div class="ori-project-text position-absolute">
-                                            <h3><a href="product-single.html">Invisible Door</a></h3>
-                                            <span class="text-uppercase project-category"><a href="#">Istek - Rom fabrikasi</a></span>
-                                        </div>
-                                        <div class="ori-project-link position-absolute">
-                                            <a href="product-single.html"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="accessories" role="tabpanel" aria-labelledby="pills-home-tab">
-                                    <div class="ori-project-item-1 position-relative">
-                                        <div class="ori-project-img">
-                                            <img src="assets/img/project/pro1.png" alt="">
-                                        </div>
-                                        <div class="ori-project-text position-absolute">
-                                            <h3><a href="product-single.html">Hasharotlardan himoyalovchi to‘r</a></h3>
-                                            <span class="text-uppercase project-category"><a href="#">Istek - Rom fabrikasi</a></span>
-                                        </div>
-                                        <div class="ori-project-link position-absolute">
-                                            <a href="product-single.html"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="ori-project-item-1 position-relative">
-                                        <div class="ori-project-img">
-                                            <img src="assets/img/project/pro2.png" alt="">
-                                        </div>
-                                        <div class="ori-project-text position-absolute">
-                                            <h3><a href="product-single.html">Deraza tokchalari</a></h3>
-                                            <span class="text-uppercase project-category"><a href="#">Istek - Rom fabrikasi</a></span>
-                                        </div>
-                                        <div class="ori-project-link position-absolute">
-                                            <a href="product-single.html"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="ori-project-item-1 position-relative">
-                                        <div class="ori-project-img">
-                                            <img src="assets/img/project/pro3.png" alt="">
-                                        </div>
-                                        <div class="ori-project-text position-absolute">
-                                            <h3><a href="product-single.html">Rom va eshik tutqichlari</a></h3>
-                                            <span class="text-uppercase project-category"><a href="#">Istek - Rom fabrikasi</a></span>
-                                        </div>
-                                        <div class="ori-project-link position-absolute">
-                                            <a href="product-single.html"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="ori-btn-1 position-absolute text-uppercase wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                    <a href="portfolio.html">Barchasini ko'rish</a>
+                    <a href="{{route('product')}}">Barchasini ko'rish</a>
                 </div>
             </div>
+
         </div>
         <div class="line_animation">
             <div class="line_area"></div>
@@ -618,7 +465,7 @@
             <div class="ori-blog-content-1">
                 <div class="row">
                     @foreach ($news as $new)
-                        
+
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                         <div class="ori-blog-inner-item">
                             <div class="blog-inner-img">

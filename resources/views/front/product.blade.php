@@ -1,3 +1,4 @@
+
 <x-layouts.frontend>
     <!-- Start of Breadcrumbs  section
 	============================================= -->
@@ -19,9 +20,9 @@
 			<div class="line_area"></div>
 			<div class="line_area"></div>
 			<div class="line_area"></div>
-			<div class="line_area"></div> 
+			<div class="line_area"></div>
 		</div>
-	</section>	
+	</section>
 <!-- End of Breadcrumbs section
 	============================================= -->
 
@@ -35,151 +36,24 @@
 						<div class="ori-shop-feed-post-content">
 							<div class="ori-shop-feed-post-items">
 								<div class="row">
-									<div class="col-md-4">
-										<div class="ori-shop-inner-item text-center">
-											<div class="shop-img-cart-btn position-relative">
-												<div class="shop-img">
-													<img src="assets/img/shop/shop1.png" alt="">
-												</div>
-												<div class="add-cart-btn text-uppercase text-center">
-													<a href="cart.html">add to cart</a>
-												</div>
-											</div>
-											<div class="shop-text">
-												<h3><a href="product-single.html">Table Chair Couch</a></h3>
-												<span class="pro_price">$100.00</span>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="ori-shop-inner-item text-center">
-											<div class="shop-img-cart-btn position-relative">
-												<div class="shop-img">
-													<img src="assets/img/shop/shop2.png" alt="">
-												</div>
-												<div class="add-cart-btn text-uppercase text-center">
-													<a href="cart.html">add to cart</a>
-												</div>
-											</div>
-											<div class="shop-text">
-												<h3><a href="product-single.html">Gold Bag Euclidean</a></h3>
-												<span class="pro_price">$100.00</span>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="ori-shop-inner-item text-center">
-											<div class="shop-img-cart-btn position-relative">
-												<div class="shop-img">
-													<img src="assets/img/shop/shop3.png" alt="">
-												</div>
-												<div class="add-cart-btn text-uppercase text-center">
-													<a href="cart.html">add to cart</a>
-												</div>
-											</div>
-											<div class="shop-text">
-												<h3><a href="product-single.html">Air Force Shoe</a></h3>
-												<span class="pro_price">$100.00</span>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="ori-shop-inner-item text-center">
-											<div class="shop-img-cart-btn position-relative">
-												<span class="label-tag position-absolute">HIT!</span>
-												<div class="shop-img">
-													<img src="assets/img/shop/shop4.png" alt="">
-												</div>
-												<div class="add-cart-btn text-uppercase text-center">
-													<a href="cart.html">add to cart</a>
-												</div>
-											</div>
-											<div class="shop-text">
-												<h3><a href="product-single.html">Chair Furniture Couch</a></h3>
-												<span class="pro_price">$100.00</span>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="ori-shop-inner-item text-center">
-											<div class="shop-img-cart-btn position-relative">
-												<div class="shop-img">
-													<img src="assets/img/shop/shop5.png" alt="">
-												</div>
-												<div class="add-cart-btn text-uppercase text-center">
-													<a href="cart.html">add to cart</a>
-												</div>
-											</div>
-											<div class="shop-text">
-												<h3><a href="product-single.html">Running Fitness Sports</a></h3>
-												<span class="pro_price">$100.00</span>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="ori-shop-inner-item text-center">
-											<div class="shop-img-cart-btn position-relative">
-												<div class="shop-img">
-													<img src="assets/img/shop/shop6.png" alt="">
-												</div>
-												<div class="add-cart-btn text-uppercase text-center">
-													<a href="cart.html">add to cart</a>
-												</div>
-											</div>
-											<div class="shop-text">
-												<h3><a href="product-single.html"> T-shirt Gildan Activewear</a></h3>
-												<span class="pro_price">$100.00</span>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="ori-shop-inner-item text-center">
-											<div class="shop-img-cart-btn position-relative">
-												<div class="shop-img">
-													<img src="assets/img/shop/shop7.png" alt="">
-												</div>
-												<div class="add-cart-btn text-uppercase text-center">
-													<a href="cart.html">add to cart</a>
-												</div>
-											</div>
-											<div class="shop-text">
-												<h3><a href="product-single.html">Leather jacket Motorcycle</a></h3>
-												<span class="pro_price">$100.00</span>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="ori-shop-inner-item text-center">
-											<div class="shop-img-cart-btn position-relative">
-												<div class="shop-img">
-													<img src="assets/img/shop/shop8.png" alt="">
-												</div>
-												<div class="add-cart-btn text-uppercase text-center">
-													<a href="cart.html">add to cart</a>
-												</div>
-											</div>
-											<div class="shop-text">
-												<h3><a href="product-single.html">T-shirt Romper suit Baby</a></h3>
-												<span class="pro_price">$100.00</span>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="ori-shop-inner-item text-center">
-											<div class="shop-img-cart-btn position-relative">
-												<div class="shop-img">
-													<img src="assets/img/shop/shop9.png" alt="">
-												</div>
-												<div class="add-cart-btn text-uppercase text-center">
-													<a href="cart.html">add to cart</a>
-												</div>
-											</div>
-											<div class="shop-text">
-												<h3><a href="product-single.html">Chandelier Lampe Lighting </a></h3>
-												<span class="pro_price">$100.00</span>
-											</div>
-										</div>
-									</div>
+									 @foreach($products as $tm )
+                                        <div class="col-md-4">
+                                            <div class="ori-shop-inner-item text-center">
+                                                <div class="shop-img-cart-btn position-relative">
+                                                    <div class="shop-img">
+                                                        <img src="/storage/{{ $tm->image}}" alt="rasm yo'q">
+                                                    </div>
+                                                    <div class="add-cart-btn text-uppercase text-center">
+                                                        <a href="{{route('product' , $tm->id)}}">Batafsil</a>
+                                                    </div>
+                                                </div>
+                                                <div class="shop-text">
+                                                    <h3><a href="">{{$tm->name_uz}}</a></h3>
+                                                    <span class="pro_price">{{$tm->price}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+									 @endforeach
 								</div>
 							</div>
 						</div>
@@ -201,7 +75,7 @@
 									</ul>
 								</div>
 							</div>
-							
+
 							<div class="ori-shop-sidebar-widget">
 								<div class="best-seller-widget ul-li-block">
 									<h3 class="widget-title">Yangiliklar</h3>
@@ -233,13 +107,13 @@
 									</div>
 								</div>
 							</div>
-							
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>	
+	</section>
 <!-- End of Shop Feed Post  section
-	============================================= -->	
+	============================================= -->
 </x-layouts.frontend>

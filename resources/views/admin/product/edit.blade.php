@@ -1,6 +1,9 @@
 @extends('layouts.admin')
 
 @section('content')
+    <?php
+        $lang = \Illuminate\Support\Facades\App::getLocale();
+        ?>
     <div class="container-fluid">
         <div class="py-3 py-lg-4">
             <div class="row">
@@ -17,7 +20,6 @@
                 </div>
             </div>
         </div>
-
         @if (session('error'))
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
             {{ session('error') }}
@@ -32,14 +34,15 @@
                         <form action="{{ route('product.update', $product->id) }}" method="post" class="needs-validation dropzone" enctype="multipart/form-data" novalidate id="myAwesomeDropzone" data-plugin="dropzone" data-previews-container="#file-previews" data-upload-preview-template="#uploadPreviewTemplate">
                             @csrf
                             @method('PUT')
-                            
+
                             <h2>Kategoriyalar</h2>
                             <div class="mb-3">
                                 <label for="category_id" class="form-label">Kategoriyani tanlang</label>
                                 <select class="form-control" id="category_id" name="category_id" required>
                                     <option value="">Kategoriyani tanlang</option>
+                                    {{$categories}}
                                     @foreach($categories as $category)
-                                        <option value="{{ $category->id }}" {{ $product->category_id == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
+                                        <option value="{{ $category->id }}" {{ $product->category_id == $category->id ? 'selected' : '' }}>{{ $category->name_uz }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -70,6 +73,11 @@
                             <div class="mb-3">
                                 <label for="description_en" class="form-label">Yangiliklar haqida batafsil Ingliz tilida</label>
                                 <textarea name="description_en" class="form-control" id="description_en" placeholder="Yangiliklar haqida batafsil En" rows="4" required>{{ $product->description_en }}</textarea>
+                            </div>
+                            <h2>Narxi</h2>
+                            <div class="mb-3">
+                                <label for="price" class="form-label">    Narxi</label>
+                                <input type="text" class="form-control" id="price" name="price" value="{{ $product->price }}" placeholder="Nomi Uz" required>
                             </div>
 
                             <style>

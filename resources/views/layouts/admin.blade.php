@@ -61,7 +61,7 @@
     </style>
     <script src="/admin-panel/assets/js/config.js"></script>
 
-    
+
 </head>
 <style>
 
@@ -103,48 +103,6 @@
                             <span class="badge bg-primary rounded ms-auto">01</span>
                         </a>
                     </li>
-
-
-
-                    <li class="menu-item">
-                        <a href="#menuExpages2" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
-                            <span class="menu-icon"><i class="bx bx-file"></i></span>
-                            <span class="menu-text"> Xizmatlar </span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <div class="collapse" id="menuExpages2">
-                            <ul class="sub-menu">
-
-                                <li class="menu-item">
-                                    <a href="#" class="menu-link">
-                                        <span class="menu-text">Veb-sayt xizmatlari</span>
-                                    </a>
-                                </li>
-
-                                <li class="menu-item">
-                                    <a href="#" class="menu-link">
-                                        <span class="menu-text">Reklama xizmatlari</span>
-                                    </a>
-                                </li>
-
-                                <li class="menu-item">
-                                    <a href="# class=" menu-link">
-                                        <span class="menu-text">Biznes uchun vositalar</span>
-                                    </a>
-                                </li>
-
-                                <li class="menu-item">
-                                    <a href="#" class="menu-link">
-                                        <span class="menu-text">Marketing xizmatlari</span>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-
-                    
-
                     <li class="menu-item">
                             <span class="menu-icon"></span>
                             <span class="menu-text"> Jadvallar </span>
@@ -187,7 +145,7 @@
                         </a>
                     </li>
 
-                    
+
                 </ul>
             </div>
         </div>
