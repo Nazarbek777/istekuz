@@ -17,7 +17,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
             <div class="ori-slider-wrap-1">
                 <div class="ori-slider-content-1 position-relative">
                     <div class="ori-slider-text text-center  text-uppercase">
-                        <h1>Eng yaxshi ko'rinish <span>TRIO 6000</span>
+                        <h1>{{__('main.index1')}} <span>TRIO 6000</span>
                             <i class="fas fa-arrow-right"></i>
                         </h1>
                         <div class="slider-play-btn">
@@ -30,7 +30,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                 </div>
                 <div class="ori-slider-content-1 position-relative">
                     <div class="ori-slider-text text-center  text-uppercase">
-                        <h1>Issiq va sovuqdan himoya <span>Thermo 70 </span>
+                        <h1>{{__('main.index2')}} <span>Thermo 70 </span>
                             <i class="fas fa-arrow-right"></i>
                         </h1>
                         <div class="slider-play-btn">
@@ -43,7 +43,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                 </div>
                 <div class="ori-slider-content-1 position-relative">
                     <div class="ori-slider-text text-center  text-uppercase">
-                        <h1>Eng hamyonbop termo profil <span>BKT 57</span>
+                        <h1>{{__('main.index3')}} <span>BKT 57</span>
                             <i class="fas fa-arrow-right"></i>
                         </h1>
                         <div class="slider-play-btn">
@@ -82,10 +82,10 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
             <div class="container">
                 <div class="ori-service-top-content-1 d-flex justify-content-between align-items-center">
                     <div class="ori-section-title-1 text-uppercase wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <h2>Rom fabrikasi <span> ISTEK</span></h2>
+                        <h2>{{__('main.index4')}} <span> {{__('main.ISTEK')}}</span></h2>
                     </div>
                     <div class="ori-btn-1 text-uppercase wow fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <a href="tel: +998935135324">Bog'lanish</a>
+                        <a href="tel: +998935135324">{{__('main.contact1')}}</a>
                     </div>
                 </div>
                 <div class="ori-service-content-1">
@@ -93,14 +93,14 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                         <div class="col-lg-4 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                             <div class="ori-service-inner-item position-relative">
                                 <div class="ori-service-more position-absolute">
-                                    <a href="about.html"><i class="fas fa-arrow-right"></i></a>
+                                    <a href="{{route('about')}}"><i class="fas fa-arrow-right"></i></a>
                                 </div>
                                 <div class="ori-service-img-title position-relative">
                                     <div class="ori-service-img">
                                         <img src="assets/img/service/ser1.png" alt="">
                                     </div>
                                     <div class="ori-service-title text-center position-absolute">
-                                        <h3>About us <i class="fal fa-arrow-right"></i></h3>
+                                        <h3>{{__('main.about')}} <i class="fal fa-arrow-right"></i></h3>
                                     </div>
                                 </div>
                             </div>
@@ -115,7 +115,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                                         <img src="assets/img/service/ser2.png" alt="">
                                     </div>
                                     <div class="ori-service-title text-center position-absolute">
-                                        <h3>Our Mission <i class="fal fa-arrow-right"></i></h3>
+                                        <h3>{{__('main.missions')}}<i class="fal fa-arrow-right"></i></h3>
                                     </div>
                                 </div>
                             </div>
@@ -130,7 +130,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                                         <img src="assets/img/service/ser3.png" alt="">
                                     </div>
                                     <div class="ori-service-title text-center position-absolute">
-                                        <h3>Our partners <i class="fal fa-arrow-right"></i></h3>
+                                        <h3>{{__('main.partners')}} <i class="fal fa-arrow-right"></i></h3>
                                     </div>
                                 </div>
                             </div>
@@ -148,7 +148,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
     <section id="ori-sponsor-1" class="ori-sponsor-section-1 position-relative">
         <div class="container">
             <div class="ori-sponsor-title text-uppercase text-center">
-                <h3><i></i> <span>Hamkorlar</span> <i></i> </h3>
+                <h3><i></i> <span>{{__('main.partner2')}}</span> <i></i> </h3>
             </div>
             <div class="ori-sponsor-content">
                 <div class="ori-sponsor-slider">
@@ -217,7 +217,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                     <div class="col-lg-4">
                         <div class="ori-project-tab-btn-content">
                             <div class="ori-section-title-1 text-uppercase wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                <h2>ISTEK <span> Maxsulotlar</span></h2>
+                                <h2>{{__('main.ISTEK')}} <span> {{__('main.products')}}</span></h2>
                             </div>
                             <div class="ori-project-tab-btn ul-li-block text-uppercase wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                                 <ul class="nav nav-pills" id="pills-tab" role="tablist">
@@ -240,11 +240,11 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                                         @foreach($category->products as $product)
                                             <div class="ori-project-item-1 position-relative">
                                                 <div class="ori-project-img">
-                                                    <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name_uz }}">
+                                                    <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product['name_'.$lang] }}">
                                                 </div>
                                                 <div class="ori-project-text position-absolute">
-                                                    <h3><a href="{{route('singleProduct',$product->id)}}">{{ $product->name_uz }}</a></h3>
-                                                    <span class="text-uppercase project-category"><a href="#">ISTEK - Rom fabrikasi</a></span>
+                                                    <h3><a href="{{route('singleProduct',$product->id)}}">{{ $product['name_'.$lang] }}</a></h3>
+                                                    <span class="text-uppercase project-category"><a href="#">{{__('main.ISTEK')}} - {{__('main.index4')}}</a></span>
                                                 </div>
                                                 <div class="ori-project-link position-absolute">
                                                     <a href="{{route('singleProduct',$product->id)}}"><i class="fas fa-arrow-right"></i></a>
@@ -258,7 +258,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                     </div>
                 </div>
                 <div class="ori-btn-1 position-absolute text-uppercase wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                    <a href="{{route('product')}}">Barchasini ko'rish</a>
+                    <a href="{{route('product')}}">{{__('main.seeAll')}}</a>
                 </div>
             </div>
 
@@ -282,9 +282,9 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
     <section id="ori-text-scroll-1" class="ori-text-scroll-section-1 position-relative">
         <div class="ori-text-scroll-content">
             <div class="ori-text-scroll-item-1 text-uppercase">
-                <h3>Rom fabrikasi<span> Istek</span></h3>
+                <h3>{{__('main.index4')}}<span> {{__('main.istek1')}}</span></h3>
                 <span class="ori-text-scroll-icon"><img src="./assets/img/new/logo-star.svg" width="84px" /></span>
-                <h3>Rom fabrikasi<span> Istek</span></h3>
+                <h3>{{__('main.index4')}}<span> {{__('main.istek1')}}</span></h3>
                 <span class="ori-text-scroll-icon"><img src="./assets/img/new/logo-star.svg" width="84px" /></span>
             </div>
         </div>
@@ -309,10 +309,10 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
             <div class="container">
                 <div class="ori-team-top-content-1 d-flex justify-content-between align-items-center">
                     <div class="ori-section-title-1 text-uppercase wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <h2>Bizning ahil <span>jamoamiz</span></h2>
+                        <h2>{{__('main.index5')}} <span>{{__('main.index6')}}</span></h2>
                     </div>
                     <div class="ori-btn-1 text-uppercase wow fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <a href="team.html">Barchasini ko'rish</a>
+                        <a href="team.html">{{__('main.seeAll')}}</a>
                     </div>
                 </div>
                 <div class="ori-team-content-1">
@@ -365,7 +365,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
         <div class="container">
             <div class="ori-testimonial-content-1 position-relative">
                 <div class="ori-testimonial-title text-center text-uppercase">
-                    <h3>Mijozlarimiz biz haqimizda</h3>
+                    <h3>{{__('main.index7')}}</h3>
                 </div>
                 <div class="ori-testimonial-slider-1">
                     <div class="ori-testimonial-item-area">
@@ -430,9 +430,9 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
     <section id="ori-text-scroll-2" class="ori-text-scroll-section-2 position-relative">
         <div class="ori-text-scroll-content">
             <div class="ori-text-scroll-item-2 clearfix text-uppercase">
-                <h3>Rom fabrikasi <span> Istek</span></h3>
+                <h3>{{__('main.index4')}} <span> {{__('main.istek1')}}</span></h3>
                 <span class="ori-text-scroll-icon"><img src="./assets/img/new/logo-star.svg" width="84px" /></span>
-                <h3>Rom fabrikasi <span> Istek</span></h3>
+                <h3>{{__('main.index4')}} <span> {{__('main.istek1')}}</span></h3>
                 <span class="ori-text-scroll-icon"><img src="./assets/img/new/logo-star.svg" width="84px" /></span>
             </div>
         </div>
@@ -456,10 +456,10 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
         <div class="container">
             <div class="ori-blog-top-content-1 d-flex justify-content-between align-items-center">
                 <div class="ori-section-title-1 text-uppercase wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                    <h2><span>Istek</span> Yangiliklar </h2>
+                    <h2><span>{{__('main.istek1')}}</span> {{__('main.news')}} </h2>
                 </div>
                 <div class="ori-btn-1 text-uppercase wow fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
-                    <a href="blog.html">Barchasini ko'rish</a>
+                    <a href="blog.html">{{__('main.seeAll')}}</a>
                 </div>
             </div>
             <div class="ori-blog-content-1">
@@ -473,7 +473,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                             </div>
                             <div class="blog-inner-text">
                                 <h3><a href="{{ route('singleBlog', ['blog' => $new->id])}}">{{$new['name_'.App::getLocale()]}}</a></h3>
-                                <a class="read-more text-uppercase" href="{{ route('singleBlog', ['blog' => $new->id])}}">Read more <i class="fal fa-chevron-right"></i></a>
+                                <a class="read-more text-uppercase" href="{{ route('singleBlog', ['blog' => $new->id])}}">{{__('main.readMore')}}<i class="fal fa-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>
