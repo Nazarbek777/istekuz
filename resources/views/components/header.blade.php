@@ -1,7 +1,6 @@
 <?php
 
 use App\Models\Category;
-
 $lang = \Illuminate\Support\Facades\App::getLocale();
 $categories = Category::all();
 ?>
@@ -27,10 +26,10 @@ $categories = Category::all();
                         <li class="dropdown">
                             <a href="{{ route('about')}}">{{__('main.istek1')}}</a>
                             <ul class="dropdown-menu clearfix">
-                                <li><a href="{{route('about')}}">{{__('main.about')}}</a></li>
-                                <li><a href="{{route('mission')}}">{{__('main.about48')}}</a></li>
-                                <li><a href="404">{{__('main.history')}}</a></li>
-                                <li><a href="404">{{__('main.partner')}}</a></li>
+                                <li><a target="_blank" href="{{route('about')}}">{{__('main.about')}}</a></li>
+                                <li><a target="_blank" href="{{route('mission')}}">Mission</a></li>
+                                <li><a target="_blank" href="404">{{__('main.history')}}</a></li>
+                                <li><a target="_blank" href="404">{{__('main.partner')}}</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">

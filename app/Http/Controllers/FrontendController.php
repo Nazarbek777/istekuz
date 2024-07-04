@@ -20,7 +20,14 @@ class FrontendController extends Controller
         return view('front.index', compact('logos','teams', 'news','categories'));
     }
 
-    
+    public function mission()
+    {
+        return view('front.mission');
+    }
+    public function faq()
+    {
+        return view('front.faq');
+    }
     public function about()
     {
         $teams = Team::all();
@@ -65,9 +72,7 @@ class FrontendController extends Controller
         return view('front.product',   compact('products','categories','news'));
     }
 
-    public function mission(){
-        return view('front.mission');
-    }
+
 
     public function history(){
         return view('front.history');
@@ -78,6 +83,11 @@ class FrontendController extends Controller
     }
 
     public function team(){
-        return view('front.team');
+        $teams = Team::all();
+        return view('front.team', compact('teams'));
+    }
+    public function singleTeam($team){
+        $teams = Team::find($team);
+        return view('front.singleTeam',compact('teams'));
     }
 }
