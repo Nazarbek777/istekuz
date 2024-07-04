@@ -63,4 +63,20 @@ class FrontendController extends Controller
         $products = Product::all();
         return view('front.product',   compact('products','categories','news'));
     }
+
+    public function mission(){
+        return view('front.mission');
+    }
+
+    public function history(){
+        return view('front.history');
+    }
+
+    public function partner(){
+        return view('front.partner');
+    }
+
+    public function team(){
+        return view('front.team');
+    }
 }
