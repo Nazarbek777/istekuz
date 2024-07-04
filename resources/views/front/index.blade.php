@@ -108,7 +108,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                         <div class="col-lg-4 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <div class="ori-service-inner-item position-relative">
                                 <div class="ori-service-more position-absolute">
-                                    <a href="{{route('mission')}}"><i class="fas fa-arrow-right"></i></a>
+                                    <a href="{{ route('mission')}}"><i class="fas fa-arrow-righa"></i></a>
                                 </div>
                                 <div class="ori-service-img-title position-relative">
                                     <div class="ori-service-img">
@@ -123,7 +123,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                         <div class="col-lg-4 wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
                             <div class="ori-service-inner-item position-relative">
                                 <div class="ori-service-more position-absolute">
-                                    <a href="service.html"><i class="fas fa-arrow-right"></i></a>
+                                    <a href="{{ route('partner')}}"><i class="fas fa-arrow-right"></i></a>
                                 </div>
                                 <div class="ori-service-img-title position-relative">
                                     <div class="ori-service-img">

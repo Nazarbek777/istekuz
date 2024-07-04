@@ -40,6 +40,10 @@ Route::get('/product', [FrontendController::class, 'product'])->name('product');
 Route::get('/category{category}', [FrontendController::class, 'categoryId'])->name('categoryId');
 Route::get('/product{product}', [FrontendController::class, 'singleProduct'])->name('singleProduct');
 Route::get('/blog/{blog}', [FrontendController::class, 'singleBlog'])->name('singleBlog');
+Route::get('/mission', [FrontendController::class, 'mission'])->name('mission');
+Route::get('/partner', [FrontendController::class, 'partner'])->name('partner');
+Route::get('/history', [FrontendController::class, 'history'])->name('history');
+Route::get('/team', [FrontendController::class, 'team'])->name('team');
 
 Route::get('/login', [AdminController::class, 'login'])->name('login');
 Route::post('/authenticate', [AdminController::class, 'authenticate'])->name('authenticate');
