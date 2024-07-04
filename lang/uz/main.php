@@ -6,7 +6,7 @@ return[
     ],
 
     'title'  =>  'Sarlavha!',
-    
+
 
     'footer' => [
         'newsletter' => 'Biz bilan bog`laning',
@@ -20,7 +20,7 @@ return[
     ],
     'language' => 'Til',
     'main' => 'Bosh sahifa',
-    'istek1' => 'Istak',
+    'istek1' => 'Istek',
     'about' => 'Biz haqimizda',
     'history' => 'Tarix',
     'partner' => 'Hamkorlar',
@@ -106,6 +106,6 @@ return[
     'inputName' => 'Ismingizni Kiriting',
     'message' => 'Xabar',
     'inputMessage' => 'Xabaringizni kiriting',
-    
+
 
 ];

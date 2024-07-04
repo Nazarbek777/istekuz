@@ -21,7 +21,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                             <i class="fas fa-arrow-right"></i>
                         </h1>
                         <div class="slider-play-btn">
-                            <a class="video_box d-flex align-items-center justify-content-center text-uppercase" href="https://www.youtube.com/watch?v=sAnapTqdieo">Ko'rish</a>
+                            <a class="video_box d-flex align-items-center justify-content-center text-uppercase" href="https://www.youtube.com/watch?v=sAnapTqdieo">{{__('main.see')}}</a>
                         </div>
                         <div class="ori-slider-img position-absolute">
                             <img src="assets/img/slider/slider-1.png" alt="">
@@ -34,7 +34,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                             <i class="fas fa-arrow-right"></i>
                         </h1>
                         <div class="slider-play-btn">
-                            <a class="video_box d-flex align-items-center justify-content-center text-uppercase" href="https://www.youtube.com/watch?v=sAnapTqdieo">PLAY</a>
+                            <a class="video_box d-flex align-items-center justify-content-center text-uppercase" href="https://www.youtube.com/watch?v=sAnapTqdieo">{{__('main.see')}}</a>
                         </div>
                         <div class="ori-slider-img position-absolute">
                             <img src="assets/img/slider/slider-2.png" alt="">
@@ -47,7 +47,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                             <i class="fas fa-arrow-right"></i>
                         </h1>
                         <div class="slider-play-btn">
-                            <a class="video_box d-flex align-items-center justify-content-center text-uppercase" href="https://www.youtube.com/watch?v=sAnapTqdieo">PLAY</a>
+                            <a class="video_box d-flex align-items-center justify-content-center text-uppercase" href="https://www.youtube.com/watch?v=sAnapTqdieo">{{__('main.see')}}</a>
                         </div>
                         <div class="ori-slider-img position-absolute">
                             <img src="assets/img/slider/slider-3.png" alt="">
@@ -108,14 +108,14 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                         <div class="col-lg-4 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <div class="ori-service-inner-item position-relative">
                                 <div class="ori-service-more position-absolute">
-                                    <a href="{{ route('mission')}}"><i class="fas fa-arrow-right"></i></a>
+                                    <a href="{{ route('mission')}}"><i class="fas fa-arrow-righa"></i></a>
                                 </div>
                                 <div class="ori-service-img-title position-relative">
                                     <div class="ori-service-img">
                                         <img src="assets/img/service/ser2.png" alt="">
                                     </div>
                                     <div class="ori-service-title text-center position-absolute">
-                                        <h3>{{__('main.missions')}}<i class="fal fa-arrow-right"></i></h3>
+                                        <h3>{{__('main.mission')}}<i class="fal fa-arrow-right"></i></h3>
                                     </div>
                                 </div>
                             </div>
@@ -155,28 +155,28 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                     <div class="ori-sponsor-item">
                         <div class="ori-sponsor-img">
                             <a href="#">
-                                <img src="assets/img/sponsor/dora.png" alt="">
+                                <img src="/assets/img/sponsor/dora.png" alt="">
                             </a>
                         </div>
                     </div>
                     <div class="ori-sponsor-item">
                         <div class="ori-sponsor-img">
                             <a href="#">
-                                <img src="assets/img/sponsor/akfa.png" alt="">
+                                <img src="/assets/img/sponsor/akfa.png" alt="">
                             </a>
                         </div>
                     </div>
                     <div class="ori-sponsor-item">
                         <div class="ori-sponsor-img">
                             <a href="#">
-                                <img src="assets/img/sponsor/englber.png" alt="">
+                                <img src="/assets/img/sponsor/englber.png" alt="">
                             </a>
                         </div>
                     </div>
                     <div class="ori-sponsor-item">
                         <div class="ori-sponsor-img">
                             <a href="#">
-                                <img src="assets/img/sponsor/imzo.png" alt="">
+                                <img src="/assets/img/sponsor/imzo.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -237,22 +237,24 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                             <div class="tab-content" id="pills-tabContent">
                                 @foreach($categories as $index => $category)
                                     <div class="tab-pane fade {{ $index == 0 ? 'show active' : '' }}" id="category-{{ $category->id }}" role="tabpanel" aria-labelledby="category-tab-{{ $category->id }}">
-                                        @foreach($category->products as $product)
+                                        @php $products = $category->products->take(2); @endphp
+                                        @foreach($products as $product)
                                             <div class="ori-project-item-1 position-relative">
                                                 <div class="ori-project-img">
                                                     <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product['name_'.$lang] }}">
                                                 </div>
                                                 <div class="ori-project-text position-absolute">
-                                                    <h3><a href="{{route('singleProduct',$product->id)}}">{{ $product['name_'.$lang] }}</a></h3>
+                                                    <h3><a href="{{ route('singleProduct', $product->id) }}">{{ $product['name_'.$lang] }}</a></h3>
                                                     <span class="text-uppercase project-category"><a href="#">{{__('main.ISTEK')}} - {{__('main.index4')}}</a></span>
                                                 </div>
                                                 <div class="ori-project-link position-absolute">
-                                                    <a href="{{route('singleProduct',$product->id)}}"><i class="fas fa-arrow-right"></i></a>
+                                                    <a href="{{ route('singleProduct', $product->id) }}"><i class="fas fa-arrow-right"></i></a>
                                                 </div>
                                             </div>
                                         @endforeach
                                     </div>
                                 @endforeach
+
                             </div>
                         </div>
                     </div>

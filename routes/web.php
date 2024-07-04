@@ -30,7 +30,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+Route::view('404','errors.404');
 Route::get('/', [FrontendController::class, 'home'])->name('index');
+Route::get('/mission', [FrontendController::class, 'mission'])->name('mission');
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 Route::get('/blog', [FrontendController::class, 'blog'])->name('blog');
