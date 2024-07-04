@@ -24,7 +24,7 @@ $categories = Category::all();
                             <a href="{{ route('index')}}">{{__('main.main')}}</a>
                         </li>
                         <li class="dropdown">
-                            <a href="{{ route('about')}}">{{__('main.istek')}}</a>
+                            <a href="{{ route('about')}}">{{__('main.istek1')}}</a>
                             <ul class="dropdown-menu clearfix">
                                 <li><a target="_blank" href="{{route('about')}}">{{__('main.about')}}</a></li>
                                 <li><a target="_blank" href="">{{__('main.history')}}</a></li>

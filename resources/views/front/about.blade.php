@@ -4,10 +4,10 @@
     <section id="ori-breadcrumbs" class="ori-breadcrumbs-section position-relative" data-background="assets/img/bg/bread-bg.png">
         <div class="container">
             <div class="ori-breadcrumb-content text-center ul-li">
-                <h1>Biz haqimizda</h1>
+                <h1>{{__('main.about')}}</h1>
                 <ul>
-                    <li><a href="index.html">ISTEK</a></li>
-                    <li>Biz haqimizda</li>
+                    <li><a href="{{ route('index')}}">{{__('main.ISTEK')}}</a></li>
+                    <li>{{__('main.about')}}</li>
                 </ul>
             </div>
         </div>
@@ -31,11 +31,11 @@
         <div class="container">
             <div class="ori-about-play-top-content d-flex justify-content-between align-items-center">
                 <div class="ori-inner-section-title">
-                    <span class="sub-title text-uppercase">Kompaniya haqida</span>
-                    <h2>Istek - Rom kompaniyasi</h2>
+                    <span class="sub-title text-uppercase">{{__('main.about1')}}</span>
+                    <h2>{{__('main.istek1')}} - {{__('main.index4')}}</h2>
                 </div>
                 <div class="ori-about-play-top-text">
-                    Eng so'ngi tehnologiyalardan foydalangan holda, yuqori sifat va tezkorlik bilan sizga hizmat ko'rsatishga tayyormiz
+                    {{__('main.about2')}}
                 </div>
             </div>
             <div class="ori-about-play-area position-relative">
@@ -43,26 +43,26 @@
                     <img src="assets/img/about/play-bg.png" alt="">
                 </div>
                 <div class="about-play-btn position-absolute">
-                    <a class="text-uppercase video_box d-flex align-items-center justify-content-center" href="https://www.youtube.com/watch?v=CH_Kv7Y3fQw">Ko'rish</a>
+                    <a class="text-uppercase video_box d-flex align-items-center justify-content-center" href="https://www.youtube.com/watch?v=CH_Kv7Y3fQw">{{__('main.see')}}</a>
                 </div>
             </div>
             <div class="ori-about-counter-area">
                 <div class="ori-about-counter-item-wrap d-flex justify-content-between">
                     <div class="ori-about-counter-item pera-content">
                         <h3><span class="counter">15</span>+</h3>
-                        <p class="text-uppercase"><span>//</span> Tajriba</p>
+                        <p class="text-uppercase"><span>//</span> {{__('main.about3')}}</p>
                     </div>
                     <div class="ori-about-counter-item pera-content">
                         <h3><span class="counter">861</span>+</h3>
-                        <p class="text-uppercase"><span>//</span> Yakunlangan loyihalar</p>
+                        <p class="text-uppercase"><span>//</span> {{__('main.about4')}}</p>
                     </div>
                     <div class="ori-about-counter-item pera-content">
                         <h3><span class="counter">1000</span>+</h3>
-                        <p class="text-uppercase"><span>//</span> Mamnun mijozlar</p>
+                        <p class="text-uppercase"><span>//</span> {{__('main.about5')}}</p>
                     </div>
                     <div class="ori-about-counter-item pera-content">
                         <h3><span class="counter">98</span>+</h3>
-                        <p class="text-uppercase"><span>//</span> Mutahassislar</p>
+                        <p class="text-uppercase"><span>//</span> {{__('main.about6')}}</p>
                     </div>
                 </div>
             </div>
@@ -89,13 +89,13 @@
                         <div class="ori-faq-tab-btn">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">ISTEK haqida</button>
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">{{__('main.about47')}}</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Missiya</button>
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">{{__('main.about48')}}</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">ISTEK kompaniyasida ishlash</button>
+                                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">{{__('main.about49')}}</button>
                                 </li>
                             </ul>
                         </div>
@@ -103,9 +103,8 @@
                     <div class="col-lg-7">
                         <div class="ori-faq-text-wrapper-content">
                             <div class="ori-inner-section-title">
-                                <span class="sub-title text-uppercase">Biz haqimizda</span>
-                                <h2>Kerakli ma'lumotlar.
-                                    Istek</h2>
+                                <span class="sub-title text-uppercase">{{__('main.about')}}</span>
+                                <h2>{{__('main.about7')}}</h2>
                             </div>
                             <div class="ori-faq-accordion-area">
                                 <div class="tab-content" id="myTabContent">
@@ -115,48 +114,48 @@
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="headingOne">
                                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                            ISTEK - BU DERAZA TIZIMLARINING YANGI BRENDI
+                                                            {{__('main.about8')}}
                                                         </button>
                                                     </h2>
                                                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample_2">
                                                         <div class="accordion-body">
-                                                            Istek - bu deraza tizimlarining yangi brendi bo'lib, uning asosiy vazifasi mijozlarning yangi va yuqori sifatli derazalarga bo'lgan istaklarini amaliy xarajatlar bilan ta'minlashdir.
+                                                            {{__('main.about9')}}
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="headingTwo">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                            LOGOTIP TEKISLIGIDAGI DIZAYN
+                                                            {{__('main.about10')}}
                                                         </button>
                                                     </h2>
                                                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample_2">
                                                         <div class="accordion-body">
-                                                            Logotip tekislikdagi ikkita kvadratdan iborat grafik element shaklida qilingan. Grafik elementni o'qish va tushunish oson, bu zamonaviy ikki oynali oynalar bilan bog'lanishga olib keladi.
+                                                            {{__('main.about11')}}
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="headingThree">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                            GROTESK SHRIFT ASOSIDA YARATILISHI
+                                                            {{__('main.about12')}}
                                                         </button>
                                                     </h2>
                                                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample_2">
                                                         <div class="accordion-body">
-                                                            Grafik elementning o'ng tomonida grotesk shrift asosida yaratilgan noyob ISTEK yozuvi mavjud. Engil, zamonaviy sans-serif shriftdan foydalanish texnologiya va zamonaviylikni, minimalizm va eksperimentni namoyish qilish istagi va keraksiz konventsiyalarni rad etish bilan oqlanadi.
+                                                            {{__('main.about13')}}
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="headingFour">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                            OSIYO MIQYOSIDAGI KATTA ZAVOD
+                                                            {{__('main.about14')}}
                                                         </button>
                                                     </h2>
                                                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample_2">
                                                         <div class="accordion-body">
-                                                            Brend o'zining shrifti bilan iste'molchilarga "ISTEK - bu texnologiya va zamonaviylik haqida ISTEK - bu sizga faqat siz xohlagan va sizga kerak bo'lgan narsalarni beradi".
+                                                            {{__('main.about15')}}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -169,48 +168,48 @@
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="heading5">
                                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
-                                                            HAYOT TARZINI YAXSHILASH
+                                                            {{__('main.about16')}}
                                                         </button>
                                                     </h2>
                                                     <div id="collapse5" class="accordion-collapse collapse show" aria-labelledby="heading5" data-bs-parent="#accordionExample_3">
                                                         <div class="accordion-body">
-                                                            Hayot tarzini yaxshilash, unga qulaylik va afzallikni olib keluvchi yangi standart va yo'nalishlarni yaratish.
+                                                            {{__('main.about17')}}
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="heading6">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                                                            MAMLAKAT SANOATINI RIVOJLANTIRISH
+                                                            {{__('main.about18')}}
                                                         </button>
                                                     </h2>
                                                     <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionExample_3">
                                                         <div class="accordion-body">
-                                                            Mamlakat sanoatini rivojlantirish hamda o'z maqsadlarimizga erishish va zimmamizdagi burchni ado etish yo'lidagi bosilgan har bir taraqqiyot qadamlari uchun mas'ul bo'lish.
+                                                            {{__('main.about19')}}
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="heading7">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                                                            BIZNESNI YURITISH VA O‘ZARO HAMKORLIK
+                                                            {{__('main.about20')}}
                                                         </button>
                                                     </h2>
                                                     <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionExample_3">
                                                         <div class="accordion-body">
-                                                            Biznesni yuritish va o'zaro hamkorlik olib borishning an'anaviy uslublarini o'zgartirish va ishga yangicha yondashishni tatqib etish.
+                                                            {{__('main.about21')}}
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="heading8">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-                                                            MIJOZLARIMIZ E’TIBORINI QOZONISH
+                                                            {{__('main.about22')}}
                                                         </button>
                                                     </h2>
                                                     <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample_3">
                                                         <div class="accordion-body">
-                                                            Mijozlarimiz e'tiborini qozonish, xodimlarimiz va hamkorlarimiz manfaatlarini himoya qilish va jamiyat taraqqiyoti yo'lida kompaniya samaradorligini doimo oshirib borish.
+                                                            {{__('main.about23')}}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -223,48 +222,48 @@
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="heading10">
                                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="true" aria-controls="collapse10">
-                                                            "KARYERAVIY O‘SISH"
+                                                            {{__('main.about24')}}
                                                         </button>
                                                     </h2>
                                                     <div id="collapse10" class="accordion-collapse collapse show" aria-labelledby="heading10" data-bs-parent="#accordionExample_31">
                                                         <div class="accordion-body">
-                                                            Biz faoliyatni endi boshlayotgan ham, malakali mutaxassislarimizga ham katta "KARYARAVIY O'SISH" imkoniyatlarini taqdim etamiz.
+                                                            {{__('main.about25')}}
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="heading12">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
-                                                            O'QUV VA RIVOJLANISH DASTURLARIMIZ
+                                                            {{__('main.about26')}}
                                                         </button>
                                                     </h2>
                                                     <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordionExample_31">
                                                         <div class="accordion-body">
-                                                            Hozirgi tajribangizdan yoki malaka darajangizdan qat'iy nazar, bizda professional maqsadlaringizga erishishingizga yordam beradigan o'quv va rivojlanish dasturlarimiz mavjud.
+                                                            {{__('main.about27')}}
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="heading13">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
-                                                            O'ZIGA XOS EHTIYOJLARI VA AMBITSIYALAR
+                                                            {{__('main.about28')}}
                                                         </button>
                                                     </h2>
                                                     <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13" data-bs-parent="#accordionExample_31">
                                                         <div class="accordion-body">
-                                                            Biz har bir xodimga o'ziga xos ehtiyojlari va ambitsiyalari borligini tushunamiz.Shu munosabat bilan, biz xodimlarning individual rivojlanishiga e'tibor qaratamiz.Bizning asosiy maqsadimiz - barcha xodimlarni karyeraviy o'sish uchun barcha zarur vositalar va resurslar bilan ta'minlashdir.
+                                                            {{__('main.about29')}}
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="heading15">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
-                                                            BIZ XODIMLARIMIZ BILAN FAXRLANAMIZ!
+                                                            {{__('main.about30')}}
                                                         </button>
                                                     </h2>
                                                     <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15" data-bs-parent="#accordionExample_31">
                                                         <div class="accordion-body">
-                                                            Biz barcha xodimlarimiz bilan faxrlanamiz! Siz o'z salohiyatingizni ro'yobga chiqarishingiz va karyerangizda yangi cho'qqilarni zabt etishingiz mumkin bo'lgan ilhomlantiruvchi va qo'llab-quvvatlovchi muhit yaratishga intilamiz.
+                                                            {{__('main.about31')}}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -337,7 +336,7 @@
     <section id="ori-sponsor-1" class="ori-sponsor-section-1 position-relative">
         <div class="container">
             <div class="ori-sponsor-title text-uppercase text-center">
-                <h3><i></i> <span>Hamkorlar</span> <i></i> </h3>
+                <h3><i></i> <span>{{__('main.partner2')}}</span> <i></i> </h3>
             </div>
             <div class="ori-sponsor-content">
                 <div class="ori-sponsor-slider">
@@ -403,10 +402,10 @@
             <div class="container">
                 <div class="ori-team-top-content-1 d-flex justify-content-between align-items-center">
                     <div class="ori-section-title-1 text-uppercase">
-                        <h2 class="d-flex">Bizning professional <br>jamoamiz bilan tanishing</h2>
+                        <h2 class="d-flex">{{__('main.about32')}} <br>{{__('main.about33')}}</h2>
                     </div>
                     <div class="ori-btn-1 text-uppercase">
-                        <a href="team.html">Barchasini ko'rish</a>
+                        <a href="team.html">{{__('main.seeAll')}}</a>
                     </div>
                 </div>
                 <div class="ori-team-content-1">
@@ -456,8 +455,8 @@
         <div class="container">
             <div class="ori-inner-section-title text-center">
                 <span class="sub-title text-uppercase">
-                    Istek - istaklarga mos tanlov</span>
-                <h2>Qanday erishdik ?</h2>
+                    {{__('main.about34')}}</span>
+                <h2>{{__('main.about35')}}</h2>
             </div>
             <div class="ori-achivement-history-content">
                 <div class="ori-achivement-history-item-wrapper position-relative">
@@ -467,8 +466,8 @@
                                 2019
                             </div>
                             <div class="achivement-text">
-                                <h3>Tashkil etish</h3>
-                                <p>Kompaniyani tashkil etishda juda ko'p qiyinchiliklarga duch keldik, lekin ahil jamoamiz va sifatli maxsulotlarimiz tufayli o'z sodiq mijozlarimizga ega bo'ldik.</p>
+                                <h3>{{__('main.about36')}}</h3>
+                                <p>{{__('main.about37')}}</p>
                             </div>
                         </div>
                     </div>
@@ -478,8 +477,8 @@
                                 2020
                             </div>
                             <div class="achivement-text">
-                                <h3>PVX romlar</h3>
-                                <p>Mijozlarimizning hohish istaklariga binoan har tomonlama qulay va jozibali dizaynga ega romlarni ishlab chiqarishni yo'lga qo'ydik</p>
+                                <h3>{{__('main.about38')}}</h3>
+                                <p>{{__('main.about39')}}</p>
                             </div>
                         </div>
                     </div>
@@ -489,8 +488,8 @@
                                 2021
                             </div>
                             <div class="achivement-text">
-                                <h3>Sifat </h3>
-                                <p>Bizning mahsulotlarimiz yuqori sifat standartlariga javob beradi va xalqaro sertifikatlarga ega.</p>
+                                <h3>{{__('main.about40')}} </h3>
+                                <p>{{__('main.about41')}}</p>
                             </div>
                         </div>
                     </div>
@@ -500,8 +499,8 @@
                                 2022
                             </div>
                             <div class="achivement-text">
-                                <h3>Innovatsiya</h3>
-                                <p>Doimiy ravishda yangi texnologiyalarni tadbiq etish orqali bozor talablari va mijozlar ehtiyojlariga mos keluvchi mahsulotlar ishlab chiqaramiz.</p>
+                                <h3>{{__('main.about42')}}</h3>
+                                <p>{{__('main.about43')}}</p>
                             </div>
                         </div>
                     </div>
@@ -511,8 +510,8 @@
                                 2023
                             </div>
                             <div class="achivement-text">
-                                <h3>Ishonchlilik </h3>
-                                <p>Har bir loyihamizda sifat va barqarorlikka e’tibor qaratamiz, mijozlarimizning ishonchini qozonamiz.</p>
+                                <h3>{{__('main.about44')}} </h3>
+                                <p>{{__('main.about45')}}</p>
                             </div>
                         </div>
                     </div>
@@ -522,8 +521,8 @@
                                 2024
                             </div>
                             <div class="achivement-text">
-                                <h3>Hamkorlarimiz</h3>
-                                <p>Istek Group nafaqat O‘zbekistonda, balki xalqaro miqyosda ham ko‘plab hamkorlar bilan ishlaydi. Bizning hamkorlarimiz orasida yetakchi qurilish kompaniyalari va ishlab chiqaruvchilar mavjud.</p>
+                                <h3>{{__('main.partner2')}}</h3>
+                                <p>{{__('main.about46')}}</p>
                             </div>
                         </div>
                     </div>
