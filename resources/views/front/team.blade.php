@@ -118,7 +118,7 @@
                         <div class="col-lg-4">
                             <div class="ori-team-inner-item position-relative">
                                 <div class="ori-team-img">
-                                    <img src="assets/img/team/tm1.png" alt="">
+                                    <img src="/storage/{{ $tm->image}}" alt="">
                                 </div>
                                 <div class="ori-team-text text-center position-absolute">
                                     <h3><a href="{{ route('singleTeam', ['team' => $tm->id]) }}">{{$tm->full_name}}</a>

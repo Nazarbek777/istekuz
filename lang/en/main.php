@@ -25,6 +25,7 @@ return [
     "index7" => "Customers about us",
     "news" => "News",
     "readMore" => "Read more",
+    'category' => 'Categories',
 
     'send' => 'Send',
     'about1' => 'About Company',
@@ -88,4 +89,11 @@ return [
     'inputName' => 'Enter Your Name',
     'message' => 'Message',
     'inputMessage' => 'Enter Your Message',
+
+    'footer1' => 'Working hours',
+    'footer2' => 'Sunday - Day off',
+
+    'closeProducts' => 'Similar products',
+
+
 ];

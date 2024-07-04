@@ -41,7 +41,8 @@ return[
     'index6' => 'jamoamiz',
     'index7' => 'Mijozlarimiz biz haqimizda',
     'news' => 'Yangiliklar',
-    'readMore' => "Ba'tafsil",
+    'readMore' => "Batafsil",
+    'category' => 'Kategoriyalar',
 
     'send' => 'Yuborish',
     'about1' => 'Kompaniya haqida',
@@ -106,6 +107,9 @@ return[
     'inputName' => 'Ismingizni Kiriting',
     'message' => 'Xabar',
     'inputMessage' => 'Xabaringizni kiriting',
+    'footer1' => 'Ish vaqti',
+    'footer2' => "Yakshanba - Dam olish kuni",
 
+    'closeProducts' => "O'xshash maxsulotlar",
 
 ];
