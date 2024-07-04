@@ -97,7 +97,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                                 </div>
                                 <div class="ori-service-img-title position-relative">
                                     <div class="ori-service-img">
-                                        <img src="assets/img/service/ser1.png" alt="">
+                                        <img src="assets/img/about.png" alt="">
                                     </div>
                                     <div class="ori-service-title text-center position-absolute">
                                         <h3>{{__('main.about')}} <i class="fal fa-arrow-right"></i></h3>
@@ -112,7 +112,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                                 </div>
                                 <div class="ori-service-img-title position-relative">
                                     <div class="ori-service-img">
-                                        <img src="assets/img/service/ser2.png" alt="">
+                                        <img src="assets/img/mission.png" alt="">
                                     </div>
                                     <div class="ori-service-title text-center position-absolute">
                                         <h3>{{__('main.about48')}}<i class="fal fa-arrow-right"></i></h3>
@@ -127,7 +127,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                                 </div>
                                 <div class="ori-service-img-title position-relative">
                                     <div class="ori-service-img">
-                                        <img src="assets/img/service/ser3.png" alt="">
+                                        <img src="assets/img/partner.png" alt="">
                                     </div>
                                     <div class="ori-service-title text-center position-absolute">
                                         <h3>{{__('main.partners')}} <i class="fal fa-arrow-right"></i></h3>

@@ -26,10 +26,13 @@ $categories = Category::all();
                         <li class="dropdown">
                             <a href="{{ route('about')}}">{{__('main.istek1')}}</a>
                             <ul class="dropdown-menu clearfix">
-                                <li><a target="_blank" href="{{route('about')}}">{{__('main.about')}}</a></li>
-                                <li><a target="_blank" href="{{route('mission')}}">Mission</a></li>
-                                <li><a target="_blank" href="404">{{__('main.history')}}</a></li>
-                                <li><a target="_blank" href="404">{{__('main.partner')}}</a></li>
+                                <li><a href="{{route('about')}}">{{__('main.about')}}</a></li>
+                                <li><a href="{{route('mission')}}">Mission</a></li>
+                                <li><a href="404">{{__('main.history')}}</a></li>
+                                <li><a href="{{ route('partner')}}">{{__('main.partner')}}</a></li>
+                                <li><a href="{{ route('team')}}">Team</a></li>
+                                <li><a href="{{ route('faq')}}">FAQ</a></li>
+
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -203,10 +206,10 @@ $categories = Category::all();
                         <div class="content-box">
                             <h5>Social Account</h5>
                             <ul class="social-box">
-                                <a href="https://www.facebook.com/people/Istek/61557360990149/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://t.me/istek_uz" target="_blank"><i class="fab fa-telegram"></i></a>
-                                <a href="https://www.instagram.com/istek.uz/" target="_blank"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.youtube.com/@istek_uz" target="_blank"><i class="fab fa-youtube"></i></a>
+                                <a href="https://www.facebook.com/people/Istek/61557360990149/"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://t.me/istek_uz"><i class="fab fa-telegram"></i></a>
+                                <a href="https://www.instagram.com/istek.uz/"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.youtube.com/@istek_uz"><i class="fab fa-youtube"></i></a>
                             </ul>
                         </div>
                     </div>
