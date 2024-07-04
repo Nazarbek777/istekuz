@@ -76,20 +76,29 @@ class NewsController extends Controller
     {
         $validated = $request->validated();
 
+        $path = $news->image; // Existing image path by default
+        $path2 = $news->image2; // Existing second image path by default
+
         if ($request->hasFile('image')) {
+            // Delete old image if exists
             if ($news->image) {
                 Storage::delete('public/' . $news->image);
             }
+            // Store new image
             $name = time() . '_' . $request->file('image')->getClientOriginalName();
             $path = $request->file('image')->storeAs('product_photo', $name, 'public');
         }
+
         if ($request->hasFile('image2')) {
+            // Delete old second image if exists
             if ($news->image2) {
                 Storage::delete('public/' . $news->image2);
             }
-            $name = time() . '_' . $request->file('image2')->getClientOriginalName();
-            $path2 = $request->file('image2')->storeAs('product_photo', $name, 'public');
+            // Store new second image
+            $name2 = time() . '_' . $request->file('image2')->getClientOriginalName();
+            $path2 = $request->file('image2')->storeAs('product_photo', $name2, 'public');
         }
+
         $news->update([
             'name_uz' => $validated['name_uz'],
             'name_ru' => $validated['name_ru'],
@@ -97,12 +106,13 @@ class NewsController extends Controller
             'description_uz' => $validated['description_uz'],
             'description_ru' => $validated['description_ru'],
             'description_en' => $validated['description_en'],
-            'image' => $path ?? $news->image,
-            'image2' => $path2 ?? $news->image,
+            'image' => $path,
+            'image2' => $path2,
         ]);
 
         return redirect()->route('news.index')->with('success', 'Yangilik muvaffaqiyatli tahrirlandi');
     }
+
 
 
     public function destroy(News $news)

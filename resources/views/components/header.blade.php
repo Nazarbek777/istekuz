@@ -27,8 +27,9 @@ $categories = Category::all();
                             <a href="{{ route('about')}}">{{__('main.istek1')}}</a>
                             <ul class="dropdown-menu clearfix">
                                 <li><a target="_blank" href="{{route('about')}}">{{__('main.about')}}</a></li>
-                                <li><a target="_blank" href="">{{__('main.history')}}</a></li>
-                                <li><a target="_blank" href="">{{__('main.partner')}}</a></li>
+                                <li><a target="_blank" href="{{route('mission')}}">Mission</a></li>
+                                <li><a target="_blank" href="404">{{__('main.history')}}</a></li>
+                                <li><a target="_blank" href="404">{{__('main.partner')}}</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -102,7 +103,7 @@ $categories = Category::all();
                                 <a href="{{ route('about')}}">{{__('main.istek')}}</a>
                                 <ul class="dropdown-menu clearfix">
                                     <li><a target="_blank" href="{{ route('about')}}">{{__('main.about')}} </a></li>
-                                    <li><a target="_blank" href="shop-single.html">{{__('main.history')}}</a></li>
+                                    <li><a target="_blank" href="404">{{__('main.history')}}</a></li>
                                     <li><a target="_blank" href="cart.html">{{__('main.partner')}}</a></li>
                                 </ul>
                             </li>
