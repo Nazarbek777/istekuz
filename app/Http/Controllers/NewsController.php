@@ -6,6 +6,7 @@ use App\Http\Requests\NewsStoreRequest;
 use App\Http\Requests\NewsUpdateRequest;
 use App\Models\News;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller
@@ -28,10 +29,21 @@ class NewsController extends Controller
     {
         $validated = $request->validated();
 
+        $path = null;
+        $path2 = null;
+
         if ($request->hasFile('image')) {
-            $name = time() . '_' . $request->file('image')->getClientOriginalName();
-            $path = $request->file('image')->storeAs('product_photo', $name, 'public');
+            $name1 = time() . '_' . $request->file('image')->getClientOriginalName();
+            $path = $request->file('image')->storeAs('product_photo', $name1, 'public');
         }
+
+        if ($request->hasFile('image2')) {
+            $name2 = time() . '_' . $request->file('image2')->getClientOriginalName();
+            $path2 = $request->file('image2')->storeAs('product_photo', $name2, 'public');
+        }
+
+        Log::info('Image1 Path: ' . $path);
+        Log::info('Image2 Path: ' . $path2);
 
         News::create([
             'name_uz' => $validated['name_uz'],
@@ -40,11 +52,13 @@ class NewsController extends Controller
             'description_uz' => $validated['description_uz'],
             'description_ru' => $validated['description_ru'],
             'description_en' => $validated['description_en'],
-            'image' => $path ?? null,
+            'image' => $path,
+            'image2' => $path2,
         ]);
 
         return redirect()->route('news.index')->with('success', 'Yangilik Bazaga Saqlandi');
     }
+
 
 
     public function show(News $news)
@@ -69,6 +83,13 @@ class NewsController extends Controller
             $name = time() . '_' . $request->file('image')->getClientOriginalName();
             $path = $request->file('image')->storeAs('product_photo', $name, 'public');
         }
+        if ($request->hasFile('image2')) {
+            if ($news->image2) {
+                Storage::delete('public/' . $news->image2);
+            }
+            $name = time() . '_' . $request->file('image2')->getClientOriginalName();
+            $path2 = $request->file('image2')->storeAs('product_photo', $name, 'public');
+        }
         $news->update([
             'name_uz' => $validated['name_uz'],
             'name_ru' => $validated['name_ru'],
@@ -76,7 +97,8 @@ class NewsController extends Controller
             'description_uz' => $validated['description_uz'],
             'description_ru' => $validated['description_ru'],
             'description_en' => $validated['description_en'],
-            'image' => $path ?? $news->image, // Keep the old image if a new one is not uploaded
+            'image' => $path ?? $news->image,
+            'image2' => $path2 ?? $news->image,
         ]);
 
         return redirect()->route('news.index')->with('success', 'Yangilik muvaffaqiyatli tahrirlandi');

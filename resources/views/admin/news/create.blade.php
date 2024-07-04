@@ -20,12 +20,14 @@
         </div>
     </div>
     <!-- end page title -->
+
     @if (session('error'))
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        {{ session('error') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ session('error') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
     @endif
+
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
@@ -40,13 +42,14 @@
                             <input type="text" class="form-control" id="validationCustom01" name="name_uz" placeholder="Nomini kiriting" required>
                         </div>
                         <div class="mb-3">
-                            <label for="validationCustom01" class="form-label">Nomi Rus tilida</label>
-                            <input type="text" class="form-control" id="validationCustom01" name="name_ru" placeholder="Nomini kiriting" required>
+                            <label for="validationCustom02" class="form-label">Nomi Rus tilida</label>
+                            <input type="text" class="form-control" id="validationCustom02" name="name_ru" placeholder="Nomini kiriting" required>
                         </div>
                         <div class="mb-3">
-                            <label for="validationCustom01" class="form-label">Nomi Ingliz tilida</label>
-                            <input type="text" class="form-control" id="validationCustom01" name="name_en" placeholder="Nomini kiriting" required>
+                            <label for="validationCustom03" class="form-label">Nomi Ingliz tilida</label>
+                            <input type="text" class="form-control" id="validationCustom03" name="name_en" placeholder="Nomini kiriting" required>
                         </div>
+
                         <h2 class="mt-5">Yangiliklar haqida batafsil</h2>
                         <div class="mb-3">
                             <label for="description_uz" class="form-label">Yangiliklar haqida batafsil O'zbek tilida</label>
@@ -60,6 +63,7 @@
                             <label for="description_en" class="form-label">Yangiliklar haqida batafsil Ingliz tilida</label>
                             <textarea name="description_en" class="form-control" id="description_en" placeholder="Yangiliklar haqida batafsil En" rows="4" required></textarea>
                         </div>
+
                         <style>
                             .custom-file-input {
                                 display: none;
@@ -88,51 +92,63 @@
                         </style>
 
                         <div class="mb-3 border rounded border-secondary-subtle">
-                            <label for="fileInput" class="custom-file-label" id="photoLabel">Rasm Tanlash</label>
-                            <input id="fileInput" name="image" type="file" class="custom-file-input" onchange="displayFileName()">
-                            <i class="delete-icon fas fa-times-circle" id="deleteIcon" onclick="deleteImage()"></i>
+                            <label for="fileInput1" class="custom-file-label" id="photoLabel1">Rasm Tanlash 850 x 480</label>
+                            <input id="fileInput1" name="image" type="file" class="custom-file-input" onchange="displayFileName('fileInput1', 'photoLabel1', 'deleteIcon1')">
+                            <i class="delete-icon fas fa-times-circle" id="deleteIcon1" onclick="deleteImage('fileInput1', 'photoLabel1', 'deleteIcon1')"></i>
                         </div>
 
-                        <div id="imagePreview" class="mb-3"></div>
+                        <div id="imagePreview1" class="mb-3"></div>
+                        <div class="mb-3 border rounded border-secondary-subtle">
+                            <label for="fileInput2" class="custom-file-label" id="photoLabel2">Rasm Tanlash 80 x 80</label>
+                            <input id="fileInput2" name="image2" type="file" class="custom-file-input" onchange="displayFileName('fileInput2', 'photoLabel2', 'deleteIcon2')">
+                            <i class="delete-icon fas fa-times-circle" id="deleteIcon2" onclick="deleteImage('fileInput2', 'photoLabel2', 'deleteIcon2')"></i>
+                        </div>
+
+                        <div id="imagePreview2" class="mb-3"></div>
 
                         <script>
-                            document.getElementById('fileInput').addEventListener('change', function() {
-                                const file = this.files[0];
-                                if (file) {
-                                    const reader = new FileReader();
-                                    reader.onload = function(e) {
-                                        const preview = document.createElement('img');
-                                        preview.classList.add('preview-image');
-                                        preview.src = e.target.result;
-                                        document.getElementById('imagePreview').innerHTML = '';
-                                        document.getElementById('imagePreview').appendChild(preview);
-                                        // Show delete icon
-                                        document.getElementById('deleteIcon').style.display = 'inline-block';
-                                    };
-                                    reader.readAsDataURL(file);
-                                } else {
-                                    document.getElementById('imagePreview').innerHTML = '';
-                                    // Hide delete icon
-                                    document.getElementById('deleteIcon').style.display = 'none';
-                                }
-                            });
-
-                            function displayFileName() {
-                                const input = document.getElementById('fileInput');
-                                const label = document.getElementById('photoLabel');
-                                const fileName = input.files[0].name;
+                            function displayFileName(inputId, labelId, iconId) {
+                                var input = document.getElementById(inputId);
+                                var label = document.getElementById(labelId);
+                                var icon = document.getElementById(iconId);
+                                var fileName = input.files[0].name;
                                 label.textContent = fileName;
+                                icon.style.display = 'block';
+
+                                var previewId = inputId === 'fileInput1' ? 'imagePreview1' : 'imagePreview2';
+                                displayImagePreview(input, previewId);
                             }
 
-                            function deleteImage() {
-                                // Remove image preview
-                                document.getElementById('imagePreview').innerHTML = '';
-                                // Clear file input
-                                document.getElementById('fileInput').value = '';
-                                // Hide delete icon
-                                document.getElementById('deleteIcon').style.display = 'none';
+                            function displayImagePreview(input, previewId) {
+                                var preview = document.getElementById(previewId);
+                                if (input.files && input.files[0]) {
+                                    var reader = new FileReader();
+                                    reader.onload = function(e) {
+                                        var img = document.createElement('img');
+                                        img.src = e.target.result;
+                                        img.className = 'preview-image';
+                                        preview.innerHTML = '';
+                                        preview.appendChild(img);
+                                    };
+                                    reader.readAsDataURL(input.files[0]);
+                                } else {
+                                    preview.innerHTML = '';
+                                }
+                            }
+
+                            function deleteImage(inputId, labelId, iconId) {
+                                var input = document.getElementById(inputId);
+                                var label = document.getElementById(labelId);
+                                var icon = document.getElementById(iconId);
+                                input.value = '';
+                                label.textContent = inputId === 'fileInput1' ? 'Rasm Tanlash 850 x 480' : 'Rasm Tanlash 80 x 80';
+                                icon.style.display = 'none';
+
+                                var previewId = inputId === 'fileInput1' ? 'imagePreview1' : 'imagePreview2';
+                                document.getElementById(previewId).innerHTML = '';
                             }
                         </script>
+
                         <div class="mt-3">
                             <button class="btn btn-primary me-4" type="submit">Saqlash</button>
                             <a href="{{ route('news.index')}}" class="btn btn-danger" type="submit">O'chirish</a>

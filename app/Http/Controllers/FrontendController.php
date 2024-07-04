@@ -29,12 +29,15 @@ class FrontendController extends Controller
 
     public function contact()
     {
+
         return view('front.contact');
     }
 
     public function blog()
     {
-        return view('front.blog');
+        $categories = Category::with('products')->get();
+        $news = News::paginate(2);
+        return view('front.blog', compact('news','categories'));
     }
 //    public function    categoryId($category)
 //    {
@@ -55,7 +58,9 @@ class FrontendController extends Controller
 
     public function product()
     {
+        $news = News::take(4)->get();
+        $categories = Category::with('products')->get();
         $products = Product::all();
-        return view('front.product',   compact('products'));
+        return view('front.product',   compact('products','categories','news'));
     }
 }

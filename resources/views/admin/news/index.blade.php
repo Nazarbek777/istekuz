@@ -47,7 +47,7 @@
                                     <th>ID</th>
                                     <th>Nomi Uz</th>
                                     <th>Batafsil UZ</th>
-                                    <th>Rasm</th>
+                                    <th>Rasm 80 x 80</th>
                                     <th>Actions</th>
 
                                 </tr>
@@ -58,7 +58,7 @@
                                     <td>{{ $new->id }}</td>
                                     <td>{{ $new->name_uz}}</td>
                                     <td>{{ $new->description_uz}}</td>
-                                    <td><img src="/storage/{{$new->image}}" style="width: 100px;" alt=""></td>
+                                    <td><img src="/storage/{{$new->image2}}" style="width: 100px;" alt=""></td>
                                     <td>
                                         <div class="mx-1 d-inline-block">
                                             <a href="{{ route('news.edit', $new->id) }}"><i class="mdi mdi-book-edit-outline fs-3"></i></a>

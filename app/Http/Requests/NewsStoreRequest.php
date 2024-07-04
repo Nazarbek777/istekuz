@@ -6,13 +6,13 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class NewsStoreRequest extends FormRequest
 {
-    
+
     public function authorize()
     {
         return auth()->user()->role == 'admin';
     }
 
-    
+
     public function rules()
     {
         return [
@@ -23,6 +23,7 @@ class NewsStoreRequest extends FormRequest
             'description_ru' => 'required|string',
             'description_en' => 'required|string',
             'image' => 'nullable',
+            'image2' => 'nullable',
         ];
     }
 }
