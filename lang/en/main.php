@@ -94,6 +94,34 @@ return [
     'footer2' => 'Sunday - Day off',
 
     'closeProducts' => 'Similar products',
+    'singleProduct1' => 'The installation depth of the system allows it to be used in many structures:',
+    'singleProduct2' => 'Residential buildings, office buildings, and various public and industrial buildings',
+    'singleProduct3' => 'Frame and door constructions where the use of other materials is not possible due to architectural or structural requirements',
+    'singleProduct4' => 'Frame constructions with high requirements for thermal and sound insulation',
+    'singleProduct5' => 'Engelberg 80 gives a great look to your interior and emphasizes the uniqueness of your design solution.',
+    'singleProduct6' => 'About the Service',
+    'singleProduct7' => 'Free Measurement',
+    'singleProduct8' => 'Speed',
+    'singleProduct9' => 'Quality',
+    'singleProduct10' => 'Warranty',
+    'singleProduct11' => 'Result',
+    'singleProduct12' => 'High Quality',
+    'singleProduct13' => 'Soundproof',
+    'singleProduct14' => 'Maintains',
+    'singleProduct15' => 'Temperature',
+    'singleProduct16' => 'About the Company',
+    'singleProduct17' => 'Download the Catalog',
+    'singleProduct18' => "ISTEK Window Factory offers you the highest quality products at the best prices using the latest technologies.",
+    'singleProduct19' => "Our technologies and processes ensure fast production, and orders are delivered promptly.",
+    'singleProduct20' => "To ensure high quality, we collaborate with comprehensive suppliers and deeply inspect every process.",
+    'singleProduct21' => "ISTEK Window Factory guarantees quality and warranty for each product. We are pleased that you purchase and trust our products.",
+
+
+    'search' => 'Search',
+    'blogs' => 'Blogs',
+    'blog1' => 'Posts',
+    'continue' => 'Read More',
+    'search1' => 'Search for a keyword',
 
 
 ];

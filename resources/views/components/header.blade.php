@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Category;
+
 $lang = \Illuminate\Support\Facades\App::getLocale();
 $categories = Category::all();
 ?>
@@ -65,7 +66,7 @@ $categories = Category::all();
                             <a href="{{ route('contact')}}">{{__('main.contact')}}</a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{__('main.language')}}</a>
+                            <a href="#" data-toggle="dropdown">{{__('main.language')}}</a>
                             <ul class="dropdown-menu">
                                 <li><a href="/uz">Uzbek (uz)</a></li>
                                 <li><a href="/ru">Russian (ru)</a></li>
@@ -104,11 +105,15 @@ $categories = Category::all();
                             </li>
 
                             <li class="dropdown">
-                                <a href="{{ route('about')}}">{{__('main.istek')}}</a>
+                                <a href="{{ route('about')}}">{{__('main.istek1')}}</a>
                                 <ul class="dropdown-menu clearfix">
-                                    <li><a href="{{ route('about')}}">{{__('main.about')}} </a></li>
+                                    <li><a href="{{route('about')}}">{{__('main.about')}}</a></li>
+                                    <li><a href="{{route('mission')}}">Mission</a></li>
                                     <li><a href="404">{{__('main.history')}}</a></li>
-                                    <li><a href="cart.html">{{__('main.partner')}}</a></li>
+                                    <li><a href="{{ route('partner')}}">{{__('main.partner')}}</a></li>
+                                    <li><a href="{{ route('team')}}">Team</a></li>
+                                    <li><a href="{{ route('faq')}}">FAQ</a></li>
+
                                 </ul>
                             </li>
 
