@@ -37,7 +37,7 @@
                                     <img src="{{asset('storage/' . $product->image)}}" alt="">
                                 </div>
                                 <div class="about-play-btn position-absolute">
-                                    <a class="text-uppercase d-flex align-items-center justify-content-center" href="#">{{ __('main.')}}</a>
+                                    <a class="text-uppercase d-flex align-items-center justify-content-center" href="#">{{ __('main.see')}}</a>
                                 </div>
                             </div>
                             <div class="ori-service-details-text pera-content">
@@ -46,58 +46,46 @@
 
                                     {{$product['description_'. $lang]}}
                                 </p>
-                                <h2 class="mt-3">Tizimning montaj chuqurligi uni ko'plab tuzilmalarda qo'llash imkonini
-                                    beradi: </h2>
+                                <h2 class="mt-3">{{__('main.singleProduct1')}}</h2>
                                 <div class="ori-service-details-outcome ul-li-block">
                                     <ul>
-                                        <li>Turar-joy binolarida, ofis binolarida va turli jamoat va sanoat binolarida
+                                        <li>{{__('main.singleProduct2')}}
                                         </li>
-                                        <li>Arxitektura yoki konstruktiv talablar tufayli boshqa materiallardan
-                                            foydalanish mumkin bo'lmagan rom va eshik konstruktsiyalari
+                                        <li>{{__('main.singleProduct3')}}
                                         </li>
-                                        <li>Issiqlik va ovoz izolyatsiyasiga yuqori talablar qo‘yiladigan rom
-                                            konstruksiyalari
+                                        <li>{{__('main.singleProduct4')}}
                                         </li>
                                     </ul>
                                 </div>
                                 <p>
-                                    Engelberg 80 - interyeringizga ajoyib ko‘rinish baxsh etadi va dizayn
-                                    yechimingizning o'ziga xosligini ta'kidlaydi.
+                                    {{__('main.singleProduct5')}}
                                 </p>
 
 
                                 <div class="ori-service-details-process ul-li-block">
-                                    <h2>Xizmat haqida</h2>
+                                    <h2>{{__('main.singleProduct6')}}</h2>
                                     <div class="ori-service-process-item-wrap d-flex flex-wrap">
                                         <div class="ori-service-process-item pera-content">
-                                            <h3><span>01</span> Bepul o'lchash </h3>
-                                            <p>Creative analysis is important. It is common for marketers to measure
-                                                campaign performance at a superficial level. But to fully understand
-                                                it, </p>
+                                            <h3><span>01</span> {{__('main.singleProduct7')}} </h3>
+                                            <p>{{__('main.singleProduct18')}}</p>
                                         </div>
                                         <div class="ori-service-process-item pera-content">
-                                            <h3><span>02</span> Tezlik </h3>
-                                            <p>Creative analysis is important. It is common for marketers to measure
-                                                campaign performance at a superficial level. But to fully understand
-                                                it, </p>
+                                            <h3><span>02</span> {{__('main.singleProduct8')}} </h3>
+                                            <p>{{__('main.singleProduct19')}}</p>
                                         </div>
                                         <div class="ori-service-process-item pera-content">
-                                            <h3><span>03</span> Sifat </h3>
-                                            <p>Creative analysis is important. It is common for marketers to measure
-                                                campaign performance at a superficial level. But to fully understand
-                                                it, </p>
+                                            <h3><span>03</span> {{__('main.singleProduct9')}} </h3>
+                                            <p>{{__('main.singleProduct20')}}</p>
                                         </div>
                                         <div class="ori-service-process-item pera-content">
-                                            <h3><span>04</span> Kafolat </h3>
-                                            <p>Creative analysis is important. It is common for marketers to measure
-                                                campaign performance at a superficial level. But to fully understand
-                                                it, </p>
+                                            <h3><span>04</span> {{__('main.singleProduct10')}} </h3>
+                                            <p>{{__('main.singleProduct21')}}</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="ori-service-details-result">
-                                    <h2>Natija</h2>
+                                    <h2>{{__('main.singleProduct11')}}</h2>
                                     <div class="ori-service-details-result-item-wrap d-flex justify-content-between">
                                         <div class="ori-about-circle-progress-item">
                                             <div class="counter-boxed text-center headline position-relative">
@@ -106,7 +94,7 @@
                                                     <div class="inner-text count-box"><span class="count-text" data-stop="90" data-speed="4500"></span>%
                                                     </div>
                                                 </div>
-                                                <h3 class="text-uppercase"> Sifatli</h3>
+                                                <h3 class="text-uppercase"> {{__('main.singleProduct12')}}</h3>
                                             </div>
                                         </div>
                                         <div class="ori-about-circle-progress-item">
@@ -116,7 +104,7 @@
                                                     <div class="inner-text count-box"><span class="count-text" data-stop="90" data-speed="4500"></span>%
                                                     </div>
                                                 </div>
-                                                <h3 class="text-uppercase"> Shovqinga chidamli</h3>
+                                                <h3 class="text-uppercase"> {{__('main.singleProduct13')}}</h3>
                                             </div>
                                         </div>
                                         <div class="ori-about-circle-progress-item">
@@ -126,7 +114,7 @@
                                                     <div class="inner-text count-box"><span class="count-text" data-stop="90" data-speed="4500"></span>%
                                                     </div>
                                                 </div>
-                                                <h3 class="text-uppercase">Haroratni meyorda <br> tutadi</h3>
+                                                <h3 class="text-uppercase">{{__('main.singleProduct14')}} <br> {{__('main.singleProduct15')}}</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -171,9 +159,9 @@
                             </div>
                             <div class="ori-service-details-widget ul-li-block">
                                 <div class="company-profile-widget">
-                                    <h3 class="widget-title">Kompaniya haqida</h3>
+                                    <h3 class="widget-title">{{__('main.singleProduct16')}}</h3>
                                     <div class="profile-download-btn text-center text-uppercase">
-                                        <a href="#">Katalogni yuklab olish</a>
+                                        <a href="{{ asset('storage/' . $product->image) }}" download="catalog.jpg" id="downloadLink">{{__('main.singleProduct17')}}</a>
                                     </div>
                                 </div>
                             </div>
@@ -193,7 +181,28 @@
             <div class="line_area"></div>
         </div>
     </section>
+    <script>
+        function uploadCatalog() {
+            const form = document.getElementById('uploadForm');
+            const formData = new FormData(form);
 
+            fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                }).then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Image uploaded successfully!');
+                    } else {
+                        alert('Image upload failed!');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred while uploading the image.');
+                });
+        }
+    </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {

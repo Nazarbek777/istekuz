@@ -8,10 +8,10 @@
     <section id="ori-breadcrumbs" class="ori-breadcrumbs-section position-relative" data-background="assets/img/bg/bread-bg.png">
         <div class="container">
             <div class="ori-breadcrumb-content text-center ul-li">
-                <h1>Yangiliklar</h1>
+                <h1>{{__('main.news')}}</h1>
                 <ul>
-                    <li><a href="index.html">Istek</a></li>
-                    <li>Yangiliklar</li>
+                    <li><a href="index.html">{{__('main.istek1')}}</a></li>
+                    <li>{{__('main.news')}}</li>
                 </ul>
             </div>
         </div>
@@ -39,16 +39,16 @@
                         <div class="ori-blog-sidebar">
                             <div class="ori-blog-widget">
                                 <div class="search-widget">
-                                    <h3 class="widget-title">Qidirish</h3>
+                                    <h3 class="widget-title">{{__('main.search')}}</h3>
                                     <form action="#">
-                                        <input type="text" name="search" placeholder="Kalit so'zni qidiring">
+                                        <input type="text" name="search" placeholder="{{__('main.search1')}}">
                                         <button><i class="fal fa-search"></i></button>
                                     </form>
                                 </div>
                             </div>
                             <div class="ori-blog-widget">
                                 <div class="recent-post-widget">
-                                    <h3 class="widget-title">Bloglar</h3>
+                                    <h3 class="widget-title">{{__('main.blogs')}}</h3>
                                     @foreach($news as $tm)
                                         <div class="ori-recent-post-item d-flex align-items-center">
                                             <div class="recent-blog-img">
@@ -66,7 +66,7 @@
                             </div>
                             <div class="ori-blog-widget">
                                 <div class="service-widget ul-li-block">
-                                    <h3 class="widget-title">Kategoriyalar</h3>
+                                    <h3 class="widget-title">{{__('main.category')}}</h3>
                                     <ul>
                                         @foreach($categories as $category)
                                             <li><a href="{{ route('product') }}">{{ $category['name_' . $lang] }} <span>({{ $category->products->count() }})</span></a></li>
@@ -77,7 +77,7 @@
 
                             <div class="ori-blog-widget">
                                 <div class="gallery-widget ul-li">
-                                    <h3 class="widget-title">Lavhalar</h3>
+                                    <h3 class="widget-title">{{__('main.blog1')}}</h3>
                                     <ul class="zoom-gallery">
                                         <li><a href="assets/img/blog/blg-f5.png" data-source="assets/img/blog/blg-f5.png"><img src="assets/img/gallery/gl1.png" alt=""></a></li>
                                         <li><a href="assets/img/blog/blg-f5.png" data-source="assets/img/blog/blg-f5.png"><img src="assets/img/gallery/gl2.png" alt=""></a></li>
@@ -106,8 +106,8 @@
                                                 <a class="blog-comment" href="#"><i class="fas fa-comment"></i> 05</a>
                                             </div>
                                             <h3><a href="{{ route('singleBlog', ['blog' => $tm->id]) }}">{{$tm['name_' . $lang]}}</a></h3>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                            <a class="blog-more text-uppercase" href="{{ route('singleBlog', ['blog' => $tm->id]) }}">CONTINUE READING <i class="fal fa-arrow-right"></i></a>
+                                            <p>{{$tm['description_'.$lang]}}</p>
+                                            <a class="blog-more text-uppercase" href="{{ route('singleBlog', ['blog' => $tm->id]) }}">{{__('main.continue')}} <i class="fal fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 @endforeach

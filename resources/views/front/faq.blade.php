@@ -12,7 +12,7 @@
     </form>
 </div>
 <!-- Sidebar sidebar Item -->
-<div class="xs-sidebar-group info-group">
+<div class="xs-sidebar-group info-grou2p">
     <div class="xs-overlay xs-bg-black">
         <div class="row loader-area">
             <div class="col-3 preloader-wrap">
