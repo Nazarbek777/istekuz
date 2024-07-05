@@ -1,7 +1,7 @@
 <x-layouts.frontend>
     <?php
-$lang = \Illuminate\Support\Facades\App::getLocale();
-?>
+    $lang = \Illuminate\Support\Facades\App::getLocale();
+    ?>
 
     <!-- Start of Slider section
 	============================================= -->
@@ -222,11 +222,11 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                             <div class="ori-project-tab-btn ul-li-block text-uppercase wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                                 <ul class="nav nav-pills" id="pills-tab" role="tablist">
                                     @foreach($categories as $index => $category)
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link {{ $index == 0 ? 'active' : '' }}" id="category-tab-{{ $category->id }}" data-bs-toggle="pill" data-bs-target="#category-{{ $category->id }}" type="button" role="tab" aria-controls="category-{{ $category->id }}" aria-selected="{{ $index == 0 ? 'true' : 'false' }}">
-                                                {{ $category['name_'. $lang] }}
-                                            </button>
-                                        </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link {{ $index == 0 ? 'active' : '' }}" id="category-tab-{{ $category->id }}" data-bs-toggle="pill" data-bs-target="#category-{{ $category->id }}" type="button" role="tab" aria-controls="category-{{ $category->id }}" aria-selected="{{ $index == 0 ? 'true' : 'false' }}">
+                                            {{ $category['name_'. $lang] }}
+                                        </button>
+                                    </li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -236,23 +236,23 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                         <div class="ori-project-tab-content wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
                             <div class="tab-content" id="pills-tabContent">
                                 @foreach($categories as $index => $category)
-                                    <div class="tab-pane fade {{ $index == 0 ? 'show active' : '' }}" id="category-{{ $category->id }}" role="tabpanel" aria-labelledby="category-tab-{{ $category->id }}">
-                                        @php $products = $category->products->take(2); @endphp
-                                        @foreach($products as $product)
-                                            <div class="ori-project-item-1 position-relative">
-                                                <div class="ori-project-img">
-                                                    <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product['name_'.$lang] }}">
-                                                </div>
-                                                <div class="ori-project-text position-absolute">
-                                                    <h3><a href="{{ route('singleProduct', $product->id) }}">{{ $product['name_'.$lang] }}</a></h3>
-                                                    <span class="text-uppercase project-category"><a href="#">{{__('main.ISTEK')}} - {{__('main.index4')}}</a></span>
-                                                </div>
-                                                <div class="ori-project-link position-absolute">
-                                                    <a href="{{ route('singleProduct', $product->id) }}"><i class="fas fa-arrow-right"></i></a>
-                                                </div>
-                                            </div>
-                                        @endforeach
+                                <div class="tab-pane fade {{ $index == 0 ? 'show active' : '' }}" id="category-{{ $category->id }}" role="tabpanel" aria-labelledby="category-tab-{{ $category->id }}">
+                                    @php $products = $category->products->take(2); @endphp
+                                    @foreach($products as $product)
+                                    <div class="ori-project-item-1 position-relative">
+                                        <div class="ori-project-img">
+                                            <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product['name_'.$lang] }}">
+                                        </div>
+                                        <div class="ori-project-text position-absolute">
+                                            <h3><a href="{{ route('singleProduct', $product->id) }}">{{ $product['name_'.$lang] }}</a></h3>
+                                            <span class="text-uppercase project-category"><a href="#">{{__('main.ISTEK')}} - {{__('main.index4')}}</a></span>
+                                        </div>
+                                        <div class="ori-project-link position-absolute">
+                                            <a href="{{ route('singleProduct', $product->id) }}"><i class="fas fa-arrow-right"></i></a>
+                                        </div>
                                     </div>
+                                    @endforeach
+                                </div>
                                 @endforeach
 
                             </div>
@@ -373,11 +373,10 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                     <div class="ori-testimonial-item-area">
                         <div class="ori-testimonial-item-1">
                             <div class="ori-testimonial-text text-center pera-content">
-                                <p>“Our office is something we are pleased with. We consider it the little magnet; it is wanting to come here and afterward difficult to leave it. Our office is additionally a big name.”
-                                </p>
+                                <p>{{__('main.team2')}}</p>
                                 <div class="ori-testimonial-author text-center text-uppercase">
-                                    <h4>Suhrob Baxtiyorov</h4>
-                                    <span>ui/ux Designer</span>
+                                    <h4>Ismoil Usmonov</h4>
+                                    <span>CEO, Tech Innovators</span>
                                 </div>
                             </div>
                         </div>
@@ -385,11 +384,10 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                     <div class="ori-testimonial-item-area">
                         <div class="ori-testimonial-item-1">
                             <div class="ori-testimonial-text text-center pera-content">
-                                <p>“Our office is something we are pleased with. We consider it the little magnet; it is wanting to come here and afterward difficult to leave it. Our office is additionally a big name.”
-                                </p>
+                                <p>{{__('main.team3')}}</p>
                                 <div class="ori-testimonial-author text-center text-uppercase">
-                                    <h4>Suhrob Baxtiyorov</h4>
-                                    <span>ui/ux Designer</span>
+                                    <h4>Samariddion Nurmamatov</h4>
+                                    <span>Me'mor, Design Works</span>
                                 </div>
                             </div>
                         </div>
@@ -397,11 +395,10 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                     <div class="ori-testimonial-item-area">
                         <div class="ori-testimonial-item-1">
                             <div class="ori-testimonial-text text-center pera-content">
-                                <p>“Our office is something we are pleased with. We consider it the little magnet; it is wanting to come here and afterward difficult to leave it. Our office is additionally a big name.”
-                                </p>
+                                <p>{{__('main.team4')}}</p>
                                 <div class="ori-testimonial-author text-center text-uppercase">
-                                    <h4>Suhrob Baxtiyorov</h4>
-                                    <span>ui/ux Designer</span>
+                                    <h4>Jalilov Quvonchbek</h4>
+                                    <span>Menejer, Creative Solutions</span>
                                 </div>
                             </div>
                         </div>
