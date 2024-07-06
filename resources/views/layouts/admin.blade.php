@@ -207,8 +207,8 @@
                                 <i class="mdi mdi-magnify font-size-24"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-animated dropdown-menu-end dropdown-lg p-0">
-                                <form class="p-3">
-                                    <input type="search" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                <form class="form-inline ml-3" action="{{ route('search') }}" method="GET">
+                                    <input type="search" name="search" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
                                 </form>
                             </div>
                         </li>

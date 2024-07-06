@@ -70,6 +70,7 @@ Route::middleware(['checkAdmin:admin', 'auth'])->group(function () {
         Route::resource('news', NewsController::class);
         Route::resource('team', TeamController::class);
         Route::resource('logo', LogoController::class);
+        Route::get('/search', [NewsController::class, 'search'])->name('search');
     });
 });
 

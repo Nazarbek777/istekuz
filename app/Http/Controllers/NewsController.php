@@ -5,11 +5,47 @@ namespace App\Http\Controllers;
 use App\Http\Requests\NewsStoreRequest;
 use App\Http\Requests\NewsUpdateRequest;
 use App\Models\News;
+use App\Models\Product;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller
 {
+
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+
+        $news = News::query()
+            ->orwhere('name_uz', 'LIKE', "%{$search}%")
+            ->orwhere('name_ru', 'LIKE', "%{$search}%")
+            ->orwhere('name_en', 'LIKE', "%{$search}%")
+            ->orWhere('description_uz', 'LIKE', "%{$search}%")
+            ->orWhere('description_ru', 'LIKE', "%{$search}%")
+            ->orWhere('description_en', 'LIKE', "%{$search}%")
+            ->get();
+
+        $products = Product::query()
+            ->join('categories', 'categories.id', '=', 'products.category_id')
+            ->where(function ($query) use ($search) {
+                $query
+                    ->orWhere('categories.name_uz', 'LIKE', "%{$search}%")
+                    ->orWhere('categories.name_ru', 'LIKE', "%{$search}%")
+                    ->orWhere('categories.name_en', 'LIKE', "%{$search}%")
+                    ->orWhere('products.name_uz', 'LIKE', "%{$search}%")
+                    ->orWhere('products.name_ru', 'LIKE', "%{$search}%")
+                    ->orWhere('products.name_en', 'LIKE', "%{$search}%")
+                    ->orWhere('products.price', 'LIKE', "%{$search}%")
+                    ->orWhere('products.description_uz', 'LIKE', "%{$search}%")
+                    ->orWhere('products.description_ru', 'LIKE', "%{$search}%")
+                    ->orWhere('products.description_en', 'LIKE', "%{$search}%");
+            })
+            ->select('products.*')
+            ->get();
+
+        return view('admin.search', compact('news','products'));
+    }
 
     public function index()
     {
@@ -116,7 +152,7 @@ class NewsController extends Controller
 
     public function destroy(News $news)
     {
-        if($news->image){
+        if ($news->image) {
             Storage::delete($news->image);
         }
         $news->delete();
