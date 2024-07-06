@@ -29,7 +29,7 @@ class TeamController extends Controller
         $validated = $request->validated();
         if ($request->hasFile('image')) {
             $name = time() . '_' . $request->file('image')->getClientOriginalName();
-            $path = $request->file('image')->storeAs('team_photo', $name, 'public');
+            $path = $request->file('image')->storeAs('team_photo', $name);
         }
 
         Team::create([
@@ -73,7 +73,7 @@ class TeamController extends Controller
                 Storage::delete('public/' . $team->image);
             }
             $name = time() . '_' . $request->file('image')->getClientOriginalName();
-            $path = $request->file('image')->storeAs('product_photo', $name, 'public');
+            $path = $request->file('image')->storeAs('product_photo', $name);
         }
         $team->update([
             'full_name' => $validated['full_name'],

@@ -31,7 +31,7 @@ class ProductController extends Controller
 
         if ($request->hasFile('image')) {
             $name = time() . '_' . $request->file('image')->getClientOriginalName();
-            $path = $request->file('image')->storeAs('product_photo', $name, 'public');
+                $path = $request->file('image')->storeAs('product_photo', $name);
         }
 
         Product::create([
@@ -73,7 +73,7 @@ class ProductController extends Controller
                 Storage::delete('public/' . $product->image);
             }
             $name = time() . '_' . $request->file('image')->getClientOriginalName();
-            $path = $request->file('image')->storeAs('product_photo', $name, 'public');
+            $path = $request->file('image')->storeAs('product_photo', $name);
         }
         $product->update([
             'category_id' => $validated['category_id'],
