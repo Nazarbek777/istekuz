@@ -1,3 +1,9 @@
+<?php
+
+$order = \App\Models\Order::where('status', 'yangi')->count();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light" data-menu-color="brand" data-topbar-color="light">
 
@@ -117,31 +123,42 @@
                     </li>
                     <li class="menu-item">
                         <a href="{{ route('product.index')}}" class="menu-link waves-effect waves-light">
-                            <span class="menu-icon"><i class="bx bx-calendar"></i></span>
+                            <span class="menu-icon"><i class="bx bx-circle"></i></span>
                             <span class="menu-text"> Mahsulotlar </span>
                         </a>
                     </li>
                     <li class="menu-item">
+                        <a href="/admin/order" class="menu-link waves-effect waves-light">
+                            <span class="menu-icon"><i class="bx bx-cart"></i></span>
+                            <span class="menu-text">
+                            Buyurtmalar
+                            @if($order > 0)
+                                    <span class="badge bg-danger">{{ $order }}</span>
+                                @endif
+                        </span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
                         <a href="{{ route('about.index')}}" class="menu-link waves-effect waves-light">
-                            <span class="menu-icon"><i class="bx bx-calendar"></i></span>
+                            <span class="menu-icon"><i class="bx bx-user"></i></span>
                             <span class="menu-text"> Biz Haqimizda </span>
                         </a>
                     </li>
                     <li class="menu-item">
                         <a href="{{ route('news.index') }}" class="menu-link waves-effect waves-light">
-                            <span class="menu-icon"><i class="bx bx-calendar"></i></span>
+                            <span class="menu-icon"><i class="bx bx-alarm"></i></span>
                             <span class="menu-text"> Yangiliklar </span>
                         </a>
                     </li>
                     <li class="menu-item">
                         <a href="{{ route('team.index') }}" class="menu-link waves-effect waves-light">
-                            <span class="menu-icon"><i class="bx bx-calendar"></i></span>
+                            <span class="menu-icon"><i class="fa fa-users"></i></span>
                             <span class="menu-text"> Jamoa </span>
                         </a>
                     </li>
                     <li class="menu-item">
                         <a href="{{ route('logo.index') }}" class="menu-link waves-effect waves-light">
-                            <span class="menu-icon"><i class="bx bx-calendar"></i></span>
+                            <span class="menu-icon"><i class="fa fa-photo-film"></i></span>
                             <span class="menu-text"> Logo </span>
                         </a>
                     </li>
