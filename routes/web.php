@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Category;
@@ -47,6 +48,7 @@ Route::get('/team', [FrontendController::class, 'team'])->name('team');
 Route::get('/faq', [FrontendController::class, 'faq'])->name('faq');
 Route::get('/team/{team}', [FrontendController::class, 'singleTeam'])->name('singleTeam');
 Route::get('calculate', [FrontendController::class, 'calculate'])->name('calculate');
+Route::post('/order', [OrderController::class, 'store'])->name('order.store');
 
 Route::get('/login', [AdminController::class, 'login'])->name('login');
 Route::post('/authenticate', [AdminController::class, 'authenticate'])->name('authenticate');
@@ -70,6 +72,7 @@ Route::middleware(['checkAdmin:admin', 'auth'])->group(function () {
         Route::resource('news', NewsController::class);
         Route::resource('team', TeamController::class);
         Route::resource('logo', LogoController::class);
+        Route::resource('/order', OrderController::class);
         Route::get('/search', [NewsController::class, 'search'])->name('search');
     });
 });
