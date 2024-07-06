@@ -69,12 +69,12 @@ class NewsController extends Controller
 
         if ($request->hasFile('image')) {
             $name1 = time() . '_' . $request->file('image')->getClientOriginalName();
-            $path = $request->file('image')->storeAs('product_photo', $name1, 'public');
+            $path = $request->file('image')->storeAs('product_photo', $name1);
         }
 
         if ($request->hasFile('image2')) {
             $name2 = time() . '_' . $request->file('image2')->getClientOriginalName();
-            $path2 = $request->file('image2')->storeAs('product_photo', $name2, 'public');
+            $path2 = $request->file('image2')->storeAs('product_photo', $name2);
         }
 
         Log::info('Image1 Path: ' . $path);
@@ -121,7 +121,7 @@ class NewsController extends Controller
             }
             // Store new image
             $name = time() . '_' . $request->file('image')->getClientOriginalName();
-            $path = $request->file('image')->storeAs('product_photo', $name, 'public');
+            $path = $request->file('image')->storeAs('product_photo', $name);
         }
 
         if ($request->hasFile('image2')) {
@@ -131,7 +131,7 @@ class NewsController extends Controller
             }
             // Store new second image
             $name2 = time() . '_' . $request->file('image2')->getClientOriginalName();
-            $path2 = $request->file('image2')->storeAs('product_photo', $name2, 'public');
+            $path2 = $request->file('image2')->storeAs('product_photo', $name2);
         }
 
         $news->update([
