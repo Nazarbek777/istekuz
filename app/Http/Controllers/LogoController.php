@@ -31,7 +31,7 @@ class LogoController extends Controller
         $validated = $request->validated();
         if ($request->hasFile('image')) {
             $name = time() . '_' . $request->file('image')->getClientOriginalName();
-            $path = $request->file('image')->storeAs('product_photo', $name, 'public');
+            $path = $request->file('image')->storeAs('product_photo', $name);
         }
 
         Logo::create([
@@ -57,7 +57,7 @@ class LogoController extends Controller
                 Storage::delete('public/' . $logo->image);
             }
             $name = time() . '_' . $request->file('image')->getClientOriginalName();
-            $path = $request->file('image')->storeAs('product_photo', $name, 'public');
+            $path = $request->file('image')->storeAs('product_photo', $name);
         }
 
         $logo->update([
