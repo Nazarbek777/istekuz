@@ -22,17 +22,23 @@ class FrontendController extends Controller
 
     public function mission()
     {
-        return view('front.mission');
+        $logos = Logo::all();
+        return view('front.mission', compact('logos'));
     }
     public function faq()
     {
-        return view('front.faq');
+        $logos = Logo::all();
+        return view('front.faq', compact('logos'));
     }
     public function about()
     {
         $teams = Team::all();
         $logos = Logo::all();
         return view('front.about', compact('teams', 'logos'));
+    }
+
+    public function calculate(){
+        return view('front.calculator');
     }
 
     public function contact()

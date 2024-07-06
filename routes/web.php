@@ -46,6 +46,7 @@ Route::get('/history', [FrontendController::class, 'history'])->name('history');
 Route::get('/team', [FrontendController::class, 'team'])->name('team');
 Route::get('/faq', [FrontendController::class, 'faq'])->name('faq');
 Route::get('/team/{team}', [FrontendController::class, 'singleTeam'])->name('singleTeam');
+Route::get('calculate', [FrontendController::class, 'calculate'])->name('calculate');
 
 Route::get('/login', [AdminController::class, 'login'])->name('login');
 Route::post('/authenticate', [AdminController::class, 'authenticate'])->name('authenticate');
