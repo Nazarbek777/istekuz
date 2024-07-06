@@ -28,10 +28,10 @@ $categories = Category::all();
                             <a href="{{ route('about')}}">{{__('main.istek1')}}</a>
                             <ul class="dropdown-menu clearfix">
                                 <li><a href="{{route('about')}}">{{__('main.about')}}</a></li>
-                                <li><a href="{{route('mission')}}">Mission</a></li>
+                                <li><a href="{{route('mission')}}">{{__('main.about48')}}</a></li>
                                 <!-- <li><a href="404">{{__('main.history')}}</a></li> -->
                                 <li><a href="{{ route('partner')}}">{{__('main.partner')}}</a></li>
-                                <li><a href="{{ route('team')}}">Team</a></li>
+                                <li><a href="{{ route('team')}}">{{__('main.about33')}}</a></li>
                                 <li><a href="{{ route('faq')}}">FAQ</a></li>
 
                             </ul>
@@ -63,6 +63,9 @@ $categories = Category::all();
                             <a class="" href="{{ route('blog')}}">{{__('main.blog')}}</a>
                         </li>
                         <li>
+                            <a class="" href="{{ route('calculate')}}">{{__('main.calculator')}}</a>
+                        </li>
+                        <li>
                             <a href="{{ route('contact')}}">{{__('main.contact')}}</a>
                         </li>
                         <li class="dropdown">
@@ -77,9 +80,9 @@ $categories = Category::all();
                 </nav>
             </div>
             <div class="ori-header-sidebar-search d-flex align-items-center">
-                <div class="ori-search-btn">
+                <!-- <div class="ori-search-btn">
                     <button class="search-box-outer"><i class="fal fa-search"></i></button>
-                </div>
+                </div> -->
                 <div class="ori-sidenav-btn navSidebar-button">
                     <button><i class="fal fa-bars"></i></button>
                 </div>

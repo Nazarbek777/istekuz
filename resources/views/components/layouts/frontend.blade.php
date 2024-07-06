@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="/assets/css/slick.css">
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/calculate.css">
 </head>
 
 <body class="ori-digital-studio">

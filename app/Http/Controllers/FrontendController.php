@@ -37,6 +37,10 @@ class FrontendController extends Controller
         return view('front.about', compact('teams', 'logos'));
     }
 
+    public function calculate(){
+        return view('front.calculator');
+    }
+
     public function contact()
     {
 
