@@ -36,7 +36,7 @@ body {
     display: flex;
     gap: 10px;
     justify-content: space-evenly;
-    margin-bottom: 20px;
+    
 }
 
 .window-sections {
@@ -54,7 +54,9 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    align-items: end;
+    align-items: center;
+    padding-top: 5px;
+    border: 1px solid gray;
 }
 
 .text-tmp {
@@ -78,9 +80,9 @@ body {
     width: 100%;
 }
 
-.window-sections__field.active {
+/* .window-sections__field.active {
     filter: invert(86%) sepia(20%) saturate(6940%) hue-rotate(20deg) brightness(104%) contrast(102%);
-}
+} */
 
 .window-sections__field img {
     width: auto;
@@ -99,10 +101,10 @@ body {
 .window-sections__variations-container {
     z-index: 5;
     position: absolute;
-    bottom: 46%;
-    left: 48%;
+    bottom: 55%;
+    left: 25%;
     display: none;
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(3, 90px);
     width: auto;
     padding: 25px;
     grid-gap: 10px;
@@ -1162,7 +1164,8 @@ button {
 }
 
 .window-cotnainer {
-    margin-top: 150px
+    margin-top: 150px;
+    position: relative;
 }
 
 .input input,
