@@ -202,12 +202,17 @@
                         </div>
                         <div class="window-sections">
                             <!-- Single Window -->
-                            <div class="window-sections__item">
-                                <div class="window-sections__field" id="77">
-                                    <div class="btn-custom">
-                                        1Stvorkali
+                            <div class="window-sections__item" data-variations-img="https://imzo.uz/uploads/configurator/single/scheme_1_1.svg">
+                                <!-- <div class="text-tmp title-18">
+                                <h4 class="window-sections-title_js">Bir stvorkali</h4>
+                            </div> -->
+                                <div class="window-sections__field-wrap">
+                                    <div class="window-sections__field" id="77">
+                                        <!-- <img src="https://imzo.uz/uploads/configurator/single/scheme_1_1.svg"> -->
+                                        <div>
+                                            <h5>Bir stvorkali</h3>
+                                        </div>
                                     </div>
-
                                     <div class="window-sections__variations-container">
                                         <div class="window-sections__variations-item active" id="164" data-name="Глухое" data-url="https://imzo.uz/uploads/configurator/single/image_1_1.svg">
                                             <img src="https://imzo.uz/uploads/configurator/single/scheme_1_1.svg">
@@ -228,64 +233,70 @@
                                 </div>
                             </div>
                             <!-- Double Window -->
-                            <div class="window-sections__item">
-                                <div class="window-sections__field" id="83">
-                                    <div class="btn-custom">2Stvorkali</div>
-                                </div>
-
-                                <div class="window-sections__variations-container">
-                                    <div class="window-sections__variations-item" id="179" data-name="Глухое, Глухое" data-url="https://imzo.uz/uploads/configurator/double/image_2_1.svg">
-                                        <img src="https://imzo.uz/uploads/configurator/double/scheme_2_1.svg">
+                            <div class="window-sections__item" data-variations-img="https://imzo.uz/uploads/configurator/double/scheme_2_1.svg">
+                                <!-- <div class="text-tmp title-18">
+                                <h4 class="window-sections-title_js">Ikki stvorkali</h4>
+                            </div> -->
+                                <div class="window-sections__field-wrap">
+                                    <div class="window-sections__field" id="83">
+                                        <!-- <img src="https://imzo.uz/uploads/configurator/double/scheme_2_1.svg"> -->
+                                        <div>
+                                            <h5>Ikki stvorkali</h5>
+                                        </div>
                                     </div>
-                                    <div class="window-sections__variations-item" id="178" data-name="Поворотное, Глухое" data-url="https://imzo.uz/uploads/configurator/double/image_2_2.svg">
-                                        <img src="https://imzo.uz/uploads/configurator/double/scheme_2_2.svg">
-                                    </div>
-                                    <div class="window-sections__variations-item" id="180" data-name="Поворотно-откидное, Глухое" data-url="https://imzo.uz/uploads/configurator/double/image_2_2.svg">
-                                        <img src="https://imzo.uz/uploads/configurator/double/scheme_2_2_1.svg">
-                                    </div>
-                                    <div class="window-sections__variations-item" id="176" data-name="Глухое, Поворотное" data-url="https://imzo.uz/uploads/configurator/double/image_2_3.svg">
-                                        <img src="https://imzo.uz/uploads/configurator/double/scheme_2_3.svg">
-                                    </div>
-                                    <div class="window-sections__variations-item" id="177" data-name="Глухое, Поворотно-откидное" data-url="https://imzo.uz/uploads/configurator/double/image_2_3.svg">
-                                        <img src="https://imzo.uz/uploads/configurator/double/scheme_2_3_1.svg">
-                                    </div>
-                                    <div class="window-sections__variations-item" id="172" data-name="Поворотное, Поворотное" data-url="https://imzo.uz/uploads/configurator/double/image_2_4.svg">
-                                        <img src="https://imzo.uz/uploads/configurator/double/scheme_2_4.svg">
-                                    </div>
-                                    <div class="window-sections__variations-item" id="174" data-name="Поворотное, Поворотно-откидное" data-url="https://imzo.uz/uploads/configurator/double/image_2_4.svg">
-                                        <img src="https://imzo.uz/uploads/configurator/double/scheme_2_4_2.svg">
-                                    </div>
-                                    <div class="window-sections__variations-item" id="175" data-name="Поворотно-откидное, Поворотное" data-url="https://imzo.uz/uploads/configurator/double/image_2_4.svg">
-                                        <img src="https://imzo.uz/uploads/configurator/double/scheme_2_4_1.svg">
-                                    </div>
-                                    <div class="window-sections__variations-item" id="173" data-name="Поворотно-откидное, Поворотно-откидное" data-url="https://imzo.uz/uploads/configurator/double/image_2_4.svg">
-                                        <img src="https://imzo.uz/uploads/configurator/double/scheme_2_4_4.svg">
+                                    <div class="window-sections__variations-container">
+                                        <div class="window-sections__variations-item" id="179" data-name="Глухое, Глухое" data-url="https://imzo.uz/uploads/configurator/double/image_2_1.svg">
+                                            <img src="https://imzo.uz/uploads/configurator/double/scheme_2_1.svg">
+                                        </div>
+                                        <div class="window-sections__variations-item" id="178" data-name="Поворотное, Глухое" data-url="https://imzo.uz/uploads/configurator/double/image_2_2.svg">
+                                            <img src="https://imzo.uz/uploads/configurator/double/scheme_2_2.svg">
+                                        </div>
+                                        <div class="window-sections__variations-item" id="180" data-name="Поворотно-откидное, Глухое" data-url="https://imzo.uz/uploads/configurator/double/image_2_2.svg">
+                                            <img src="https://imzo.uz/uploads/configurator/double/scheme_2_2_1.svg">
+                                        </div>
+                                        <div class="window-sections__variations-item" id="176" data-name="Глухое, Поворотное" data-url="https://imzo.uz/uploads/configurator/double/image_2_3.svg">
+                                            <img src="https://imzo.uz/uploads/configurator/double/scheme_2_3.svg">
+                                        </div>
+                                        <div class="window-sections__variations-item" id="177" data-name="Глухое, Поворотно-откидное" data-url="https://imzo.uz/uploads/configurator/double/image_2_3.svg">
+                                            <img src="https://imzo.uz/uploads/configurator/double/scheme_2_3_1.svg">
+                                        </div>
+                                        <div class="window-sections__variations-item" id="172" data-name="Поворотное, Поворотное" data-url="https://imzo.uz/uploads/configurator/double/image_2_4.svg">
+                                            <img src="https://imzo.uz/uploads/configurator/double/scheme_2_4.svg">
+                                        </div>
+                                        <div class="window-sections__variations-item" id="174" data-name="Поворотное, Поворотно-откидное" data-url="https://imzo.uz/uploads/configurator/double/image_2_4.svg">
+                                            <img src="https://imzo.uz/uploads/configurator/double/scheme_2_4_2.svg">
+                                        </div>
+                                        <div class="window-sections__variations-item" id="175" data-name="Поворотно-откидное, Поворотное" data-url="https://imzo.uz/uploads/configurator/double/image_2_4.svg">
+                                            <img src="https://imzo.uz/uploads/configurator/double/scheme_2_4_1.svg">
+                                        </div>
+                                        <div class="window-sections__variations-item" id="173" data-name="Поворотно-откидное, Поворотно-откидное" data-url="https://imzo.uz/uploads/configurator/double/image_2_4.svg">
+                                            <img src="https://imzo.uz/uploads/configurator/double/scheme_2_4_4.svg">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Triple Window -->
-                            <div class="window-sections__item">
-                                <div class="text-tmp title-18">
-                                </div>
-                                <div class="window-sections__field" id="84">
-                                    <div class="btn-custom">3Stvorkali</div>
-                                </div>
-                                <div class="window-sections__variations-container">
-                                    <div class="window-sections__variations-item" id="194" data-name="Глухое" data-url="https://imzo.uz/uploads/configurator/tricuspid/image_3_1.svg"><img src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_1.svg">
+                            <div class="window-sections__item" data-variations-img="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_1.svg">
+                                <!-- <div class="text-tmp title-18">
+                                <h4 class="window-sections-title_js">Uch stvorkali</h4>
+                            </div> -->
+                                <div class="window-sections__field-wrap">
+                                    <div class="window-sections__field" id="84">
+                                        <!-- <img src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_1.svg"> -->
+                                        <div>
+                                            <h5>Uch stvorkali</h5>
+                                        </div>
                                     </div>
-                                    <div class="window-sections__variations-item" id="192" data-name="Поворотное, Глухое, Поворотное" data-url="https://imzo.uz/uploads/configurator/tricuspid/image_3_2.svg"><img src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_2.svg">
-                                    </div>
-                                    <div class="window-sections__variations-item" id="193" data-name="Поворотно-откидное, Глухое, Поворотно-откидное" data-url="https://imzo.uz/uploads/configurator/tricuspid/image_3_2.svg"><img src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_2_1.svg">
-                                    </div>
-                                    <div class="window-sections__variations-item" id="190" data-name="Глухое, Поворотное, Глухое" data-url="https://imzo.uz/uploads/configurator/tricuspid/image_3_3.svg"><img src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_3.svg">
-                                    </div>
-                                    <div class="window-sections__variations-item" id="191" data-name="Глухое, Поворотно-откидное, Глухое" data-url="https://imzo.uz/uploads/configurator/tricuspid/image_3_3.svg"><img src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_3_1.svg">
-                                    </div>
-                                    <div class="window-sections__variations-item" id="189" data-name="Поворотное, Поворотное, Поворотное" data-url="https://imzo.uz/uploads/configurator/tricuspid/image_3_4_1.svg">
-                                        <img src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_4.svg">
-                                    </div>
-                                    <div class="window-sections__variations-item" id="188" data-name="Поворотно-откидное, Поворотно-откидное, Поворотно-откидное" data-url="https://imzo.uz/uploads/configurator/tricuspid/image_3_4.svg">
-                                        <img src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_4_4.svg">
+                                    <div class="window-sections__variations-container">
+                                        <div class="window-sections__variations-item" id="194" data-name="Глухое" data-url="https://imzo.uz/uploads/configurator/tricuspid/image_3_1.svg"><img src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_1.svg"></div>
+                                        <div class="window-sections__variations-item" id="192" data-name="Поворотное, Глухое, Поворотное" data-url="https://imzo.uz/uploads/configurator/tricuspid/image_3_2.svg"><img src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_2.svg"></div>
+                                        <div class="window-sections__variations-item" id="193" data-name="Поворотно-откидное, Глухое, Поворотно-откидное" data-url="https://imzo.uz/uploads/configurator/tricuspid/image_3_2.svg"><img src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_2_1.svg"></div>
+                                        <div class="window-sections__variations-item" id="190" data-name="Глухое, Поворотное, Глухое" data-url="https://imzo.uz/uploads/configurator/tricuspid/image_3_3.svg"><img src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_3.svg"></div>
+                                        <div class="window-sections__variations-item" id="191" data-name="Глухое, Поворотно-откидное, Глухое" data-url="https://imzo.uz/uploads/configurator/tricuspid/image_3_3.svg"><img src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_3_1.svg"></div>
+                                        <div class="window-sections__variations-item" id="189" data-name="Поворотное, Поворотное, Поворотное" data-url="https://imzo.uz/uploads/configurator/tricuspid/image_3_4_1.svg"><img src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_4.svg"></div>
+                                        <div class="window-sections__variations-item" id="188" data-name="Поворотно-откидное, Поворотно-откидное, Поворотно-откидное" data-url="https://imzo.uz/uploads/configurator/tricuspid/image_3_4.svg">
+                                            <img src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_4_4.svg">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -310,6 +321,7 @@
             </div>
         </div>
     </div>
+
 
 
     <!-- End of Calculate section
