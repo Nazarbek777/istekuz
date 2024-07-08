@@ -66,7 +66,7 @@ $products = Product::take(5)->get();
 		</div>
 		<div class="ori-footer-copyright d-flex justify-content-between">
 			<div class="ori-copyright-text">
-				© 2024 Barcha huquqlar himoyalanadi - ISTEK - Dora Dev.
+				© 2024 Barcha huquqlar himoyalanadi - ISTEK - <a href="https://dora.uz/" target="_blank">Dora</a>.
 			</div>
 			<div class="ori-copyright-social">
 				<a href="https://www.facebook.com/people/Istek/61557360990149/" target="_blank"><i class="fab fa-facebook-f"></i></a>

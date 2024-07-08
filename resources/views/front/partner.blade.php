@@ -29,7 +29,7 @@
 
     <!-- Start of Shop Details section
 	============================================= -->
-    <section id="ori-shop-details" class="ori-shop-details-section position-relative">
+    <section id="ori-achivement-history" class="ori-achivement-history-section position-relative mt-5">
         <div class="container">
             <div class="ori-shop-details-content m-5">
                 <div class="row">
@@ -257,8 +257,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
         <div class="line_animation">
             <div class="line_area"></div>

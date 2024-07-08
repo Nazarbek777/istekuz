@@ -154,28 +154,28 @@
                 <div class="ori-sponsor-slider">
                     <div class="ori-sponsor-item">
                         <div class="ori-sponsor-img">
-                            <a href="#">
+                            <a href="javascript:void()">
                                 <img src="/assets/img/sponsor/dora.png" alt="">
                             </a>
                         </div>
                     </div>
                     <div class="ori-sponsor-item">
                         <div class="ori-sponsor-img">
-                            <a href="#">
+                            <a href="javascript:void()">
                                 <img src="/assets/img/sponsor/akfa.png" alt="">
                             </a>
                         </div>
                     </div>
                     <div class="ori-sponsor-item">
                         <div class="ori-sponsor-img">
-                            <a href="#">
+                            <a href="javascript:void()">
                                 <img src="/assets/img/sponsor/englber.png" alt="">
                             </a>
                         </div>
                     </div>
                     <div class="ori-sponsor-item">
                         <div class="ori-sponsor-img">
-                            <a href="#">
+                            <a href="javascript:void()">
                                 <img src="/assets/img/sponsor/imzo.png" alt="">
                             </a>
                         </div>
@@ -184,7 +184,7 @@
 
                     <div class="ori-sponsor-item">
                         <div class="ori-sponsor-img">
-                            <a href="#">
+                            <a href="javascript:void()">
                                 <img src="/storage/{{ $logo->image }}" alt="">
                             </a>
                         </div>
@@ -328,7 +328,7 @@
                                 </div>
                                 <div class="ori-team-text text-center position-absolute">
                                     <h3><a href="team-single.html">{{ $team->full_name }}</a></h3>
-                                    <span>{{$team->job}}</span>
+                                    <span style="color:white;">{{$team->job}}</span>
                                 </div>
                                 <div class="ori-team-social text-center position-absolute">
                                     <a href="{{ $team->facebook_link}}"><i class="fab fa-facebook-f"></i></a>
