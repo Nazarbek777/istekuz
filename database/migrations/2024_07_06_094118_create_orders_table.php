@@ -22,7 +22,7 @@ class CreateOrdersTable extends Migration
             $table->string('weight_size')->nullable();
             $table->string('type')->nullable();
             $table->string('seriya')->nullable();
-            $table->json('complect')->nullable();
+            $table->text('complect')->nullable();
             $table->string('profile_color')->nullable();
             $table->string('laminate_color')->nullable();
             $table->string('window_type')->nullable();
