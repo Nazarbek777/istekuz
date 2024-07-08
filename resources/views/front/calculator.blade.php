@@ -10,7 +10,7 @@
 
                         <div class="aside-serias">
                             <div class="text-tmp title-18">
-                                <h4 class="mt-5">{{__('main.calculator1')}}</h4>
+                                <label class="mt-5">{{__('main.calculator1')}}</label>
                             </div>
                             <div class="input">
                                 <div class="select-custom select-serias-9699_js select-serias_js">
@@ -65,7 +65,7 @@
                         <div class="options-cotainer">
                             <div class="aside-options">
                                 <div class="text-tmp title-18">
-                                    <h4 class="aside-options-title_js">{{__('main.calculator2')}}</h4>
+                                    <label class="aside-options-title_js">{{__('main.calculator2')}}</label>
                                 </div>
                                 <div class="input">
                                     <div class="select-custom select-serias-6462_js">
@@ -461,12 +461,13 @@
                             </script>
 
                             <div class="aside-types">
-                                <h4 class="text mt-5">{{__('main.calculator19')}}</h4>
-                                <div class="aside-types__btns mt-4 mb-4">
+                                <h4 class="mt-5">{{__('main.calculator19')}}</h4>
+                                <div class="aside-types__btns mt-2 mb-4">
                                     <div class="btn-custom aside-types-btn_js active" id="75" data-name="PVX">{{__('main.calculator20')}}</div>
                                     <style>
                                         .btn-custom.active {
-                                            background: black !important;
+                                            border: #198754;
+                                            background: #198754 !important;
                                             color: white !important;
                                         }
                                     </style>
@@ -503,12 +504,12 @@
                             </script>
 
                             <div class="aside-types">
-                                <h4 class="text">{{__('main.calculator22')}}</h4>
-                                <div class="input  mt-4">
+                                <h4 class="mt-5">{{__('main.calculator22')}}</h4>
+                                <div class="input  mt-3">
                                     <input class="quanty-input_js" name="quantity" type="text" min="1" style="color: white;">
                                 </div>
                             </div>
-                            <button class="btn btn-outline-light" type="submit" style="width: 100%; margin-top: 20px;">{{__('main.calculator23')}}</button>
+                            <button class="btn btn-success" type="submit" style="width: 100%; margin-top: 20px;">{{__('main.calculator23')}}</button>
                         </div>
                     </div>
                 </div>

@@ -13,7 +13,7 @@ return [
     "index1" => "Best appearance",
     "index2" => "Protection from heat and cold",
     "index3" => "Most energy-efficient thermal profile",
-    "index4" => "Rom factory",
+    "index4" => "Rom fabrikasi",
     "ISTEK" => "ISTEK",
     "contact1" => "Contact",
     "missions" => "Our missions",
