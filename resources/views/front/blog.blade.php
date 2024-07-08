@@ -96,7 +96,7 @@
                                 @foreach($news as $tm)
                                     <div class="ori-blog-feed-item">
                                         <div class="ori-blog-img">
-                                            <img src="assets/img/blog/blg-f1.png" alt="">
+                                            <img src="/storage/{{ $tm->image}}" alt="">
                                         </div>
                                         <div class="ori-blog-text pera-content">
                                             <div class="blog-meta text-uppercase">
@@ -106,7 +106,7 @@
                                                 <a class="blog-comment" href="#"><i class="fas fa-comment"></i> 05</a>
                                             </div>
                                             <h3><a href="{{ route('singleBlog', ['blog' => $tm->id]) }}">{{$tm['name_' . $lang]}}</a></h3>
-                                            <p>{{$tm['description_'.$lang]}}</p>
+                                            <p>{!!$tm['description_'.$lang]!!}</p>
                                             <a class="blog-more text-uppercase" href="{{ route('singleBlog', ['blog' => $tm->id]) }}">{{__('main.continue')}} <i class="fal fa-arrow-right"></i></a>
                                         </div>
                                     </div>

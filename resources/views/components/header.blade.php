@@ -36,34 +36,22 @@ $categories = Category::all();
 
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="{{route('product')}}">{{__('main.products')}}</a>
-                            <ul class="dropdown-menu clearfix">
-                                @foreach ($categories as $category )
-
-                                <li class="dropdown">
-                                    <a href="{{route('product')}}">{{$category['name_'. $lang]}}</a>
-                                    <ul class="dropdown-menu clearfix z-n">
+                        <li class="dropdown" style="z-index: 9999 !important;">
+                            <a href="{{ route('product') }}">{{ __('main.products') }}</a>
+                            <ul class="dropdown-menu clearfix" style="z-index: 9999 !important;">
+                                @foreach ($categories as $category)
+                                <li class="dropdown" style="z-index: 9999 !important;">
+                                    <a href="{{ route('product') }}">{{ $category['name_' . $lang] }}</a>
+                                    <ul class="dropdown-menu clearfix" style="z-index: 9999 !important;">
                                         @foreach ($category->products as $product)
-                                        <li><a href="{{route('singleProduct', $product->id)}}">{{ $product['name_'. $lang] }}</a></li>
+                                        <li><a href="{{ route('singleProduct', $product->id) }}">{{ $product['name_' . $lang] }}</a></li>
                                         @endforeach
                                     </ul>
-                                    <style>
-                                        .z-n{
-                                            z-index: 9999;
-                                        }
-                                    </style>
                                 </li>
                                 @endforeach
                             </ul>
-                            {{-- <a href="#">{{__('main.products')}}</a>--}}
-                            {{-- <ul class="dropdown-menu clearfix">--}}
-                            {{-- @foreach ($categories as $category )--}}
-                            {{-- <li><a href="{{ route('category', $category->id )}}">{{ $category['name_'.App::getLocale()]}}</a>
-                        </li>--}}
-                        {{-- @endforeach--}}
-                        {{-- </ul>--}}
                         </li>
+
                         <li>
                             <a class="" href="{{ route('blog')}}">{{__('main.blog')}}</a>
                         </li>
@@ -128,13 +116,20 @@ $categories = Category::all();
                             <li class="dropdown">
                                 <a href="{{route('product')}}">{{__('main.products')}}</a>
                                 <ul class="dropdown-menu clearfix">
-                                    @foreach ($categories as $category )
-                                    <li><a href="{{ route('product')}}">{{ $category['name_'.App::getLocale()]}}</a></li>
-                                    @endforeach
+                                    @foreach ($categories as $category)
+                                <li class="dropdown" style="z-index: 9999 !important;">
+                                    <a href="{{ route('product') }}">{{ $category['name_' . $lang] }}</a>
+                                    <ul class="dropdown-menu clearfix" style="z-index: 9999 !important;">
+                                        @foreach ($category->products as $product)
+                                        <li><a href="{{ route('singleProduct', $product->id) }}">{{ $product['name_' . $lang] }}</a></li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                                @endforeach
                                 </ul>
                             </li>
 
-                            <li><a class="" href="{{ route('blog')}}">{{__('main.blog')}}</a></li>
+                            <li><a class="active" href="{{ route('blog')}}">{{__('main.blog')}}</a></li>
                             <li><a href="{{route('contact')}}">{{__('main.contact')}}</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{__('main.language')}} </a>
