@@ -31,7 +31,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::view('404','errors.404');
+Route::view('404', 'errors.404');
 Route::get('/', [FrontendController::class, 'home'])->name('index');
 Route::get('/mission', [FrontendController::class, 'mission'])->name('mission');
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
@@ -53,7 +53,7 @@ Route::post('/order', [OrderController::class, 'store'])->name('order.store');
 Route::get('/login', [AdminController::class, 'login'])->name('login');
 Route::post('/authenticate', [AdminController::class, 'authenticate'])->name('authenticate');
 Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
-
+Route::post('/order', [OrderController::class, 'store'])->name('order.store');
 
 Route::get('/{lang}', function ($lang) {
     session(['lang' => $lang]);
@@ -72,8 +72,14 @@ Route::middleware(['checkAdmin:admin', 'auth'])->group(function () {
         Route::resource('news', NewsController::class);
         Route::resource('team', TeamController::class);
         Route::resource('logo', LogoController::class);
-        Route::resource('/order', OrderController::class);
+        Route::prefix('order')->group(function () {
+            Route::get('/', [OrderController::class, 'index'])->name('order.index');
+            Route::get('/create', [OrderController::class, 'create'])->name('order.create');
+            Route::get('/{order}', [OrderController::class, 'show'])->name('order.show');
+            Route::get('/{order}/edit', [OrderController::class, 'edit'])->name('order.edit');
+            Route::put('/{order}', [OrderController::class, 'update'])->name('order.update');
+            Route::delete('/{order}', [OrderController::class, 'destroy'])->name('order.destroy');
+        });
         Route::get('/search', [NewsController::class, 'search'])->name('search');
     });
 });
-

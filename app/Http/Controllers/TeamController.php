@@ -70,7 +70,7 @@ class TeamController extends Controller
 
         if ($request->hasFile('image')) {
             if ($team->image) {
-                Storage::delete('public/' . $team->image);
+                Storage::delete($team->image);
             }
             $name = time() . '_' . $request->file('image')->getClientOriginalName();
             $path = $request->file('image')->storeAs('product_photo', $name);

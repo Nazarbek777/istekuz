@@ -13,14 +13,19 @@ class Order extends Model
         'full_name',
         'phone_number',
         'quantity',
-        'size_height',
-        'size_weight',
+        'height_size',
+        'weight_size',
         'type',
         'seriya',
         'complect',
         'profile_color',
         'laminate_color',
         'window_type',
-        'sheet',
+        'profile_type',
+    ];
+
+
+    protected $casts = [
+        'complect' => 'array', // Ensure complect is cast as an array
     ];
 }

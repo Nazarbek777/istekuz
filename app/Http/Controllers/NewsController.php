@@ -117,7 +117,7 @@ class NewsController extends Controller
         if ($request->hasFile('image')) {
             // Delete old image if exists
             if ($news->image) {
-                Storage::delete('public/' . $news->image);
+                Storage::delete($news->image);
             }
             // Store new image
             $name = time() . '_' . $request->file('image')->getClientOriginalName();
@@ -127,7 +127,7 @@ class NewsController extends Controller
         if ($request->hasFile('image2')) {
             // Delete old second image if exists
             if ($news->image2) {
-                Storage::delete('public/' . $news->image2);
+                Storage::delete($news->image2);
             }
             // Store new second image
             $name2 = time() . '_' . $request->file('image2')->getClientOriginalName();

@@ -70,7 +70,7 @@ class ProductController extends Controller
 
         if ($request->hasFile('image')) {
             if ($product->image) {
-                Storage::delete('public/' . $product->image);
+                Storage::delete($product->image);
             }
             $name = time() . '_' . $request->file('image')->getClientOriginalName();
             $path = $request->file('image')->storeAs('product_photo', $name);

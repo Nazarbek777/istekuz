@@ -35,15 +35,16 @@ class OrderController extends Controller
             'full_name' => 'required|string|max:255',
             'phone_number' => 'required|string|max:255',
             'quantity' => 'required|string|max:255',
-            'size_height' => 'required|string|max:255',
-            'size_weight' => 'required|string|max:255',
+            'height_size' => 'required|string|max:255',
+            'weight_size' => 'required|string|max:255',
             'type' => 'required|string|max:255',
             'seriya' => 'required|string|max:255',
-            'complect' => 'required|string|max:255',
+            'complect' => 'required|array', // Changed from 'string' to 'array'
+            'complect.*' => 'required|string|max:255',
             'profile_color' => 'required|string|max:255',
             'laminate_color' => 'required|string|max:255',
             'window_type' => 'required|string|max:255',
-            'sheet' => 'required|string|max:255',
+            'profile_type' => 'required|string|max:255',
         ]);
 
         Order::create($validated);
