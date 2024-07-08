@@ -1,5 +1,7 @@
-<x-layouts.admin>
-    <div class="container-fluid">
+@extends('layouts.admin')
+
+@section('content')
+   <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
                 <form action="{{ route('order.update', $order->id) }}" method="POST">
@@ -17,4 +19,4 @@
             </div>
         </div>
     </div>
-</x-layouts.admin>
+@endsection

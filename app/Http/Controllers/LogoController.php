@@ -54,7 +54,7 @@ class LogoController extends Controller
     {
         if ($request->hasFile('image')) {
             if ($logo->image) {
-                Storage::delete('public/' . $logo->image);
+                Storage::delete($logo->image);
             }
             $name = time() . '_' . $request->file('image')->getClientOriginalName();
             $path = $request->file('image')->storeAs('product_photo', $name);

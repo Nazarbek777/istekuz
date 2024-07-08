@@ -215,4 +215,30 @@ return [
 
     'calculator' => "Калькулятор",
 
+    'calculator10' => "Комплектующие",
+    'calculator22' => "Количество шт",
+
+    'calculator1' => "Серия профилей",
+    'calculator2' => "Двухкамерное окно",
+    'calculator3' => "Стандартное",
+    'calculator4' => "Энергосберегающее",
+    'calculator5' => "Защита от солнца",
+    'calculator6' => "Введите ширину окна",
+    'calculator7' => "Введите высоту окна",
+    'calculator8' => "Введите имя и фамилию",
+    'calculator9' => "Введите номер телефона",
+    'calculator11' => "Подоконник",
+    'calculator12' => "Антивзломное",
+    'calculator13' => "Водоотлив",
+    'calculator14' => "Профиль",
+    'calculator15' => "Ламинация",
+    'calculator16' => "Одностворчатое",
+    'calculator17' => "Двухстворчатое",
+    'calculator18' => "Трехстворчатое",
+    'calculator19' => "Тип профиля",
+    'calculator20' => "ПВХ",
+    'calculator21' => "Алюминий",
+    'calculator23' => "Отправить заказ",
+
+
 ];

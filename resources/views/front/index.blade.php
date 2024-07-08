@@ -237,7 +237,7 @@
                             <div class="tab-content" id="pills-tabContent">
                                 @foreach($categories as $index => $category)
                                 <div class="tab-pane fade {{ $index == 0 ? 'show active' : '' }}" id="category-{{ $category->id }}" role="tabpanel" aria-labelledby="category-tab-{{ $category->id }}">
-                                    @php $products = $category->products->take(2); @endphp
+                                    @php $products = $category->products->take(3); @endphp
                                     @foreach($products as $product)
                                     <div class="ori-project-item-1 position-relative">
                                         <div class="ori-project-img">

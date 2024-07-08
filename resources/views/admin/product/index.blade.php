@@ -47,8 +47,8 @@
                                     <th>ID</th>
                                     <th>Kategoriya</th>
                                     <th>Nomi Uz</th>
-                                    <th>Rasm</th>
                                     <th>Narxi</th>
+                                    <th>Rasm</th>
                                     <th>Actions</th>
 
                                 </tr>

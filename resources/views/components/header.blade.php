@@ -43,11 +43,16 @@ $categories = Category::all();
 
                                 <li class="dropdown">
                                     <a href="{{route('product')}}">{{$category['name_'. $lang]}}</a>
-                                    <ul class="dropdown-menu clearfix">
+                                    <ul class="dropdown-menu clearfix z-n">
                                         @foreach ($category->products as $product)
                                         <li><a href="{{route('singleProduct', $product->id)}}">{{ $product['name_'. $lang] }}</a></li>
                                         @endforeach
                                     </ul>
+                                    <style>
+                                        .z-n{
+                                            z-index: 9999;
+                                        }
+                                    </style>
                                 </li>
                                 @endforeach
                             </ul>
