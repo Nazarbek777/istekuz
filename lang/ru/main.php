@@ -239,7 +239,6 @@ return [
     'calculator20' => "ПВХ",
     'calculator21' => "Алюминий",
     'calculator23' => "Отправить заказ",
-
     'all' => "Все"
-
+    
 ];
