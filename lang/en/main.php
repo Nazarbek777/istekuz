@@ -239,4 +239,6 @@ return [
     'calculator21' => "Aluminum",
     'calculator23' => "Send order",
 
+    'all' => "All",
+
 ];

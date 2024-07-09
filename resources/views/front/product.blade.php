@@ -67,8 +67,9 @@
 								<div class="category-widget ul-li-block">
 									<h3 class="widget-title">{{__('main.category')}}</h3>
                                     <ul>
+											<li><a href="{{ route('product')}}">{{__('main.all')}}</a></li>
                                         @foreach($categories as $category)
-                                            <li><a href="{{ route('product') }}">{{ $category['name_' . $lang] }} <span>({{ $category->products->count() }})</span></a></li>
+                                            <li><a href="{{ route('product.category', ['category' => $category->id]) }}">{{ $category['name_' . $lang] }} <span>({{ $category->products->count() }})</span></a></li>
                                         @endforeach
                                     </ul>
 								</div>

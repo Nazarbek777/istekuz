@@ -41,7 +41,7 @@ $categories = Category::all();
                             <ul class="dropdown-menu clearfix" style="z-index: 9999 !important;">
                                 @foreach ($categories as $category)
                                 <li class="dropdown" style="z-index: 9999 !important;">
-                                    <a href="{{ route('product') }}">{{ $category['name_' . $lang] }}</a>
+                                    <a href="{{ route('product.category', ['category' => $category->id]) }}">{{ $category['name_' . $lang] }}</a>
                                     <ul class="dropdown-menu clearfix" style="z-index: 9999 !important;">
                                         @foreach ($category->products as $product)
                                         <li><a href="{{ route('singleProduct', $product->id) }}">{{ $product['name_' . $lang] }}</a></li>
@@ -117,15 +117,15 @@ $categories = Category::all();
                                 <a href="{{route('product')}}">{{__('main.products')}}</a>
                                 <ul class="dropdown-menu clearfix">
                                     @foreach ($categories as $category)
-                                <li class="dropdown" style="z-index: 9999 !important;">
-                                    <a href="{{ route('product') }}">{{ $category['name_' . $lang] }}</a>
-                                    <ul class="dropdown-menu clearfix" style="z-index: 9999 !important;">
-                                        @foreach ($category->products as $product)
-                                        <li><a href="{{ route('singleProduct', $product->id) }}">{{ $product['name_' . $lang] }}</a></li>
-                                        @endforeach
-                                    </ul>
-                                </li>
-                                @endforeach
+                                    <li class="dropdown" style="z-index: 9999 !important;">
+                                        <a href="{{ route('product.category', ['category' => $category->id]) }}">{{ $category['name_' . $lang] }}</a>
+                                        <ul class="dropdown-menu clearfix" style="z-index: 9999 !important;">
+                                            @foreach ($category->products as $product)
+                                            <li><a href="{{ route('singleProduct', $product->id) }}">{{ $product['name_' . $lang] }}</a></li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                                    @endforeach
                                 </ul>
                             </li>
 

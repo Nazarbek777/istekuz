@@ -18,7 +18,7 @@ $products = Product::take(5)->get();
 				<div class="col-lg-3 col-md-6">
 					<div class="ori-footer-widget">
 						<div class="logo-widget">
-							<a href="{{ route('index') }}"><img src="assets/img/logo/logo1.png" alt=""></a>
+							<a href="{{ route('index') }}"><img src="/assets/img/logo/logo1.png" alt=""></a>
 						</div>
 					</div>
 				</div>
