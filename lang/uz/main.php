@@ -253,5 +253,7 @@ return [
     'calculator21' => "Alyumin",
     'calculator23' => "Buyurtmani yuborish",
     'calculator10' => "Qo'shimchalar",
-    'calculator22' => "Soni (ta.)",
+    'calculator22' => "Soni",
+    'all' => "Hammasi",
+    
 ];

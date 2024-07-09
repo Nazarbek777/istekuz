@@ -54,6 +54,7 @@ Route::get('/login', [AdminController::class, 'login'])->name('login');
 Route::post('/authenticate', [AdminController::class, 'authenticate'])->name('authenticate');
 Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
 Route::post('/order', [OrderController::class, 'store'])->name('order.store');
+Route::get('product/category/{category}', [FrontendController::class, 'category'])->name('product.category');
 
 Route::get('/{lang}', function ($lang) {
     session(['lang' => $lang]);

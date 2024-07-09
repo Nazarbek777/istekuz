@@ -8,6 +8,7 @@ use App\Models\News;
 use App\Models\Product;
 use App\Models\Team;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FrontendController extends Controller
 {
@@ -76,6 +77,16 @@ class FrontendController extends Controller
         $categories = Category::with('products')->get();
         $products = Product::all();
         return view('front.product',   compact('products','categories','news'));
+    }
+
+    public function category($category){
+        $productCategory =  Product::where('category_id', $category)->get();
+        $categories = Category::with('products')->get();
+
+        $products = Product::all();
+        $news = News::take(4)->get();
+
+        return view('front.productCategory', compact('categories', 'products', 'news', 'productCategory'));
     }
 
 
