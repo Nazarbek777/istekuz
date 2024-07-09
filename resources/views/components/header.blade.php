@@ -194,14 +194,19 @@ $categories = Category::all();
                 <div class="sidebar-info-contents headline pera-content">
                     <div class="content-inner">
                         <div class="logo">
-                            <a href="index-1.html"><img src="assets/img/logo/logo1.png" alt=""></a>
+                            <a href="/"><img src="assets/img/logo/logo1.png" alt=""></a>
                         </div>
                         <div class="content-box">
-                            <h5>About Us</h5>
-                            <p class="text">The argument in favor of using filler text goes something like this: If you use real content in the Consulting Process, anytime you reach a review point you’ll end up reviewing and negotiating the content itself and not the design.</p>
+                            <h5>{{ __('main.about') }}</h5>
+                            <p class="text">{{ __('main.about37') }}</p>
                         </div>
                         <div class="gallery-box ul-li">
-                            <h5>Gallery</h5>
+                            <h5>
+                                @if($lang === 'en')Pictures
+                                @elseif($lang === 'uz')Rasmlar
+                                @elseif($lang === 'ru')Картинки
+                                @endif
+                            </h5>
                             <ul class="zoom-gallery">
                                 <li><a href="assets/img/gallery/gl1.png" data-source="assets/img/gallery/gl1.png"><img src="assets/img/gallery/gl1.png" alt=""></a></li>
                                 <li><a href="assets/img/gallery/gl2.png" data-source="assets/img/gallery/gl2.png"><img src="assets/img/gallery/gl2.png" alt=""></a></li>
@@ -212,7 +217,12 @@ $categories = Category::all();
                             </ul>
                         </div>
                         <div class="content-box">
-                            <h5>Social Account</h5>
+                            <h5>
+                                @if($lang === 'uz')Ijtimoiy hisob
+                                @elseif($lang === 'en')Social Account
+                                @elseif($lang === 'ru')Социальный аккаунт
+                                @endif
+                                </h5>
                             <ul class="social-box">
                                 <a href="https://www.facebook.com/people/Istek/61557360990149/"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://t.me/istek_uz"><i class="fab fa-telegram"></i></a>
