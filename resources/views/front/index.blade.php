@@ -2,16 +2,35 @@
     <?php
     $lang = \Illuminate\Support\Facades\App::getLocale();
     ?>
-
+    <style>
+        .rotate-right {
+            transform: rotate(90deg);
+            /* Rotate 90 degrees to the right */
+            display: inline-block;
+            /* Ensure inline elements are transformed correctly */
+        }
+    </style>
     <!-- Start of Slider section
 	============================================= -->
     <section id="ori-slider-1" class="ori-slider-section-1 position-relative">
         <div class="ori-slider-content-wrapper-1 postion-relative">
             <div class="ori-slider-social position-absolute text-uppercase ul-li">
                 <ul>
-                    <li><a href="https://www.facebook.com/people/Istek/61557360990149/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                    <li><a href="https://www.youtube.com/@istek_uz" target="_blank"><i class="fab fa-youtube"></i> Youtube</a></li>
-                    <li><a href="https://www.instagram.com/istek.uz/" target="_blank"><i class="fab fa-instagram"></i>Instagram</a></li>
+                    <li>
+                        <a href="https://www.facebook.com/people/Istek/61557360990149/" target="_blank">
+                            <i class="fab fa-facebook-f rotate-right"></i><b>Facebook</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@istek_uz" target="_blank">
+                            <i class="fab fa-youtube rotate-right"></i><b>Youtube</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/istek.uz/" target="_blank">
+                            <i class="fab fa-instagram rotate-right"></i><b>Instagram</b>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="ori-slider-wrap-1">

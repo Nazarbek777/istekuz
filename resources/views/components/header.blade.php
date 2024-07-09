@@ -208,12 +208,12 @@ $categories = Category::all();
                                 @endif
                             </h5>
                             <ul class="zoom-gallery">
-                                <li><a href="assets/img/gallery/gl1.png" data-source="assets/img/gallery/gl1.png"><img src="assets/img/gallery/gl1.png" alt=""></a></li>
-                                <li><a href="assets/img/gallery/gl2.png" data-source="assets/img/gallery/gl2.png"><img src="assets/img/gallery/gl2.png" alt=""></a></li>
-                                <li><a href="assets/img/gallery/gl3.png" data-source="assets/img/gallery/gl3.png"><img src="assets/img/gallery/gl3.png" alt=""></a></li>
-                                <li><a href="assets/img/gallery/gl4.png" data-source="assets/img/gallery/gl4.png"><img src="assets/img/gallery/gl4.png" alt=""></a></li>
-                                <li><a href="assets/img/gallery/gl5.png" data-source="assets/img/gallery/gl4.png"><img src="assets/img/gallery/gl5.png" alt=""></a></li>
-                                <li><a href="assets/img/gallery/gl6.png" data-source="assets/img/gallery/gl4.png"><img src="assets/img/gallery/gl6.png" alt=""></a></li>
+                                <li><a href="assets/img/Artboard1.jpg" data-source="assets/img/Artboard1.jpg"><img src="assets/img/Artboard1.jpg" alt=""></a></li>
+                                <li><a href="assets/img/gallery/gl2.png" data-source="assets/img/gallery/gl2.png"><img src="assets/img/Artboard2.jpg" alt=""></a></li>
+                                <li><a href="assets/img/gallery/gl3.png" data-source="assets/img/gallery/gl3.png"><img src="assets/img/Artboard3.jpg" alt=""></a></li>
+                                <li><a href="assets/img/gallery/gl4.png" data-source="assets/img/gallery/gl4.png"><img src="assets/img/Artboard4.jpg" alt=""></a></li>
+                                <li><a href="assets/img/gallery/gl5.png" data-source="assets/img/gallery/gl4.png"><img src="assets/img/Artboard5.jpg" alt=""></a></li>
+                                <li><a href="assets/img/gallery/gl6.png" data-source="assets/img/gallery/gl4.png"><img src="assets/img/Artboard6.jpg" alt=""></a></li>
                             </ul>
                         </div>
                         <div class="content-box">
