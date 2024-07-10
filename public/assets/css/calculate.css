@@ -34,7 +34,7 @@ body {
 .configurator__item-content {
     position: relative;
     display: flex;
-    gap: 10px;
+    gap: 20px;
     justify-content: space-evenly;
     
 }
@@ -56,6 +56,8 @@ body {
     height: 100%;
     align-items: center;
     border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .text-tmp {
@@ -136,6 +138,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .window-cotnainer__img {
@@ -999,7 +1002,7 @@ ul {
 /*  */
 .aside-components {
     width: 100%;
-    padding: 20px;
+    padding: 20px 0;
     background-color: #000;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -1266,12 +1269,13 @@ button {
 
 @media (max-width: 1350px) {
     .window-cotnainer {
-        margin-top: 10px
+        margin-top: 10px;
+        width: 85vw;
     }
 
     .aside-serias,
     .aside-options {
-        width: 50vw;
+        width: 85vw;
     }
 
     .configurator__item-content {
@@ -1286,7 +1290,17 @@ button {
 
     .window-sections__variations-container {
         position: absolute;
-        bottom: 27%;
+        bottom: 2%;
+        left: 30%;
+    }
+    .window-sections__variations-container.rig {
+        position: absolute;
+        bottom: 9%;
+        left: 30%;
+    }
+    .window-sections__variations-container.rig2 {
+        position: absolute;
+        bottom: 16%;
         left: 30%;
     }
 
@@ -1296,7 +1310,7 @@ button {
 
         justify-content: space-evenly;
 
-        grid-gap: 10px;
+        grid-gap: 5px;
         margin-bottom: 10px;
     }
 
@@ -1324,7 +1338,12 @@ button {
 }
 
 @media (max-width: 630px) {
-
+    .window-sections h5 {
+        font-size: 10px !important;
+    }
+    .window-sections__item {
+        padding: 7px;
+    }
     .window-cotnainer__img {
         width: 250px;
     }
@@ -1339,12 +1358,23 @@ button {
     }
 
     .window-sections__variations-container {
-        right: 50px;
+        left: 5% !important;
+        bottom: 23% !important;
+        padding: 10px;
+    }
+    .window-sections__variations-container.rig {
+        left: 5% !important;
+        bottom: 29% !important;
+        padding: 10px;
+    }
+    .window-sections__variations-container.rig2 {
+        left: 5% !important;
+        bottom: 36% !important;
         padding: 10px;
     }
 
     .aside-lamination {
-        width: 20px;
+        width: 100px;
         height: 250px;
         gap: 5px
     }
@@ -1389,7 +1419,18 @@ button {
 
     .window-sections__variations-container {
         position: absolute;
-        bottom: 31%;
+        bottom: 13%;
+        left: 22%;
+    }
+
+    .window-sections__variations-container.rig {
+        position: absolute;
+        bottom: 18%;
+        left: 22%;
+    }
+    .window-sections__variations-container.rig2 {
+        position: absolute;
+        bottom: 25%;
         left: 22%;
     }
 
@@ -1397,11 +1438,6 @@ button {
         flex-direction: column;
     }
 
-
-
-    .aside-lamination {
-        width: 50px;
-    }
 
     .lam {
         padding-right: 10px;

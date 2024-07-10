@@ -226,8 +226,8 @@
                         <!-- window -->
                         <div class="window-cotnainer">
                             <div class="window-cotnainer__inner" style="position: relative;">
-                                <div class="aside-lamination pro" style="background: white;">
-                                    <h4 class="profilWord" style="color: black;">{{__('main.calculator14')}}</h4>
+                                <div class="aside-lamination pro" style="background: #000000;">
+                                    <h4 class="profilWord" style="color: #fff;">{{__('main.calculator14')}}</h4>
                                     <div class="aside-lamination__btns">
                                         <div class="profile active" id="6" data-name="Mokko emani">
                                             <img src="https://imzo.uz/uploads/colors/e76be692729f.jpg">
@@ -275,13 +275,13 @@
                                     }
                                 </script>
                                 <div class="window-cotnainer__img">
-                                    <img src="https://imzo.uz/uploads/configurator/single/image_1_2.svg">
+                                    <img src="/assets/img/a2.svg">
                                     <div class="window-cotnainer__lamination">
                                         <img src="https://imzo.uz/uploads/colors/e76be692729f.jpg">
                                     </div>
                                 </div>
-                                <div class="aside-lamination lam" style="background: white;">
-                                    <h4 class="laminatWord" style="color: black;">{{__('main.calculator15')}}</h4>
+                                <div class="aside-lamination lam" style="background: #000000;">
+                                    <h4 class="laminatWord" style="color: #fff;">{{__('main.calculator15')}}</h4>
                                     <div class="aside-lamination__btns">
                                         <div class="aside-lamination__btn active" id="6" data-name="Mokko emani">
                                             <img src="https://imzo.uz/uploads/colors/e76be692729f.jpg">
@@ -366,7 +366,7 @@
                                                 <h5>{{__('main.calculator17')}}</h5>
                                             </div>
                                         </div>
-                                        <div class="window-sections__variations-container">
+                                        <div class="window-sections__variations-container rig">
                                             <div class="window-sections__variations-item" id="179" data-name="Глухое, Глухое" data-url="https://imzo.uz/uploads/configurator/double/image_2_1.svg">
                                                 <img src="https://imzo.uz/uploads/configurator/double/scheme_2_1.svg">
                                             </div>
@@ -405,7 +405,7 @@
                                                 <h5>{{__('main.calculator18')}}</h5>
                                             </div>
                                         </div>
-                                        <div class="window-sections__variations-container">
+                                        <div class="window-sections__variations-container rig2">
                                             <div class="window-sections__variations-item" id="194" data-name="Глухое" data-url="https://imzo.uz/uploads/configurator/tricuspid/image_3_1.svg">
                                                 <img src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_1.svg">
                                             </div>
