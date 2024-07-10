@@ -82,6 +82,27 @@
             </div>
             <div class="ori-shop-details-content m-5">
                 <div class="row">
+                <div class="col-lg-6">
+                        <div class="ori-shop-details-text-wrapper">
+                            <div class="ori-shop-details-title">
+                                <h3>{{__('main.partner6')}}</h3>
+                            </div>
+                            <div class="ori-shop-details-desc">
+                                <p>
+                                    {{__('main.partner7')}}
+                                </p>
+                                <p>
+                                    {{__('main.partner8')}}
+                                </p>
+                                <p>
+                                    {{__('main.partner9')}}
+                                </p>
+                                <p>
+                                    {{__('main.partner10')}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-6">
                         <div class="ori-shop-details-slider-wrapper">
                             <div class="ori-shop-details-slide-for">
@@ -106,27 +127,6 @@
                                 <div class="nav-inner-img">
                                     <img src="assets/img/imzo/imzo 3.png" alt="">
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="ori-shop-details-text-wrapper">
-                            <div class="ori-shop-details-title">
-                                <h3>{{__('main.partner6')}}</h3>
-                            </div>
-                            <div class="ori-shop-details-desc">
-                                <p>
-                                    {{__('main.partner7')}}
-                                </p>
-                                <p>
-                                    {{__('main.partner8')}}
-                                </p>
-                                <p>
-                                    {{__('main.partner9')}}
-                                </p>
-                                <p>
-                                    {{__('main.partner10')}}
-                                </p>
                             </div>
                         </div>
                     </div>

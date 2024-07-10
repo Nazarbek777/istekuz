@@ -768,7 +768,6 @@ body {
 .btn-custom.active {
     background-color: #fff;
     color: #000;
-    transform: translateY(2px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -1113,6 +1112,7 @@ ul {
 .aside-lamination__btn.active,
 .profile.active {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    cursor: pointer !important;
 }
 
 .aside-accessories__btn,
@@ -1135,6 +1135,7 @@ ul {
     -o-object-fit: cover;
     object-fit: cover;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 button {

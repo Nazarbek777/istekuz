@@ -143,7 +143,7 @@
                     <div class="col-lg-6">
                         <div class="ori-about-play-area position-relative">
                             <div class="ori-about-play-img">
-                                <img src="assets/img/about/v-play.png" alt="">
+                                <img src="assets/img/about/istek-play.jpg" alt="">
                             </div>
                             <div class="about-play-btn position-absolute">
                                 <a class="text-uppercase video_box d-flex align-items-center justify-content-center" href="https://www.youtube.com/watch?v=sAnapTqdieo">{{__('main.see')}}</a>
