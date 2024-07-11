@@ -54,6 +54,22 @@ class FrontendController extends Controller
         $news = News::paginate(2);
         return view('front.blog', compact('news','categories'));
     }
+
+    public function blog_search(Request $request){
+        $search = $request->input('search');
+
+        $news = News::query()
+            ->orwhere('name_uz', 'LIKE', "%{$search}%")
+            ->orwhere('name_ru', 'LIKE', "%{$search}%")
+            ->orwhere('name_en', 'LIKE', "%{$search}%")
+            ->orWhere('description_uz', 'LIKE', "%{$search}%")
+            ->orWhere('description_ru', 'LIKE', "%{$search}%")
+            ->orWhere('description_en', 'LIKE', "%{$search}%")
+            ->paginate(6);
+        $categories = Category::with('products')->get();
+
+        return view('front.blog', compact('news', 'categories'));
+    }
 //    public function    categoryId($category)
 //    {
 //        $category = Category::find($category);
@@ -61,7 +77,11 @@ class FrontendController extends Controller
 //    }
     public function singleBlog($blog){
         $news = News::find($blog);
-        return view('front.singleBlog', compact('news'));
+        $news2 = News::paginate(2);
+        $categories = Category::with('products')->get();
+
+
+        return view('front.singleBlog', compact('news', 'news2', 'categories'));
     }
     public function singleProduct($product){
         $products = Product::take(4)->get();

@@ -101,10 +101,10 @@
             <div class="container">
                 <div class="ori-service-top-content-1 d-flex justify-content-between align-items-center">
                     <div class="ori-section-title-1 text-uppercase wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <h2>{{__('main.index4')}} <span> {{__('main.ISTEK')}}</span></h2>
+                        <h2>{{__('main.ISTEK')}} <span> {{__('main.index4')}} </span></h2>
                     </div>
                     <div class="ori-btn-1 text-uppercase wow fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <a href="tel: +998935135324">{{__('main.contact1')}}</a>
+                        <a href="tel: ++998 (94) 100 11 11">{{__('main.contact1')}}</a>
                     </div>
                 </div>
                 <div class="ori-service-content-1">
@@ -112,14 +112,14 @@
                         <div class="col-lg-4 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                             <div class="ori-service-inner-item position-relative">
                                 <div class="ori-service-more position-absolute">
-                                    <a href="{{route('about')}}"><i class="fas fa-arrow-right"></i></a>
+                                    <a href="{{route('about')}}"> <i class="fas fa-arrow-right"></i></a>
                                 </div>
                                 <div class="ori-service-img-title position-relative">
                                     <div class="ori-service-img">
                                         <img src="assets/img/about.png" alt="">
                                     </div>
                                     <div class="ori-service-title text-center position-absolute">
-                                        <h3>{{__('main.about')}} <i class="fal fa-arrow-right"></i></h3>
+                                        <h3>{{__('main.about')}} <i class="fal fa-arrow-right"></i> </h3>
                                     </div>
                                 </div>
                             </div>
@@ -127,14 +127,14 @@
                         <div class="col-lg-4 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <div class="ori-service-inner-item position-relative">
                                 <div class="ori-service-more position-absolute">
-                                    <a href="{{ route('mission')}}"><i class="fas fa-arrow-right"></i></a>
+                                    <a href="{{ route('mission')}}"> <i class="fas fa-arrow-right"></i></a>
                                 </div>
                                 <div class="ori-service-img-title position-relative">
                                     <div class="ori-service-img">
                                         <img src="assets/img/mission.png" alt="">
                                     </div>
                                     <div class="ori-service-title text-center position-absolute">
-                                        <h3>{{__('main.about48')}}<i class="fal fa-arrow-right"></i></h3>
+                                        <h3>{{__('main.about48')}} <i class="fal fa-arrow-right"></i></h3>
                                     </div>
                                 </div>
                             </div>
@@ -258,18 +258,15 @@
                                 <div class="tab-pane fade {{ $index == 0 ? 'show active' : '' }}" id="category-{{ $category->id }}" role="tabpanel" aria-labelledby="category-tab-{{ $category->id }}">
                                     @php $products = $category->products->take(3); @endphp
                                     @foreach($products as $product)
-                                    <div class="ori-project-item-1 position-relative">
+                                    <a href="{{ route('singleProduct', ['product' => $product->id, 'name' => $product['name_'.$lang]]) }}" class="ori-project-item-1 position-relative d-block">
                                         <div class="ori-project-img">
                                             <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product['name_'.$lang] }}">
                                         </div>
                                         <div class="ori-project-text position-absolute">
-                                            <h3><a href="{{ route('singleProduct', $product->id) }}">{{ $product['name_'.$lang] }}</a></h3>
-                                            <span class="text-uppercase project-category"><a href="#">{{__('main.ISTEK')}} - {{__('main.index4')}}</a></span>
+                                            <h3>{{ $product['name_'.$lang] }}</h3>
+                                            <span class="text-uppercase project-category">{{__('main.ISTEK')}} - {{__('main.index4')}}</span>
                                         </div>
-                                        <div class="ori-project-link position-absolute">
-                                            <a href="{{ route('singleProduct', $product->id) }}"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
+                                    </a>
                                     @endforeach
                                 </div>
                                 @endforeach
@@ -424,8 +421,8 @@
                     </div>
                 </div>
                 <div class="carousel_nav">
-                    <button type="button" class="testi-left_arrow"><img src="assets/img/vector/prev.png" alt=""></button>
-                    <button type="button" class="testi-right_arrow"><img src="assets/img/vector/next.png" alt=""></button>
+                    <button type="button" class="testi-left_arrow"><img src="assets/img/left.png" alt="" style="width: 125px"></button>
+                    <button type="button" class="testi-right_arrow"><img src="assets/img/right.png" alt="" style="width: 125px"></button>
                 </div>
             </div>
         </div>

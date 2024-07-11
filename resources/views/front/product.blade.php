@@ -52,7 +52,6 @@
                                                 </div>
                                                 <div class="shop-text">
                                                     <h3><a href="">{{$tm->name_uz}}</a></h3>
-                                                    <span class="pro_price">{{$tm->price}}</span>
                                                 </div>
                                             </div>
                                         </div>

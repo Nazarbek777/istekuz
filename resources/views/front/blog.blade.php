@@ -40,7 +40,8 @@
                             <div class="ori-blog-widget">
                                 <div class="search-widget">
                                     <h3 class="widget-title">{{__('main.search')}}</h3>
-                                    <form action="#">
+                                    <form action="{{ route('blog.search')}}" method="POST">
+                                        @csrf
                                         <input type="text" name="search" placeholder="{{__('main.search1')}}">
                                         <button><i class="fal fa-search"></i></button>
                                     </form>
@@ -51,11 +52,11 @@
                                     <h3 class="widget-title">{{__('main.blogs')}}</h3>
                                     @foreach($news as $tm)
                                         <div class="ori-recent-post-item d-flex align-items-center">
-                                            <div class="recent-blog-img">
-                                                <img src="{{ asset('storage/' . $tm->image2) }}" alt="">
+                                            <div class="recent-blog-img" style="width: 120px">
+                                                <img style="width: 100%" src="{{ asset('storage/' . $tm->image2) }}" alt="">
                                             </div>
                                             <div class="recent-blog-text">
-                                                {{ \Carbon\Carbon::parse($tm->created_at)->format('F d, Y') }}
+                                                {{ \Carbon\Carbon::parse($tm->created_at)->format('d-m-Y') }}
                                                 <h3><a href="{{ route('singleBlog', ['blog' => $tm->id]) }}">{{ $tm['name_' . $lang] }}</a></h3>
                                             </div>
                                         </div>
@@ -79,12 +80,12 @@
                                 <div class="gallery-widget ul-li">
                                     <h3 class="widget-title">{{__('main.blog1')}}</h3>
                                     <ul class="zoom-gallery">
-                                        <li><a href="assets/img/blog/blg-f5.png" data-source="assets/img/blog/blg-f5.png"><img src="assets/img/gallery/gl1.png" alt=""></a></li>
-                                        <li><a href="assets/img/blog/blg-f5.png" data-source="assets/img/blog/blg-f5.png"><img src="assets/img/gallery/gl2.png" alt=""></a></li>
-                                        <li><a href="assets/img/blog/blg-f5.png" data-source="assets/img/blog/blg-f5.png"><img src="assets/img/gallery/gl3.png" alt=""></a></li>
-                                        <li><a href="assets/img/blog/blg-f5.png" data-source="assets/img/blog/blg-f5.png"><img src="assets/img/gallery/gl4.png" alt=""></a></li>
-                                        <li><a href="assets/img/blog/blg-f5.png" data-source="assets/img/blog/blg-f5.png"><img src="assets/img/gallery/gl5.png" alt=""></a></li>
-                                        <li><a href="assets/img/blog/blg-f5.png" data-source="assets/img/blog/blg-f5.png"><img src="assets/img/gallery/gl6.png" alt=""></a></li>
+                                        <li><a href="assets/img/Artboard1K.jpg" data-source="assets/img/Artboard1.jpg"><img src="assets/img/Artboard1.jpg" alt=""></a></li>
+                                        <li><a href="assets/img/Artboard2K.jpg" data-source="assets/img/Artboard2.jpg"><img src="assets/img/Artboard2.jpg" alt=""></a></li>
+                                        <li><a href="assets/img/Artboard3K.jpg" data-source="assets/img/gallery/gl3.png"><img src="assets/img/Artboard3.jpg" alt=""></a></li>
+                                        <li><a href="assets/img/Artboard4K.jpg" data-source="assets/img/gallery/gl4.png"><img src="assets/img/Artboard4.jpg" alt=""></a></li>
+                                        <li><a href="assets/img/Artboard5K.jpg" data-source="assets/img/gallery/gl4.png"><img src="assets/img/Artboard5.jpg" alt=""></a></li>
+                                        <li><a href="assets/img/Artboard6K.jpg" data-source="assets/img/gallery/gl4.png"><img src="assets/img/Artboard6.jpg" alt=""></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -100,13 +101,12 @@
                                         </div>
                                         <div class="ori-blog-text pera-content">
                                             <div class="blog-meta text-uppercase">
-                                                <a class="blog-cate" href="{{route('blog')}}"><i class="fas fa-file"></i> business</a>
                                                 <a class="blog-author" href="{{route('blog')}}"><i class="fas fa-user"></i> Istek</a>
-                                                <a class="blog-date" href="{{route('blog')}}"><i class="fas fa-calendar-alt"></i>  {{ \Carbon\Carbon::parse($tm->created_at)->format('F d, Y') }}</a>
-                                                <a class="blog-comment" href="#"><i class="fas fa-comment"></i> 05</a>
+                                                <a class="blog-date" href="{{route('blog')}}"><i class="fas fa-calendar-alt"></i>  {{ \Carbon\Carbon::parse($tm->created_at)->format('d-m-Y') }}</a>
+                                                <!-- <a class="blog-comment" href="#"><i class="fas fa-comment"></i> 05</a> -->
                                             </div>
                                             <h3><a href="{{ route('singleBlog', ['blog' => $tm->id]) }}">{{$tm['name_' . $lang]}}</a></h3>
-                                            <p>{!!$tm['description_'.$lang]!!}</p>
+                                            <!-- <p>{!!$tm['description_'.$lang]!!}</p> -->
                                             <a class="blog-more text-uppercase" href="{{ route('singleBlog', ['blog' => $tm->id]) }}">{{__('main.continue')}} <i class="fal fa-arrow-right"></i></a>
                                         </div>
                                     </div>

@@ -104,7 +104,7 @@
                         <div class="ori-faq-text-wrapper-content">
                             <div class="ori-inner-section-title">
                                 <span class="sub-title text-uppercase">{{__('main.about')}}</span>
-                                <h2>{{__('main.about7')}}</h2>
+                                <!-- <h2>{{__('main.about7')}}</h2> -->
                             </div>
                             <div class="ori-faq-accordion-area">
                                 <div class="tab-content" id="myTabContent">
