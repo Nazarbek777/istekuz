@@ -95,6 +95,8 @@ body {
 
 .window-sections__variations-container.active {
     display: grid !important;
+    gap: 25px;
+    width: 100%;
 }
 
 
@@ -102,10 +104,14 @@ body {
 .window-sections__variations-container {
     z-index: 5;
     position: absolute;
-    bottom: 55%;
-    left: 25%;
+    /* bottom: 55%; */
+    top: 5%;
+    left: 0%;
+    grid-template-columns: repeat(2, 170px);
     display: none;
-    grid-template-columns: repeat(3, 90px);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
     width: auto;
     padding: 25px;
     grid-gap: 10px;
@@ -115,6 +121,7 @@ body {
 
 .window-sections__variations-item.active {
     display: grid !important;
+    width: 100%;
     filter: invert(86%) sepia(20%) saturate(6940%) hue-rotate(20deg) brightness(104%) contrast(102%);
 }
 
@@ -130,6 +137,7 @@ body {
 
 .window-sections__variations-item img {
     width: 100%;
+    /* filter: invert(86%) sepia(20%) saturate(6940%) hue-rotate(40deg) brightness(104%) contrast(102%); */
 }
 
 
@@ -834,7 +842,6 @@ body {
 }
 
 .btn {
-    z-index: 1;
     position: relative;
     display: flex;
     justify-content: center;
