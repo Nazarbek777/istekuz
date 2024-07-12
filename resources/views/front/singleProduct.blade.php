@@ -36,9 +36,7 @@
                                 <div class="ori-about-play-img">
                                     <img src="{{asset('storage/' . $product->image)}}" alt="">
                                 </div>
-                                <div class="about-play-btn position-absolute">
-                                    <a class="text-uppercase d-flex align-items-center justify-content-center" href="#">{{ __('main.see')}}</a>
-                                </div>
+                                
                             </div>
                             <div class="ori-service-details-text pera-content">
                                 <h2>{{$product['name_'. $lang]}}</h2>
@@ -90,8 +88,8 @@
                                         <div class="ori-about-circle-progress-item">
                                             <div class="counter-boxed text-center headline position-relative">
                                                 <div class="graph-outer">
-                                                    <input type="text" class="dial" data-fgColor="#FF7425" data-bgColor="#fff" data-width="180" data-height="180" data-linecap="round" value="90">
-                                                    <div class="inner-text count-box"><span class="count-text" data-stop="90" data-speed="4500"></span>%
+                                                    <input type="text" class="dial" data-fgColor="#FF7425" data-bgColor="#fff" data-width="180" data-height="180" data-linecap="round" value="80">
+                                                    <div class="inner-text count-box"><span class="count-text" data-stop="80" data-speed="4500"></span>%
                                                     </div>
                                                 </div>
                                                 <h3 class="text-uppercase"> {{__('main.singleProduct12')}}</h3>
@@ -100,8 +98,8 @@
                                         <div class="ori-about-circle-progress-item">
                                             <div class="counter-boxed text-center headline position-relative">
                                                 <div class="graph-outer">
-                                                    <input type="text" class="dial" data-fgColor="#FF7425" data-bgColor="#fff" data-width="180" data-height="180" data-linecap="round" value="90">
-                                                    <div class="inner-text count-box"><span class="count-text" data-stop="90" data-speed="4500"></span>%
+                                                    <input type="text" class="dial" data-fgColor="#FF7425" data-bgColor="#fff" data-width="180" data-height="180" data-linecap="round" value="75">
+                                                    <div class="inner-text count-box"><span class="count-text" data-stop="75" data-speed="4500"></span>%
                                                     </div>
                                                 </div>
                                                 <h3 class="text-uppercase"> {{__('main.singleProduct13')}}</h3>
@@ -110,8 +108,8 @@
                                         <div class="ori-about-circle-progress-item">
                                             <div class="counter-boxed text-center headline position-relative">
                                                 <div class="graph-outer">
-                                                    <input type="text" class="dial" data-fgColor="#FF7425" data-bgColor="#fff" data-width="180" data-height="180" data-linecap="round" value="90">
-                                                    <div class="inner-text count-box"><span class="count-text" data-stop="90" data-speed="4500"></span>%
+                                                    <input type="text" class="dial" data-fgColor="#FF7425" data-bgColor="#fff" data-width="180" data-height="180" data-linecap="round" value="85">
+                                                    <div class="inner-text count-box"><span class="count-text" data-stop="85" data-speed="4500"></span>%
                                                     </div>
                                                 </div>
                                                 <h3 class="text-uppercase">{{__('main.singleProduct14')}} <br> {{__('main.singleProduct15')}}</h3>

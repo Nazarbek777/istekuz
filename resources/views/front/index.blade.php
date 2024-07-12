@@ -104,7 +104,7 @@
                         <h2>{{__('main.ISTEK')}} <span> {{__('main.index4')}} </span></h2>
                     </div>
                     <div class="ori-btn-1 text-uppercase wow fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <a href="tel: ++998 (94) 100 11 11">{{__('main.contact1')}}</a>
+                        <a href="tel:+998941001111">{{__('main.contact1')}}</a>
                     </div>
                 </div>
                 <div class="ori-service-content-1">
@@ -343,7 +343,7 @@
                                     <img src="/storage/{{ $team->image }}" alt="">
                                 </div>
                                 <div class="ori-team-text text-center position-absolute">
-                                    <h3><a href="team-single.html">{{ $team->full_name }}</a></h3>
+                                    <h3><a href="{{ route('team')}}">{{ $team->full_name }}</a></h3>
                                     <span style="color:white;">{{$team->job}}</span>
                                 </div>
                                 <div class="ori-team-social text-center position-absolute">
