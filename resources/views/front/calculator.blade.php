@@ -331,9 +331,23 @@
 
                             </div>
                             <div class="window-sections">
+                                <div class="background"></div>
+                                <style>
+                                    .background.active {
+                                        position: fixed;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100% !important;
+                                        background-size: cover;
+                                        background-position: center;
+                                        z-index: 2; /* Ensure it is behind other elements */
+                                        background-color: #000000db;
+                                    }
+                                </style>
                                 <!-- Single Window -->
                                 <div class="window-sections__item" data-variations-img="https://imzo.uz/uploads/configurator/single/scheme_1_1.svg">
-                                    <div class="window-sections__field-wrap">
+                                    <div class="window-sections__field-wrap" style="width: 100%; text-align: center; padding: 1px;">
                                         <div class="window-sections__field" id="77">
                                             <div>
                                                 <h5>{{__('main.calculator16')}}</h5>
@@ -360,7 +374,7 @@
                                 </div>
                                 <!-- Double Window -->
                                 <div class="window-sections__item" data-variations-img="https://imzo.uz/uploads/configurator/double/scheme_2_1.svg">
-                                    <div class="window-sections__field-wrap">
+                                    <div class="window-sections__field-wrap" style="width: 100%; text-align: center; padding: 1px;">
                                         <div class="window-sections__field" id="83">
                                             <div>
                                                 <h5>{{__('main.calculator17')}}</h5>
@@ -399,7 +413,7 @@
                                 </div>
                                 <!-- Triple Window -->
                                 <div class="window-sections__item" data-variations-img="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_1.svg">
-                                    <div class="window-sections__field-wrap">
+                                    <div class="window-sections__field-wrap" style="width: 100%; text-align: center; padding: 1px;">
                                         <div class="window-sections__field" id="84">
                                             <div>
                                                 <h5>{{__('main.calculator18')}}</h5>
@@ -529,35 +543,32 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function addSuffixMM(input) {
-                    input.addEventListener('input', function () {
-                        const value = input.value.replace(/\D/g, ''); // faqat sonlarni qoldiring
-                        input.value = value ? `${value} sm` : '';
-                    });
-        
-                    input.addEventListener('focus', function () {
-                        const value = input.value.replace(/\D/g, ''); // faqat sonlarni qoldiring
-                        input.value = value;
-                    });
-        
-                    input.addEventListener('blur', function () {
-                        const value = input.value.replace(/\D/g, ''); // faqat sonlarni qoldiring
-                        input.value = value ? `${value} sm` : '';
-                    });
+                input.addEventListener('input', function () {
+                    const value = input.value.replace(/\D/g, ''); // faqat sonlarni qoldiring
+                    input.value = value ? `${value} sm` : '';
+                });
+
+                input.addEventListener('focus', function () {
+                    const value = input.value.replace(/\D/g, ''); // faqat sonlarni qoldiring
+                    input.value = value;
+                });
+
+                input.addEventListener('blur', function () {
+                    const value = input.value.replace(/\D/g, ''); // faqat sonlarni qoldiring
+                    input.value = value ? `${value} sm` : '';
+                });
             }
-        
+
             // Apply the function to the specific inputs
             const heightInput = document.getElementById('weight_size');
             const lengthInput = document.getElementById('height_size');
-        
+
             addSuffixMM(heightInput);
             addSuffixMM(lengthInput);
-        
+
             const output = document.getElementById("valueDisplay");
 
-
             const variationsItems = document.querySelectorAll(".window-sections__variations-item");
-
-
 
             // Barcha window-sections__field elementlarini topish
             const fields = document.querySelectorAll('.window-sections__field');
@@ -576,14 +587,20 @@
                 });
             });
 
-
-
             function handleVariationsClick() {
+                const background = document.querySelector('.background');
                 document.querySelectorAll('.window-sections__field-wrap').forEach(function(fieldWrap) {
                     fieldWrap.addEventListener('click', function() {
                         // Toggle 'active' class for the variations container
                         const variationsContainer = fieldWrap.querySelector('.window-sections__variations-container');
-                        variationsContainer.classList.toggle('active');
+                        const isActive = variationsContainer.classList.toggle('active');
+
+                        // Toggle 'active' class for the background
+                        if (isActive) {
+                            background.classList.add('active');
+                        } else {
+                            background.classList.remove('active');
+                        }
 
                         // Remove 'active' class from all other variations containers except the clicked one
                         document.querySelectorAll('.window-sections__variations-container').forEach(function(container) {
@@ -600,8 +617,6 @@
                 const laminationButtons = document.querySelectorAll('.aside-lamination__btn');
                 const laminationImage = document.querySelector('.window-cotnainer__lamination img');
                 const profiile = document.querySelectorAll('.profile')
-
-
 
                 profiile.forEach(function(button) {
                     button.addEventListener('click', function() {
@@ -678,12 +693,12 @@
                 });
             }
 
-
             // Initialize all event listeners
             handleVariationsClick();
             handleLaminationClick();
             handleVariationsItemClick();
             handleSelectCustomClick();
         });
+
     </script>
 </x-layouts.frontend>
