@@ -196,6 +196,8 @@ return [
     'faq27' => "Men ISTEKga qanday fikr yuborishim mumkin?",
     'faq28' => "ISTEK sizning fikrlaringizni qo'llab-quvvatlaydi. Biz har doim yaxshilashga intilamiz.",
 
+    "partner-desc" => "Tavsif",
+    "partner-inf" => "Ma`lumot",
     'partner1' => "AKFA Kompaniyasi haqida",
     'partner3' => "AKFA – O‘zbekistondagi yetakchi kompaniyalardan biri bo‘lib, u turli sohalarda faoliyat yuritadi. AKFA kompaniyasi qurilish materiallari, shisha mahsulotlari, eshik va deraza tizimlari, mebel va boshqa mahsulotlar ishlab chiqarishga ixtisoslashgan.",
     'partner4' => "Kompaniya 1990-yilda tashkil etilgan bo‘lib, bugungi kunda O‘zbekistonda va xalqaro bozorlarida katta nufuzga ega. AKFA o‘z mahsulotlarining yuqori sifati va innovatsion yondashuvi bilan mashhur bo‘lib, mijozlarining ehtiyojlarini to‘liq qondirishga intiladi.",

@@ -2,7 +2,7 @@
 return [
     'title'  =>  'Title!',
     'language' => 'Language',
-    'main' => 'Main',
+    'main' => 'Home',
     'istek1' => 'Istek',
     'about' => 'About us',
     'history' => 'History',
@@ -13,7 +13,7 @@ return [
     "index1" => "Best appearance",
     "index2" => "Protection from heat and cold",
     "index3" => "Most energy-efficient thermal profile",
-    "index4" => "Rom fabrikasi",
+    "index4" => "Rom Factory",
     "ISTEK" => "ISTEK",
     "contact1" => "Contact",
     "missions" => "Our missions",
@@ -181,6 +181,8 @@ return [
     'faq27' => "How can I submit feedback to ISTEK?",
     'faq28' => "ISTEK welcomes your feedback. We're always striving to improve.",
 
+    "partner-desc" => "Description",
+    "partner-inf" => "Information",
     'partner1' => "About AKFA Company",
     'partner3' => "AKFA is one of the leading companies in Uzbekistan, operating in various sectors. AKFA specializes in the production of building materials, glass products, door and window systems, furniture, and other products.",
     'partner4' => "The company was founded in 1990 and today has a strong reputation both in Uzbekistan and internationally. AKFA is known for the high quality of its products and innovative approach, striving to fully meet the needs of its customers.",

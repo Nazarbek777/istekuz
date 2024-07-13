@@ -188,10 +188,10 @@
                 <div class="shop-review-tab-btn">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Description</button>
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">{{__('main.partner-desc')}}</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="info-tab" data-bs-toggle="tab" data-bs-target="#info" type="button" role="tab" aria-controls="info" aria-selected="false">Information</button>
+                            <button class="nav-link" id="info-tab" data-bs-toggle="tab" data-bs-target="#info" type="button" role="tab" aria-controls="info" aria-selected="false">{{__('main.partner-inf')}}</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="faq2-tab" data-bs-toggle="tab" data-bs-target="#faq2" type="button" role="tab" aria-controls="faq2" aria-selected="false">Faq</button>
