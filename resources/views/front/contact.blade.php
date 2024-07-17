@@ -25,14 +25,6 @@
 	<!-- End of Breadcrumbs section
 	============================================= -->
 
-	<!-- Start of  google map  section
-	============================================= -->
-	<div class="ori-google-map">
-		<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.206855257846!2d69.57971507654612!3d40.845382029438554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae2d5499925425%3A0x38f2392785f65321!2sistek%20rom%20fabrikasi!5e0!3m2!1sru!2sus!4v1716555180881!5m2!1sru!2sus" height="865"></iframe>
-	</div>
-	<!-- End of  google map  section
-	============================================= -->
-
 	<!-- Start of Contact form  section
 	============================================= -->
 	<section id="ori-contact-form" class="ori-contact-form-section position-relative">
@@ -52,7 +44,7 @@
 									</div>
 									<div class="info-text pera-content">
 										<h4>{{__('main.phone')}}</h4>
-										<p>+998 (94)100 11 11 <span class="fw-bold ms-3"></span></p>
+										<a href="tel: +998941001111">+998 (94)100 11 11 <span class="fw-bold ms-3"></span></a>
 									</div>
 								</div>
 								<div class="ori-contact-info d-flex align-items-center">
@@ -61,7 +53,7 @@
 									</div>
 									<div class="info-text pera-content">
 										<h4>{{__('main.email')}}</h4>
-										<p>info@istek.uz</p>
+										<a href="mailto:info@istek.uz">info@istek.uz</a>
 									</div>
 								</div>
 								<div class="ori-contact-info d-flex align-items-center">
@@ -70,7 +62,7 @@
 									</div>
 									<div class="info-text pera-content">
 										<h4>{{__('main.address')}}</h4>
-										<p>{{__('main.contact4')}}</p>
+										<a href="">{{__('main.contact4')}}</a>
 									</div>
 								</div>
 							</div>
@@ -105,6 +97,15 @@
 	</section>
 	<!-- End of Contact Form section
 	============================================= -->
+
+	<!-- Start of  google map  section
+	============================================= -->
+	<div class="ori-google-map">
+		<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.206855257846!2d69.57971507654612!3d40.845382029438554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae2d5499925425%3A0x38f2392785f65321!2sistek%20rom%20fabrikasi!5e0!3m2!1sru!2sus!4v1716555180881!5m2!1sru!2sus" height="865"></iframe>
+	</div>
+	<!-- End of  google map  section
+	============================================= -->
+
 	<script>
 		document.addEventListener('DOMContentLoaded', (event) => {
 			const phoneInput = document.getElementById('phone_number');

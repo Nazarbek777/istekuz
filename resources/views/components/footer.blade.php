@@ -40,11 +40,19 @@ $products = Product::take(5)->get();
 						<div class="contact-widget ul-li-block">
 							<h2 class="widget-title text-uppercase">{{__('main.contact')}}</h2>
 							<div class="contact-info">
-								<span>{{__('main.contact4')}}</span>
-								<span>+998 (94) 100 11 11</span>
+								<a href="">{{__('main.contact4')}}</a>
+								<a href="tel: +998941001111">+998 (94) 100 11 11</a>
 								<a href="mailto:info@istek.uz">info@istek.uz</a>
 								<span>{{__('main.footer1')}}: 09:00 - 18:00</span>
 								<span>{{__('main.footer2')}}</span>
+								<style>
+									a:hover{
+										color: white !important;
+									}
+									span:hover{
+										color: white !important;
+									}
+								</style>
 							</div>
 						</div>
 					</div>
@@ -66,7 +74,7 @@ $products = Product::take(5)->get();
 		</div>
 		<div class="ori-footer-copyright d-flex justify-content-between">
 			<div class="ori-copyright-text">
-				© 2024 Barcha huquqlar himoyalanadi - ISTEK - <a href="https://dora.uz/" target="_blank">Dora</a>.
+				© 2024 Barcha huquqlar himoyalanadi <a href="https://dora.uz/" target="_blank">- DORA -</a>
 			</div>
 			<div class="ori-copyright-social">
 				<a href="https://www.facebook.com/people/Istek/61557360990149/" target="_blank"><i class="fab fa-facebook-f"></i></a>
