@@ -165,7 +165,7 @@ $products = Product::take(5)->get();
 				body: JSON.stringify(data)
 			})
 			.then(response => response.json())
-			.then(data => {
+			.then(data => {                    
 				if (data.ok) {
 					alert("Habar Jo'natildi!");
 					document.getElementById('contact_form').reset();
