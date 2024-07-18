@@ -39,6 +39,7 @@ Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 Route::get('/blog', [FrontendController::class, 'blog'])->name('blog');
 Route::post('/blog', [FrontendController::class, 'blog_search'])->name('blog.search');
 Route::get('/product', [FrontendController::class, 'product'])->name('product');
+Route::get('product/category/{category}', [FrontendController::class, 'category'])->name('product.category');
 Route::get('/category/{category}', [FrontendController::class, 'categoryId'])->name('categoryId');
 Route::get('/product/{product}/{name?}', [FrontendController::class, 'singleProduct'])->name('singleProduct');
 Route::get('/blog/{blog}', [FrontendController::class, 'singleBlog'])->name('singleBlog');

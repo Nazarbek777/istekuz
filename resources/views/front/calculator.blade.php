@@ -530,6 +530,15 @@
             </form>
         </div>
     </div>
+    <div class="line_animation "data-background="assets/img/bg/bread-bg.png">
+            <div class="line_area"></div>
+            <div class="line_area"></div>
+            <div class="line_area"></div>
+            <div class="line_area"></div>
+            <div class="line_area"></div>
+            <div class="line_area"></div>
+            <div class="line_area"></div>
+    </div>
 
 
 

@@ -338,7 +338,7 @@
             <div class="ori-sponsor-title text-uppercase text-center">
                 <h3><i></i> <span>{{__('main.partner2')}}</span> <i></i> </h3>
             </div>
-            <div class="ori-sponsor-content">
+            <div class="">
                 <div class="ori-sponsor-slider">
                     <div class="ori-sponsor-item">
                         <div class="ori-sponsor-img">
@@ -347,6 +347,7 @@
                             </a>
                         </div>
                     </div>
+                   
                     <div class="ori-sponsor-item">
                         <div class="ori-sponsor-img">
                             <a href="#">
@@ -358,6 +359,20 @@
                         <div class="ori-sponsor-img">
                             <a href="#">
                                 <img src="assets/img/sponsor/englber.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ori-sponsor-item">
+                        <div class="ori-sponsor-img">
+                            <a href="#">
+                                <img src="/assets/img/sponsor/dora.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ori-sponsor-item">
+                        <div class="ori-sponsor-img">
+                            <a href="#">
+                                <img src="assets/img/sponsor/dora.png" alt="">
                             </a>
                         </div>
                     </div>

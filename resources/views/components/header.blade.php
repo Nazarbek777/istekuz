@@ -62,11 +62,11 @@ $categories = Category::all();
                             <a href="{{ route('contact')}}">{{__('main.contact')}}</a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" data-toggle="dropdown">{{__('main.language')}}</a>
+                            <a href="#" data-toggle="dropdown"> <img src="/assets/img/language.svg" alt="{{__('main.language')}}"></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/uz">Uzbek (uz)</a></li>
-                                <li><a href="/ru">Russian (ru)</a></li>
-                                <li><a href="/en">English (en)</a></li>
+                                <li><a href="/uz"><img src="/assets/img/uzb.svg" alt="">uz</a></li>
+                                <li><a href="/ru"><img src="/assets/img/rus.svg" alt="">ru</a></li>
+                                <li><a href="/en"><img src="/assets/img/eng.svg" alt="">en</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -134,9 +134,9 @@ $categories = Category::all();
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{__('main.language')}} </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="/uz">Uzbek (uz)</a></li>
-                                    <li><a href="/ru">Russian (ru)</a></li>
-                                    <li><a href="/en">English (en)</a></li>
+                                    <li><a href="/uz"><img src="/assets/img/uzb.svg" alt="">uz /a></li>
+                                    <li><a href="/ru"><img src="/assets/img/uzb.svg" alt="">ru</a></li>
+                                    <li><a href="/en"><img src="/assets/img/uzb.svg" alt="">en</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -186,7 +186,7 @@ $categories = Category::all();
         <div class="sidebar-widget-container">
             <div class="widget-heading">
                 <a href="#" class="close-side-widget">
-                    X
+                  <img src="assets/img/exit2.svg" alt="">
                 </a>
             </div>
             <div class="sidebar-textwidget">
@@ -218,7 +218,7 @@ $categories = Category::all();
                         </div>
                         <div class="content-box">
                             <h5>
-                                @if($lang === 'uz')Ijtimoiy hisob
+                                @if($lang === 'uz')Ijtimoiy tarmoq
                                 @elseif($lang === 'en')Social Account
                                 @elseif($lang === 'ru')Социальный аккаунт
                                 @endif

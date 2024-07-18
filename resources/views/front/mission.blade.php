@@ -183,6 +183,7 @@
                             </a>
                         </div>
                     </div>
+                   
                     <div class="ori-sponsor-item">
                         <div class="ori-sponsor-img">
                             <a href="#">
@@ -200,7 +201,21 @@
                     <div class="ori-sponsor-item">
                         <div class="ori-sponsor-img">
                             <a href="#">
+                                <img src="/assets/img/sponsor/dora.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ori-sponsor-item">
+                        <div class="ori-sponsor-img">
+                            <a href="#">
                                 <img src="/assets/img/sponsor/imzo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ori-sponsor-item">
+                        <div class="ori-sponsor-img">
+                            <a href="#">
+                                <img src="/assets/img/sponsor/dora.png" alt="">
                             </a>
                         </div>
                     </div>

@@ -9,7 +9,7 @@ return [
     'partner' => 'Partners',
     'products' => 'Products',
     'blog' => 'Blog',
-    'contact' => 'Contact Us',
+    'contact' => 'Address',
     "index1" => "Best appearance",
     "index2" => "Protection from heat and cold",
     "index3" => "Most energy-efficient thermal profile",

@@ -26,7 +26,7 @@ return [
     'partner' => 'Hamkorlar',
     'products' => 'Mahsulotlar',
     'blog' => 'Blog',
-    'contact' => 'Aloqa',
+    'contact' => 'Manzil',
     'index1' => "Eng yaxshi ko'rinish",
     'index2' => 'Issiq va sovuqdan himoya',
     'index3' => "Eng hamyonbop termo profil",

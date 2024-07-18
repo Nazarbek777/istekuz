@@ -23,7 +23,6 @@
             <div class="line_area"></div>
             <div class="line_area"></div>
             <div class="line_area"></div>
-            <div class="line_area"></div>
         </div>
     </section>
     <!-- End of Breadcrumbs section

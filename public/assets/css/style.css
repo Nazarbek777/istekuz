@@ -1131,6 +1131,7 @@ select:visited {
 .sidebar-info-contents .content-inner .content-box .text {
   color: #fff;
   margin-bottom: 35px;
+  display: inline;
 }
 
 .sidebar-info-contents .content-inner .social-box {
@@ -1138,6 +1139,8 @@ select:visited {
   margin-top: 0px;
   padding-left: 0;
   margin-bottom: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .sidebar-info-contents .content-inner .social-box li {
@@ -10688,10 +10691,11 @@ Font load
   border-radius: 20px;
   padding: 35px 0px 25px;
   border: 1px solid #292929;
+
 }
 .ori-footer-title h2 {
   color: #fff;
-  font-size: 90px;
+  font-size: 60px;
   font-weight: 700;
 }
 .ori-footer-title h2 span {
