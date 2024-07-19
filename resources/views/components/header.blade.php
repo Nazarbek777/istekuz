@@ -62,7 +62,7 @@ $categories = Category::all();
                             <a href="{{ route('contact')}}">{{__('main.contact')}}</a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" data-toggle="dropdown"> <img src="/assets/img/language.svg" alt="{{__('main.language')}}"></a>
+                            <a href="#" data-toggle="dropdown"> <img class="d-flex align-items-center justify-content-center" src="/assets/img/language.svg" alt="{{__('main.language')}}"></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/uz"><img src="/assets/img/uzb.svg" alt="">uz</a></li>
                                 <li><a href="/ru"><img src="/assets/img/rus.svg" alt="">ru</a></li>
@@ -134,7 +134,7 @@ $categories = Category::all();
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{__('main.language')}} </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="/uz"><img src="/assets/img/uzb.svg" alt="">uz /a></li>
+                                    <li><a href="/uz"><img src="/assets/img/uzb.svg" alt="">uz</a></li>
                                     <li><a href="/ru"><img src="/assets/img/uzb.svg" alt="">ru</a></li>
                                     <li><a href="/en"><img src="/assets/img/uzb.svg" alt="">en</a></li>
                                 </ul>

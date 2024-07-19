@@ -43,6 +43,9 @@ return [
     'news' => 'Yangiliklar',
     'readMore' => "Batafsil",
     'category' => 'Kategoriyalar',
+    'true' => 'Muvaffaqiyatli jo`natildi',
+    'calculator' => 'Kalkulyator',
+
 
     'send' => 'Yuborish',
     'about1' => 'Kompaniya haqida',

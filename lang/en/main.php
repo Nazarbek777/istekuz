@@ -26,6 +26,9 @@ return [
     "news" => "News",
     "readMore" => "Read more",
     'category' => 'Categories',
+    'true' => 'Success',
+    'calculator' => 'Calculator',
+
 
     'send' => 'Send',
     'about1' => 'About Company',

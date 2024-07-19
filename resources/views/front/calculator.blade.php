@@ -1,6 +1,28 @@
 <x-layouts.frontend>
     <!-- Start of Calculate section -->
 
+    <section id="ori-breadcrumbs" class="ori-breadcrumbs-section position-relative" data-background="assets/img/bg/bread-bg.png" style="background-image: url(&quot;assets/img/bg/bread-bg.png&quot;);">
+        <div class="container">
+            <div class="ori-breadcrumb-content text-center ul-li">
+                <h1>{{__('main.calculator')}}</h1>
+                <ul>
+                    <li><a href="index.html">ISTEK</a></li>
+                    <li>{{__('main.calculator')}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="line_animation">
+            <div class="line_area"></div>
+            <div class="line_area"></div>
+            <div class="line_area"></div>
+            <div class="line_area"></div>
+            <div class="line_area"></div>
+            <div class="line_area"></div>
+            <div class="line_area"></div>
+            <div class="line_area"></div>
+        </div>
+    </section>
+
     <div class="container">
         <div class="all-border">
             <form action="{{ route('order.store') }}" method="POST">
@@ -530,15 +552,7 @@
             </form>
         </div>
     </div>
-    <div class="line_animation "data-background="assets/img/bg/bread-bg.png">
-            <div class="line_area"></div>
-            <div class="line_area"></div>
-            <div class="line_area"></div>
-            <div class="line_area"></div>
-            <div class="line_area"></div>
-            <div class="line_area"></div>
-            <div class="line_area"></div>
-    </div>
+  
 
 
 
