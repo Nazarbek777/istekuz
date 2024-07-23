@@ -395,7 +395,7 @@
                                     </div>
                                 </div>
                                 <!-- Double Window -->
-                                <div class="window-sections__item" data-variations-img="https://imzo.uz/uploads/configurator/double/scheme_2_1.svg">
+                                <div class="window-sections__item" data-variations-img="https://imzo.uz/uploads/configurator/double/scheme_2_1.svg" style="margin: 0 20px">
                                     <div class="window-sections__field-wrap" style="width: 100%; text-align: center; padding: 1px;">
                                         <div class="window-sections__field" id="83">
                                             <div>
@@ -541,8 +541,8 @@
 
                             <div class="aside-types">
                                 <h4 class="mt-5">{{__('main.calculator22')}}</h4>
-                                <div class="input  mt-3">
-                                    <input class="quanty-input_js" name="quantity" type="text" min="1" style="color: white;">
+                                <div class="input  mt-3" style="border-radius: 6px;">
+                                    <input class="quanty-input_js" name="quantity" type="text" min="1" style="color: white; border-radius: 6px">
                                 </div>
                             </div>
                             <button class="btn btn-success" type="submit" style="width: 100%; margin-top: 20px;">{{__('main.calculator23')}}</button>
