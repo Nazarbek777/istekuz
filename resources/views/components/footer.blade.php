@@ -3,7 +3,6 @@
 use App\Models\Product;
 
 $products = Product::take(5)->get();
-
 ?>
 
 <!-- Start of Footer section
@@ -70,11 +69,28 @@ $products = Product::take(5)->get();
 						</div>
 					</div>
 				</div>
+			<!-- MODAL -->
+				
+				<div class="modal fade " id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+             <div class="modal-dialog  d-flex justify-content-center align-items-center " role="document">
+      <div class="modal-content w-50"  >
+        <div class="modal-header  " >
+		<h5 class="modal-title" id="exampleModalLabel">{{__('main.true')}}<img  id="exampleModalLabel" class="icon" src="/assets/img/check.png" alt=""></h5>
+
+           
+
+		</div>
+       
+
+      </div>
+    </div>
+  </div>
+
 			</div>
 		</div>
 		<div class="ori-footer-copyright d-flex justify-content-between">
 			<div class="ori-copyright-text">
-				© 2024 Barcha huquqlar himoyalanadi <a href="https://dora.uz/" target="_blank">- DORA -</a>
+				© 2024 Barcha huquqlar himoyalanadi <a href="https://dora.uz/" target="_blank">- DORA </a>
 			</div>
 			<div class="ori-copyright-social">
 				<a href="https://www.facebook.com/people/Istek/61557360990149/" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -87,6 +103,31 @@ $products = Product::take(5)->get();
 </footer>
 <!-- End of Footer section
 	============================================= -->
+	<style>
+    .modal-content {
+      border-radius: 20px;
+      background-color:  var(--base-color-1);;
+      color: white; 
+    }
+    .modal-header {
+      border-bottom: none;
+	  justify-content: center;
+       height: 20px;
+    }
+	.modal-title{
+		font-size:15px;
+		display: flex;
+        align-items: center;
+		font-style: italic;		
+		gap:10px;
+
+	}
+	.icon{
+		width:20px;
+	}
+	
+  </style>
+
 
 <script>
 	document.addEventListener('DOMContentLoaded', (event) => {
@@ -165,14 +206,27 @@ $products = Product::take(5)->get();
 				body: JSON.stringify(data)
 			})
 			.then(response => response.json())
-			.then(data => {
+			.then(data => {                    
 				if (data.ok) {
-					alert("Habar Jo'natildi!");
-					document.getElementById('contact_form').reset();
-				} else {
-					alert('Xatolik yuz berdi qayta urunib koring.');
-				}
-			})
+          // Show the modal
+          $('#confirmationModal').modal('show');
+		
+
+          // Hide the modal after 2 seconds
+          setTimeout(function() {
+            $('#confirmationModal').modal('hide');
+          },2000);
+          document.getElementById('phone_number').value = '';
+
+          document.getElementById('contact_form').reset();
+        } else {
+          alert('Xatolik yuz berdi qayta urunib koring.');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        $('Xatolik yuz berdi qayta urunib koring.').modal("show");
+      });
 
 	}
 </script>

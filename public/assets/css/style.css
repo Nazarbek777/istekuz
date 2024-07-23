@@ -644,9 +644,9 @@ select:visited {
 .ori-main-navigation-area .dropdown:after {
   top: 2px;
   color: #fff;
-  right: -14px;
+  right: -8px;
   content: "\f107";
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 700;
   font-weight: 900;
   position: absolute;
@@ -1131,6 +1131,7 @@ select:visited {
 .sidebar-info-contents .content-inner .content-box .text {
   color: #fff;
   margin-bottom: 35px;
+  display: inline;
 }
 
 .sidebar-info-contents .content-inner .social-box {
@@ -1138,6 +1139,8 @@ select:visited {
   margin-top: 0px;
   padding-left: 0;
   margin-bottom: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .sidebar-info-contents .content-inner .social-box li {
@@ -1238,7 +1241,6 @@ select:visited {
   max-width: 360px;
   z-index: 20;
   overflow: hidden;
-  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background-color: #272727;
   -webkit-transition: all 0.5s cubic-bezier(0.9, 0.03, 0, 0.96) 0.6s;
@@ -10688,10 +10690,11 @@ Font load
   border-radius: 20px;
   padding: 35px 0px 25px;
   border: 1px solid #292929;
+
 }
 .ori-footer-title h2 {
   color: #fff;
-  font-size: 90px;
+  font-size: 60px;
   font-weight: 700;
 }
 .ori-footer-title h2 span {

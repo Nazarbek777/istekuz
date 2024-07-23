@@ -110,9 +110,9 @@
                 <div class="ori-service-content-1">
                     <div class="row">
                         <div class="col-lg-4 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                            <div class="ori-service-inner-item position-relative">
+                            <div class="ori-service-inner-item position-relative" onclick="window.location.href='{{ route('about') }}'">
                                 <div class="ori-service-more position-absolute">
-                                    <a href="{{route('about')}}"> <i class="fas fa-arrow-right"></i></a>
+                                    <a href="{{route('about')}}"> <i class="fas fa-arrow-right"></i></a> 
                                 </div>
                                 <div class="ori-service-img-title position-relative">
                                     <div class="ori-service-img">
@@ -125,7 +125,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <div class="ori-service-inner-item position-relative">
+                            <div class="ori-service-inner-item position-relative" onclick="window.location.href='{{ route('mission') }}'">
                                 <div class="ori-service-more position-absolute">
                                     <a href="{{ route('mission')}}"> <i class="fas fa-arrow-right"></i></a>
                                 </div>
@@ -140,7 +140,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
-                            <div class="ori-service-inner-item position-relative">
+                            <div class="ori-service-inner-item position-relative" onclick="window.location.href='{{ route('partner') }}'">
                                 <div class="ori-service-more position-absolute">
                                     <a href="{{ route('partner')}}"><i class="fas fa-arrow-right"></i></a>
                                 </div>
@@ -178,6 +178,7 @@
                             </a>
                         </div>
                     </div>
+                 
                     <div class="ori-sponsor-item">
                         <div class="ori-sponsor-img">
                             <a href="javascript:void()">
@@ -187,8 +188,22 @@
                     </div>
                     <div class="ori-sponsor-item">
                         <div class="ori-sponsor-img">
+                            <a href="#">
+                                <img src="/assets/img/sponsor/dora.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ori-sponsor-item">
+                        <div class="ori-sponsor-img">
                             <a href="javascript:void()">
                                 <img src="/assets/img/sponsor/englber.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ori-sponsor-item">
+                        <div class="ori-sponsor-img">
+                            <a href="#">
+                                <img src="/assets/img/sponsor/dora.png" alt="">
                             </a>
                         </div>
                     </div>
